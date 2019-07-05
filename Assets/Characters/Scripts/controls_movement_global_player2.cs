@@ -130,6 +130,106 @@ public class controls_movement_global_player2 : MonoBehaviour
             }
         }
 
+        //top/right movement
+        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow))
+        {
+            if (rotation < 45
+             && rotation > -135)
+            {
+                rotation += Time.deltaTime * rotationSpeed;
+                transform.rotation = Quaternion.Euler(0, rotation, 0);
+            }
+
+            if (rotation > 45
+             && rotation < 180)
+            {
+                rotation -= Time.deltaTime * rotationSpeed;
+                transform.rotation = Quaternion.Euler(0, rotation, 0);
+            }
+
+            if (rotation > -180
+             && rotation < -135)
+            {
+                rotation -= Time.deltaTime * rotationSpeed;
+                transform.rotation = Quaternion.Euler(0, rotation, 0);
+            }
+        }
+
+        //top/left movement
+        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow))
+        {
+            if (rotation > -45
+             && rotation < 135)
+            {
+                rotation -= Time.deltaTime * rotationSpeed;
+                transform.rotation = Quaternion.Euler(0, rotation, 0);
+            }
+
+            if (rotation < -45
+             && rotation > -180)
+            {
+                rotation += Time.deltaTime * rotationSpeed;
+                transform.rotation = Quaternion.Euler(0, rotation, 0);
+            }
+
+            if (rotation < 180
+             && rotation > 135)
+            {
+                rotation += Time.deltaTime * rotationSpeed;
+                transform.rotation = Quaternion.Euler(0, rotation, 0);
+            }
+        }
+
+        //bottom/right movement
+        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.RightArrow))
+        {
+            if (rotation < 135
+             && rotation > -45)
+            {
+                rotation += Time.deltaTime * rotationSpeed;
+                transform.rotation = Quaternion.Euler(0, rotation, 0);
+            }
+
+            if (rotation < -45
+             && rotation > -180)
+            {
+                rotation -= Time.deltaTime * rotationSpeed;
+                transform.rotation = Quaternion.Euler(0, rotation, 0);
+            }
+
+            if (rotation > 135
+             && rotation < 180)
+            {
+                rotation -= Time.deltaTime * rotationSpeed;
+                transform.rotation = Quaternion.Euler(0, rotation, 0);
+            }
+        }
+
+        //bottom/left movement
+        if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow))
+        {
+            if (rotation > -135
+             && rotation < 45)
+            {
+                rotation -= Time.deltaTime * rotationSpeed;
+                transform.rotation = Quaternion.Euler(0, rotation, 0);
+            }
+
+            if (rotation < -135
+             && rotation > -180)
+            {
+                rotation += Time.deltaTime * rotationSpeed;
+                transform.rotation = Quaternion.Euler(0, rotation, 0);
+            }
+
+            if (rotation < 180
+             && rotation > 45)
+            {
+                rotation += Time.deltaTime * rotationSpeed;
+                transform.rotation = Quaternion.Euler(0, rotation, 0);
+            }
+        }
+
 
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.RightArrow))
         {
