@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Main/Scenes/NA_Select_Screen_Test.unity
+    guid: 78bbb5da56e04ec4d94a1580671453b0
+  - enabled: 1
+    path: Assets/Main/Scenes/NA_Map_1_Test.unity
+    guid: 7f5edf7ba2e7fa045bf5c53d7a585f6a
+  - enabled: 1
+    path: Assets/Main/Scenes/NA_Map_2_Test.unity
+    guid: 0fd19c3601ee42542aa423381c98b0a4
   m_configObjects: {}
