@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class archer_attack : MonoBehaviour
+public class attack_archer : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

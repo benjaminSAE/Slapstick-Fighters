@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stamina_global : MonoBehaviour
+public class global_stamina : MonoBehaviour
 {
     float maxStaminaPoints;
     float staminaRegen;
@@ -11,7 +11,7 @@ public class stamina_global : MonoBehaviour
     [HideInInspector]
     public float currentStaminaPoints;
 
-    public static stamina_global Instance;
+    public static global_stamina Instance;
 
     void Awake()
     {
@@ -21,10 +21,10 @@ public class stamina_global : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dodgeStamina = gameObject.GetComponent<stats_global>().dodgeStamina;
-        attackStamina = gameObject.GetComponent<stats_global>().attackStamina;
-        maxStaminaPoints = gameObject.GetComponent<stats_global>().maxStaminaPoints;
-        staminaRegen = gameObject.GetComponent<stats_global>().staminaRegen;
+        dodgeStamina = gameObject.GetComponent<global_stats>().dodgeStamina;
+        attackStamina = gameObject.GetComponent<global_stats>().attackStamina;
+        maxStaminaPoints = gameObject.GetComponent<global_stats>().maxStaminaPoints;
+        staminaRegen = gameObject.GetComponent<global_stats>().staminaRegen;
         currentStaminaPoints = maxStaminaPoints;
         print(dodgeStamina);
     }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tank_dodge : MonoBehaviour
+public class attack_knight : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

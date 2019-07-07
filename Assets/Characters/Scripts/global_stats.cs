@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stats_global : MonoBehaviour
+public class global_stats : MonoBehaviour
 {
     public float movementSpeed;
     public float attackDamage;

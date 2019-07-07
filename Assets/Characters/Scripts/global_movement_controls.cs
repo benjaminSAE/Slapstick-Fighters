@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class controls_movement_global : MonoBehaviour
+public class global_movement_controls : MonoBehaviour
 {
 
     //adding variables for dynamic control options
@@ -12,38 +12,37 @@ public class controls_movement_global : MonoBehaviour
     public KeyCode down;
     public KeyCode right;
     public KeyCode dodge;
-    public KeyCode attack;
 
     //naming variables from "stats_global" for basic movement
     float rotationSpeed;
     float movementSpeed;
-    float rotation;
+    [HideInInspector]
+    public float rotation;
 
     //naming variables from "stats_global" for all things dodging
     float dodgeDistance;
-    float dodgeSpeed;
+    float dodgeSpeed; //currently not doing anything
     float dodgeCooldown;
     float nextDodge;
     float dodgeStamina;
     bool damageBlocker;
     
     float currentStaminaPoints;
-    public Text staminaText;
 
     // Start is called before the first frame update
     void Start()
     {
 
         //initialising variables from "stats_global" for basic movement
-        movementSpeed = gameObject.GetComponent<stats_global>().movementSpeed;
-        rotation = gameObject.GetComponent<stats_global>().rotation;
-        rotationSpeed = gameObject.GetComponent<stats_global>().rotationSpeed;
+        movementSpeed = gameObject.GetComponent<global_stats>().movementSpeed;
+        rotation = gameObject.GetComponent<global_stats>().rotation;
+        rotationSpeed = gameObject.GetComponent<global_stats>().rotationSpeed;
 
         //initialising variables from "stats_global" for dodging
-        dodgeDistance = gameObject.GetComponent<stats_global>().dodgeDistance;
-        dodgeSpeed = gameObject.GetComponent<stats_global>().dodgeSpeed;
-        dodgeCooldown = gameObject.GetComponent<stats_global>().dodgeCooldown;
-        dodgeStamina = gameObject.GetComponent<stats_global>().dodgeStamina;
+        dodgeDistance = gameObject.GetComponent<global_stats>().dodgeDistance;
+        dodgeSpeed = gameObject.GetComponent<global_stats>().dodgeSpeed;
+        dodgeCooldown = gameObject.GetComponent<global_stats>().dodgeCooldown;
+        dodgeStamina = gameObject.GetComponent<global_stats>().dodgeStamina;
         damageBlocker = false;
     }
 
@@ -61,14 +60,13 @@ public class controls_movement_global : MonoBehaviour
             rotation = 179;
         }
 
-        currentStaminaPoints = gameObject.GetComponent<stamina_global>().currentStaminaPoints;
-
-        staminaText.text = "Current Stamina: " + currentStaminaPoints.ToString();
-        //print("Current Stamina: " + currentStaminaPoints);
+        currentStaminaPoints = gameObject.GetComponent<global_stamina>().currentStaminaPoints;
 
         //running specific methods defined below
         DodgeControls();
         MovementControls();
+
+        print(rotation);
     }
 
 
@@ -89,9 +87,9 @@ public class controls_movement_global : MonoBehaviour
                         transform.Translate(0.75f * dodgeDistance, 0.0f, 0.75f * dodgeDistance, Space.World);
                         rotation = 45.0f;
                         nextDodge = Time.time + dodgeCooldown;
-                        stamina_global stamina_globalInstance = GetComponent<stamina_global>();
+                        global_stamina stamina_globalInstance = GetComponent<global_stamina>();
                         stamina_globalInstance.DodgeStamina();
-                        damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                        damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
                     }
 
                     //top/left dodge movement
@@ -100,9 +98,9 @@ public class controls_movement_global : MonoBehaviour
                         transform.Translate(-0.75f * dodgeDistance, 0.0f, 0.75f * dodgeDistance, Space.World);
                         rotation = -45.0f;
                         nextDodge = Time.time + dodgeCooldown;
-                        stamina_global stamina_globalInstance = GetComponent<stamina_global>();
+                        global_stamina stamina_globalInstance = GetComponent<global_stamina>();
                         stamina_globalInstance.DodgeStamina();
-                        damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                        damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
                     }
 
                     //bottom/right dodge movement
@@ -111,9 +109,9 @@ public class controls_movement_global : MonoBehaviour
                         transform.Translate(0.75f * dodgeDistance, 0.0f, -0.75f * dodgeDistance, Space.World);
                         rotation = 135.0f;
                         nextDodge = Time.time + dodgeCooldown;
-                        stamina_global stamina_globalInstance = GetComponent<stamina_global>();
+                        global_stamina stamina_globalInstance = GetComponent<global_stamina>();
                         stamina_globalInstance.DodgeStamina();
-                        damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                        damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
                     }
 
                     //bottom/left dodge movement
@@ -122,9 +120,9 @@ public class controls_movement_global : MonoBehaviour
                         transform.Translate(-0.75f * dodgeDistance, 0.0f, -0.75f * dodgeDistance, Space.World);
                         rotation = -135.0f;
                         nextDodge = Time.time + dodgeCooldown;
-                        stamina_global stamina_globalInstance = GetComponent<stamina_global>();
+                        global_stamina stamina_globalInstance = GetComponent<global_stamina>();
                         stamina_globalInstance.DodgeStamina();
-                        damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                        damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
                     }
 
                     //upwards dodge movement
@@ -139,9 +137,9 @@ public class controls_movement_global : MonoBehaviour
                             transform.Translate(0.0f, 0.0f, 1.0f * dodgeDistance, Space.World);
                             rotation = 0.1f;
                             nextDodge = Time.time + dodgeCooldown;
-                            stamina_global stamina_globalInstance = GetComponent<stamina_global>();
+                            global_stamina stamina_globalInstance = GetComponent<global_stamina>();
                             stamina_globalInstance.DodgeStamina();
-                            damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                            damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
                         }
                     }
 
@@ -157,9 +155,9 @@ public class controls_movement_global : MonoBehaviour
                             transform.Translate(1.0f * dodgeDistance, 0.0f, 0.0f, Space.World);
                             rotation = 89.9f;
                             nextDodge = Time.time + dodgeCooldown;
-                            stamina_global stamina_globalInstance = GetComponent<stamina_global>();
+                            global_stamina stamina_globalInstance = GetComponent<global_stamina>();
                             stamina_globalInstance.DodgeStamina();
-                            damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                            damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
                         }
                     }
 
@@ -175,9 +173,9 @@ public class controls_movement_global : MonoBehaviour
                             transform.Translate(0.0f, 0.0f, -1.0f * dodgeDistance, Space.World);
                             rotation = -178.9f;
                             nextDodge = Time.time + dodgeCooldown;
-                            stamina_global stamina_globalInstance = GetComponent<stamina_global>();
+                            global_stamina stamina_globalInstance = GetComponent<global_stamina>();
                             stamina_globalInstance.DodgeStamina();
-                            damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                            damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
                         }
                     }
 
@@ -193,9 +191,9 @@ public class controls_movement_global : MonoBehaviour
                             transform.Translate(-1.0f * dodgeDistance, 0.0f, 0.0f, Space.World);
                             rotation = -89.9f;
                             nextDodge = Time.time + dodgeCooldown;
-                            stamina_global stamina_globalInstance = GetComponent<stamina_global>();
+                            global_stamina stamina_globalInstance = GetComponent<global_stamina>();
                             stamina_globalInstance.DodgeStamina();
-                            damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                            damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
                         }
                     }
                 }
