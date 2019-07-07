@@ -26,6 +26,7 @@ public class stamina_global : MonoBehaviour
         maxStaminaPoints = gameObject.GetComponent<stats_global>().maxStaminaPoints;
         staminaRegen = gameObject.GetComponent<stats_global>().staminaRegen;
         currentStaminaPoints = maxStaminaPoints;
+        print(dodgeStamina);
     }
 
     // Update is called once per frame
@@ -39,6 +40,7 @@ public class stamina_global : MonoBehaviour
 
     public void DodgeStamina()
     {
+        print(dodgeStamina);
         currentStaminaPoints = currentStaminaPoints - dodgeStamina;
     }
 
