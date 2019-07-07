@@ -12,9 +12,12 @@ public class stats_global : MonoBehaviour
     public float dodgeCooldown = 0.0f;
     public float dodgeSpeed    = 0.0f;
     public float dodgeStamina  = 0.0f;
-    public float rotation      = 0.1f;
-    public float rotationSpeed = 100.0f;
     public bool damageBlocker  = false;
     public float maxHealthPoints = 0.0f;
     public float maxStaminaPoints = 0.0f;
+    public float staminaRegen  = 0.0f;
+    [HideInInspector]
+    public float rotation = 0.1f;
+    [HideInInspector]
+    public float rotationSpeed = 100.0f;
 }

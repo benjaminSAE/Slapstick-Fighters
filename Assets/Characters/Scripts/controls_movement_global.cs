@@ -27,9 +27,13 @@ public class controls_movement_global : MonoBehaviour
     float dodgeStamina;
     bool damageBlocker;
 
+    float currentStaminaPoints;
+    public Text staminaText;
+
     // Start is called before the first frame update
     void Start()
     {
+
         //initialising variables from "stats_global" for basic movement
         movementSpeed = gameObject.GetComponent<stats_global>().movementSpeed;
         rotation = gameObject.GetComponent<stats_global>().rotation;
@@ -40,7 +44,7 @@ public class controls_movement_global : MonoBehaviour
         dodgeSpeed = gameObject.GetComponent<stats_global>().dodgeSpeed;
         dodgeCooldown = gameObject.GetComponent<stats_global>().dodgeCooldown;
         dodgeStamina = gameObject.GetComponent<stats_global>().dodgeStamina;
-        damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+        damageBlocker = false;
     }
 
     // Update is called once per frame
@@ -57,6 +61,11 @@ public class controls_movement_global : MonoBehaviour
             rotation = 179;
         }
 
+        currentStaminaPoints = gameObject.GetComponent<stamina_global>().currentStaminaPoints;
+
+        staminaText.text = "Current Stamina: " + currentStaminaPoints.ToString();
+        print("Damage Blocker: " + currentStaminaPoints);
+
         //running specific methods defined below
         DodgeControls();
         MovementControls();
@@ -67,102 +76,133 @@ public class controls_movement_global : MonoBehaviour
     //"nextDodge = Time.time + dodgeCooldown;" calculates the cooldown as specified with "dodgeCooldown" from "stats_global" in seconds
     void DodgeControls()
     {
-        if (Time.time > nextDodge)
+        if (currentStaminaPoints > dodgeStamina)
         {
-            if (Input.GetKeyDown(dodge))
+            if (Time.time > nextDodge)
             {
-                //top/right dodge movement
-                if (Input.GetKey(up) && Input.GetKey(right))
+                if (Input.GetKey(dodge))
                 {
-                    transform.Translate(0.75f * dodgeDistance, 0.0f, 0.75f * dodgeDistance, Space.World);
-                    rotation = 45.0f;
-                    nextDodge = Time.time + dodgeCooldown;
-                }
-
-                //top/left dodge movement
-                if (Input.GetKey(up) && Input.GetKey(left))
-                {
-                    transform.Translate(-0.75f * dodgeDistance, 0.0f, 0.75f * dodgeDistance, Space.World);
-                    rotation = -45.0f;
-                    nextDodge = Time.time + dodgeCooldown;
-                }
-
-                //bottom/right dodge movement
-                if (Input.GetKey(down) && Input.GetKey(right))
-                {
-                    transform.Translate(0.75f * dodgeDistance, 0.0f, -0.75f * dodgeDistance, Space.World);
-                    rotation = 135.0f;
-                    nextDodge = Time.time + dodgeCooldown;
-                }
-
-                //bottom/left dodge movement
-                if (Input.GetKey(down) && Input.GetKey(left))
-                {
-                    transform.Translate(-0.75f * dodgeDistance, 0.0f, -0.75f * dodgeDistance, Space.World);
-                    rotation = -135.0f;
-                    nextDodge = Time.time + dodgeCooldown;
-                }
-
-                //upwards dodge movement
-                if (Input.GetKey(up))
-                {
-                    if (Input.GetKey(right) || Input.GetKey(down) || Input.GetKey(left))
+                    //top/right dodge movement
+                    if (Input.GetKey(up) && Input.GetKey(right))
                     {
-
-                    }
-                    else
-                    {
-                        transform.Translate(0.0f, 0.0f, 1.0f * dodgeDistance, Space.World);
-                        rotation = 0.1f;
+                        transform.Translate(0.75f * dodgeDistance, 0.0f, 0.75f * dodgeDistance, Space.World);
+                        rotation = 45.0f;
                         nextDodge = Time.time + dodgeCooldown;
+                        stamina_global.Instance.DodgeStamina();
+                        damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                    }
+
+                    //top/left dodge movement
+                    if (Input.GetKey(up) && Input.GetKey(left))
+                    {
+                        transform.Translate(-0.75f * dodgeDistance, 0.0f, 0.75f * dodgeDistance, Space.World);
+                        rotation = -45.0f;
+                        nextDodge = Time.time + dodgeCooldown;
+                        stamina_global.Instance.DodgeStamina();
+                        damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                    }
+
+                    //bottom/right dodge movement
+                    if (Input.GetKey(down) && Input.GetKey(right))
+                    {
+                        transform.Translate(0.75f * dodgeDistance, 0.0f, -0.75f * dodgeDistance, Space.World);
+                        rotation = 135.0f;
+                        nextDodge = Time.time + dodgeCooldown;
+                        stamina_global.Instance.DodgeStamina();
+                        damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                    }
+
+                    //bottom/left dodge movement
+                    if (Input.GetKey(down) && Input.GetKey(left))
+                    {
+                        transform.Translate(-0.75f * dodgeDistance, 0.0f, -0.75f * dodgeDistance, Space.World);
+                        rotation = -135.0f;
+                        nextDodge = Time.time + dodgeCooldown;
+                        stamina_global.Instance.DodgeStamina();
+                        damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                    }
+
+                    //upwards dodge movement
+                    if (Input.GetKey(up))
+                    {
+                        if (Input.GetKey(right) || Input.GetKey(down) || Input.GetKey(left))
+                        {
+
+                        }
+                        else
+                        {
+                            transform.Translate(0.0f, 0.0f, 1.0f * dodgeDistance, Space.World);
+                            rotation = 0.1f;
+                            nextDodge = Time.time + dodgeCooldown;
+                            stamina_global.Instance.DodgeStamina();
+                            damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                        }
+                    }
+
+                    //right dodge movement
+                    if (Input.GetKey(right))
+                    {
+                        if (Input.GetKey(up) || Input.GetKey(down) || Input.GetKey(left))
+                        {
+
+                        }
+                        else
+                        {
+                            transform.Translate(1.0f * dodgeDistance, 0.0f, 0.0f, Space.World);
+                            rotation = 89.9f;
+                            nextDodge = Time.time + dodgeCooldown;
+                            stamina_global.Instance.DodgeStamina();
+                            damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                        }
+                    }
+
+                    //downwards dodge movement
+                    if (Input.GetKey(down))
+                    {
+                        if (Input.GetKey(up) || Input.GetKey(right) || Input.GetKey(left))
+                        {
+
+                        }
+                        else
+                        {
+                            transform.Translate(0.0f, 0.0f, -1.0f * dodgeDistance, Space.World);
+                            rotation = -178.9f;
+                            nextDodge = Time.time + dodgeCooldown;
+                            stamina_global.Instance.DodgeStamina();
+                            damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                        }
+                    }
+
+                    //left dodge movement
+                    if (Input.GetKey(left))
+                    {
+                        if (Input.GetKey(up) || Input.GetKey(right) || Input.GetKey(down))
+                        {
+
+                        }
+                        else
+                        {
+                            transform.Translate(-1.0f * dodgeDistance, 0.0f, 0.0f, Space.World);
+                            rotation = -89.9f;
+                            nextDodge = Time.time + dodgeCooldown;
+                            stamina_global.Instance.DodgeStamina();
+                            damageBlocker = gameObject.GetComponent<stats_global>().damageBlocker;
+                        }
                     }
                 }
-
-                //right dodge movement
-                if (Input.GetKey(right))
+                else
                 {
-                    if (Input.GetKey(up) || Input.GetKey(down) || Input.GetKey(left))
-                    {
-
-                    }
-                    else
-                    {
-                        transform.Translate(1.0f * dodgeDistance, 0.0f, 0.0f, Space.World);
-                        rotation = 89.9f;
-                        nextDodge = Time.time + dodgeCooldown;
-                    }
-                }
-
-                //downwards dodge movement
-                if (Input.GetKey(down))
-                {
-                    if (Input.GetKey(up) || Input.GetKey(right) || Input.GetKey(left))
-                    {
-
-                    }
-                    else
-                    {
-                        transform.Translate(0.0f, 0.0f, -1.0f * dodgeDistance, Space.World);
-                        rotation = -178.9f;
-                        nextDodge = Time.time + dodgeCooldown;
-                    }
-                }
-
-                //left dodge movement
-                if (Input.GetKey(left))
-                {
-                    if (Input.GetKey(up) || Input.GetKey(right) || Input.GetKey(down))
-                    {
-
-                    }
-                    else
-                    {
-                        transform.Translate(-1.0f * dodgeDistance, 0.0f, 0.0f, Space.World);
-                        rotation = -89.9f;
-                        nextDodge = Time.time + dodgeCooldown;
-                    }
+                    damageBlocker = false;
                 }
             }
+            else
+            {
+                damageBlocker = false;
+            }
+        }
+        else
+        {
+            damageBlocker = false;
         }
     }
 

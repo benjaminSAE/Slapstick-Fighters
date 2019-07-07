@@ -139,7 +139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200885476}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40b60f7e108903a44bf15d7cb82df080, type: 3}
   m_Name: 
@@ -150,6 +150,7 @@ MonoBehaviour:
   right: 100
   dodge: 32
   attack: 0
+  staminaText: {fileID: 1253003580}
 --- !u!114 &200885482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,15 +167,29 @@ MonoBehaviour:
   attackDamage: 0
   attackSpeed: 0
   attackStamina: 0
-  dodgeDistance: 3
-  dodgeCooldown: 3
-  dodgeSpeed: 2
-  dodgeStamina: 0
-  rotation: 0.1
-  rotationSpeed: 100
+  dodgeDistance: 0
+  dodgeCooldown: 0
+  dodgeSpeed: 0
+  dodgeStamina: 3
   damageBlocker: 0
   maxHealthPoints: 0
-  maxStaminaPoints: 0
+  maxStaminaPoints: 100
+  staminaRegen: 0.1
+  rotation: 0.1
+  rotationSpeed: 100
+--- !u!114 &200885483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200885476}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e65d3cc9d0bb441857ea115a4752aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStaminaPoints: 0
 --- !u!1 &415712708
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,19 +926,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d88abb7270c074696bb865d4f11382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0
+  movementSpeed: 2
   attackDamage: 0
   attackSpeed: 0
   attackStamina: 0
   dodgeDistance: 0
   dodgeCooldown: 0
   dodgeSpeed: 0
-  dodgeStamina: 0
-  rotation: 0.1
-  rotationSpeed: 100
+  dodgeStamina: 10
   damageBlocker: 0
   maxHealthPoints: 0
-  maxStaminaPoints: 0
+  maxStaminaPoints: 100
+  staminaRegen: 0.1
+  rotation: 0.1
+  rotationSpeed: 100
+--- !u!114 &3081027815141694875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3081027815141694869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e65d3cc9d0bb441857ea115a4752aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStaminaPoints: 0
+--- !u!114 &3081027815141694876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3081027815141694869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b60f7e108903a44bf15d7cb82df080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  up: 119
+  left: 97
+  down: 115
+  right: 100
+  dodge: 32
+  attack: 0
+  staminaText: {fileID: 1253003580}
 --- !u!4 &3081027815812055590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6547633079698978685, guid: 37315204fc6c87048a56eead27e21043,
@@ -968,11 +1016,12 @@ MonoBehaviour:
   dodgeCooldown: 0
   dodgeSpeed: 0
   dodgeStamina: 0
-  rotation: 0.1
-  rotationSpeed: 100
   damageBlocker: 0
   maxHealthPoints: 0
   maxStaminaPoints: 0
+  staminaRegen: 0
+  rotation: 0.1
+  rotationSpeed: 100
 --- !u!1001 &8079422414584198491
 PrefabInstance:
   m_ObjectHideFlags: 0
