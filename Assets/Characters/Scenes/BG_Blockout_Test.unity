@@ -190,6 +190,7 @@ MonoBehaviour:
   down: 0
   right: 0
   dodge: 0
+  rotation: 0
 --- !u!114 &206200595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,11 +701,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b60f7e108903a44bf15d7cb82df080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  up: 0
-  left: 0
-  down: 0
-  right: 0
-  dodge: 0
+  up: 119
+  left: 97
+  down: 115
+  right: 100
+  dodge: 32
+  rotation: 0
 --- !u!114 &1740819463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,14 +720,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d88abb7270c074696bb865d4f11382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0
+  movementSpeed: 2
   attackDamage: 0
   attackSpeed: 0
   attackStamina: 0
-  dodgeDistance: 0
-  dodgeCooldown: 0
+  dodgeDistance: 4
+  dodgeCooldown: 3
   dodgeSpeed: 0
-  dodgeStamina: 0
+  dodgeStamina: 40
   damageBlocker: 0
   maxHealthPoints: 0
   maxStaminaPoints: 100
@@ -1221,6 +1223,7 @@ MonoBehaviour:
   down: 0
   right: 0
   dodge: 0
+  rotation: 0
 --- !u!114 &2789929651610600115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1314,6 +1317,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683328433092019590, guid: 8f327130cf8e02840a6d8fc21b967027,
+        type: 3}
+      propertyPath: up
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683328433092019590, guid: 8f327130cf8e02840a6d8fc21b967027,
+        type: 3}
+      propertyPath: left
+      value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683328433092019590, guid: 8f327130cf8e02840a6d8fc21b967027,
+        type: 3}
+      propertyPath: down
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683328433092019590, guid: 8f327130cf8e02840a6d8fc21b967027,
+        type: 3}
+      propertyPath: right
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683328433092019590, guid: 8f327130cf8e02840a6d8fc21b967027,
+        type: 3}
+      propertyPath: dodge
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683328433092019591, guid: 8f327130cf8e02840a6d8fc21b967027,
+        type: 3}
+      propertyPath: movementSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683328433092019591, guid: 8f327130cf8e02840a6d8fc21b967027,
+        type: 3}
+      propertyPath: dodgeStamina
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683328433092019591, guid: 8f327130cf8e02840a6d8fc21b967027,
+        type: 3}
+      propertyPath: dodgeCooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683328433092019591, guid: 8f327130cf8e02840a6d8fc21b967027,
+        type: 3}
+      propertyPath: dodgeDistance
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f327130cf8e02840a6d8fc21b967027, type: 3}
