@@ -11,16 +11,6 @@ public class attack_tank : MonoBehaviour
 
     float rotation;
 
-    //all different directions of movement
-     //Vector in the direction you want to move in.
-    
-    
-    
-    
-    
-    
-    
-
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +25,6 @@ public class attack_tank : MonoBehaviour
         rotation = gameObject.GetComponent<global_movement_controls>().rotation;
 
         TankAttack();
-
-        
     }
 
     void TankAttack()
@@ -93,15 +81,15 @@ public class attack_tank : MonoBehaviour
         }
     }
 
-    IEnumerator smooth_move(Vector3 direction, float attackSpeed)
+    IEnumerator smooth_move(Vector3 direction, float speed)
     {
         float startime = Time.time;
         Vector3 start_pos = transform.position; //Starting position.
         Vector3 end_pos = transform.position + direction; //Ending position.
 
-        while (start_pos != end_pos && ((Time.time - startime) * attackSpeed) < 1f)
+        while (start_pos != end_pos && ((Time.time - startime) * speed) < 1f)
         {
-            float move = Mathf.Lerp(0, 1, (Time.time - startime) * attackSpeed);
+            float move = Mathf.Lerp(0, 1, (Time.time - startime) * speed);
 
             transform.position += direction * move;
 

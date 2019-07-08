@@ -724,10 +724,10 @@ MonoBehaviour:
   attackDamage: 0
   attackSpeed: 0
   attackStamina: 0
-  dodgeDistance: 4
-  dodgeCooldown: 3
+  dodgeDistance: 8
+  dodgeCooldown: 2
   dodgeSpeed: 0
-  dodgeStamina: 40
+  dodgeStamina: 0
   damageBlocker: 0
   maxHealthPoints: 0
   maxStaminaPoints: 100
@@ -1351,17 +1351,17 @@ PrefabInstance:
     - target: {fileID: 4683328433092019591, guid: 8f327130cf8e02840a6d8fc21b967027,
         type: 3}
       propertyPath: dodgeStamina
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4683328433092019591, guid: 8f327130cf8e02840a6d8fc21b967027,
         type: 3}
       propertyPath: dodgeCooldown
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4683328433092019591, guid: 8f327130cf8e02840a6d8fc21b967027,
         type: 3}
       propertyPath: dodgeDistance
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f327130cf8e02840a6d8fc21b967027, type: 3}
