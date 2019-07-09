@@ -9,6 +9,7 @@ public class global_stats : MonoBehaviour
     public float attackDamage;
     public float attackSpeed;
     public float attackStamina;
+    public float attackCooldown;
     public float dodgeDistance;
     public float dodgeCooldown;
     public float dodgeSpeed;

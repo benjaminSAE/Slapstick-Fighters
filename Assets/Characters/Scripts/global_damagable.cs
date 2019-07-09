@@ -8,7 +8,8 @@ public class global_damagable : MonoBehaviour
     private float maxHP;
     private float currentHP;
     private float attackDamage;
-    public Text randomText;
+
+    bool attacking;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,6 @@ public class global_damagable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        randomText.text = "Health Total: " + currentHP;
         DoDamage();
     }
 
@@ -41,6 +41,5 @@ public class global_damagable : MonoBehaviour
             attackDamage = objectCollided.GetComponentInParent<global_stats>().attackDamage;
             currentHP -= attackDamage;
         }
-
     }
 }

@@ -22,6 +22,7 @@ public class global_stamina : MonoBehaviour
     void Start()
     {
         dodgeStamina = gameObject.GetComponent<global_stats>().dodgeStamina;
+        attackStamina = gameObject.GetComponent<global_stats>().attackStamina;
         maxStaminaPoints = gameObject.GetComponent<global_stats>().maxStaminaPoints;
         staminaRegen = gameObject.GetComponent<global_stats>().staminaRegen;
         currentStaminaPoints = maxStaminaPoints;
@@ -38,7 +39,6 @@ public class global_stamina : MonoBehaviour
 
     public void DodgeStamina()
     {
-        print(dodgeStamina);
         currentStaminaPoints = currentStaminaPoints - dodgeStamina;
     }
 
