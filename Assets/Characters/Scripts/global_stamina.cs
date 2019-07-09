@@ -22,11 +22,9 @@ public class global_stamina : MonoBehaviour
     void Start()
     {
         dodgeStamina = gameObject.GetComponent<global_stats>().dodgeStamina;
-        attackStamina = gameObject.GetComponent<global_stats>().attackStamina;
         maxStaminaPoints = gameObject.GetComponent<global_stats>().maxStaminaPoints;
         staminaRegen = gameObject.GetComponent<global_stats>().staminaRegen;
         currentStaminaPoints = maxStaminaPoints;
-        print(dodgeStamina);
     }
 
     // Update is called once per frame

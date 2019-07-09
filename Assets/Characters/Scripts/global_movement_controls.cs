@@ -67,8 +67,6 @@ public class global_movement_controls : MonoBehaviour
         //running specific methods defined below
         DodgeControls();
         MovementControls();
-
-        print(rotation);
     }
 
 

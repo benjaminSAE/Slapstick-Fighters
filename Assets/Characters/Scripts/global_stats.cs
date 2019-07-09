@@ -5,6 +5,7 @@ using UnityEngine;
 public class global_stats : MonoBehaviour
 {
     public float movementSpeed;
+    public float attackDistance;
     public float attackDamage;
     public float attackSpeed;
     public float attackStamina;

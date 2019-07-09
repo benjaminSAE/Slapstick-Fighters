@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class global_damagable : MonoBehaviour
 {
     private float maxHP;
     private float currentHP;
     private float attackDamage;
+    public Text randomText;
 
     // Start is called before the first frame update
     void Start()
@@ -18,21 +20,23 @@ public class global_damagable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        randomText.text = "Health Total: " + currentHP;
+        DoDamage();
     }
 
     void DoDamage()
     {
-        if(currentHP < 0)
+        if(currentHP <= 0)
         {
             //run player life method
+            print("dead");
         }
     }
 
-    private void OnCollisionEnter(Collision collider)
+    private void OnTriggerEnter(Collider collider)
     {
         GameObject objectCollided = collider.gameObject;
-        if (objectCollided.CompareTag("Attacker"))
+        if (objectCollided.CompareTag("Attacker") && currentHP > 0)
         {
             attackDamage = objectCollided.GetComponentInParent<global_stats>().attackDamage;
             currentHP -= attackDamage;
