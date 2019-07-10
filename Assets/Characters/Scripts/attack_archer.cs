@@ -52,6 +52,7 @@ public class attack_archer : MonoBehaviour
 
         whileLoop = false;
     }
+
     //everything that enables the archer's arrow shooting, stamina usage and cooldown
     void ArcherAttack()
     {

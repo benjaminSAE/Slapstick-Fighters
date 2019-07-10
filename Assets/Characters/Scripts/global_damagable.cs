@@ -10,6 +10,7 @@ public class global_damagable : MonoBehaviour
     private float attackDamage;
 
     bool attacking;
+    bool damageBlocker;
 
     // Start is called before the first frame update
     void Start()
@@ -29,14 +30,16 @@ public class global_damagable : MonoBehaviour
         if(currentHP <= 0)
         {
             //run player life method
-            print("dead");
+            print("dead: " + gameObject);
         }
     }
 
     private void OnTriggerEnter(Collider collider)
     {
         GameObject objectCollided = collider.gameObject;
-        if (objectCollided.CompareTag("Attacker") && currentHP > 0)
+        damageBlocker = objectCollided.GetComponentInParent<global_movement_controls>().damageBlocker;
+
+        if (damageBlocker = false && objectCollided.CompareTag("Attacker") && currentHP > 0)
         {
             attackDamage = objectCollided.GetComponentInParent<global_stats>().attackDamage;
             currentHP -= attackDamage;

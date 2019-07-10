@@ -27,7 +27,7 @@ public class global_movement_controls : MonoBehaviour
     float dodgeCooldown;
     float nextDodge;
     float dodgeStamina;
-    bool damageBlocker;
+    [HideInInspector] public bool damageBlocker;
     
     float currentStaminaPoints;
 
@@ -69,6 +69,57 @@ public class global_movement_controls : MonoBehaviour
         MovementControls();
     }
 
+    //an emergency function to stop the character from rotating if needed.
+    public void StopRotation()
+    {
+        //upwards rotation lock
+        if (rotation > -3 && rotation < 3)
+        {
+            rotation = 0f;
+        }
+
+        //upwards/right rotation lock
+        if (rotation > 42 && rotation < 48)
+        {
+            rotation = 45f;
+        }
+
+        //right rotation lock
+        if (rotation > 87 && rotation < 93)
+        {
+            rotation = 90f;
+        }
+
+        //downwards/right rotation lock
+        if (rotation > 132 && rotation < 138)
+        {
+            rotation = 135f;
+        }
+
+        //downwards rotation lock
+        if (rotation > 177 && rotation < 183 || rotation > -183 && rotation < -177)
+        {
+            rotation = 179f;
+        }
+
+        //downwards/left rotation lock
+        if (rotation > -138 && rotation < -132)
+        {
+            rotation = -135f;
+        }
+
+        //left rotation lock
+        if (rotation > -93 && rotation < -87)
+        {
+            rotation = -90f;
+        }
+
+        //upwards/left rotation lock
+        if (rotation > -48 && rotation < -42)
+        {
+            rotation = -45f;
+        }
+    }
 
     //translates position of object according to object's "dodgeDistance" while rotating object towards direction of movement
     //"nextDodge = Time.time + dodgeCooldown;" calculates the cooldown as specified with "dodgeCooldown" from "stats_global" in seconds
@@ -502,6 +553,7 @@ public class global_movement_controls : MonoBehaviour
         }
     }
 
+    //this is the Coroutine
     IEnumerator smooth_move(Vector3 direction, float speed)
     {
         float startime = Time.time;
