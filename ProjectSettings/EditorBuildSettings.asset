@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Main/Scenes/NA_Select_Screen_Test.unity
     guid: 78bbb5da56e04ec4d94a1580671453b0
   - enabled: 1
-    path: Assets/Main/Scenes/NA_Map_1_Test.unity
+    path: Assets/Environments/Scenes/NA_TundraMap.unity
     guid: 7f5edf7ba2e7fa045bf5c53d7a585f6a
   - enabled: 1
     path: Assets/Main/Scenes/NA_Map_2_Test.unity
@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main/Scenes/KT_GameOver.unity
     guid: 9d4287518dc97a14781c7c956567f909
+  - enabled: 1
+    path: Assets/Environments/Scenes/KT_SwampMap.unity
+    guid: a572023c93c5b594ab637bf317a344de
   m_configObjects: {}
