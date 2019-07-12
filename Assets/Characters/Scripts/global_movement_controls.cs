@@ -7,11 +7,11 @@ public class global_movement_controls : MonoBehaviour
 {
 
     //adding variables for dynamic control options
-    public KeyCode up;
-    public KeyCode left;
-    public KeyCode down;
-    public KeyCode right;
-    public KeyCode dodge;
+    [SerializeField] private KeyCode up;
+    [SerializeField] private KeyCode left;
+    [SerializeField] private KeyCode down;
+    [SerializeField] private KeyCode right;
+    [SerializeField] private KeyCode dodge;
 
     //naming variables from "stats_global" for basic movement
     float rotationSpeed;

@@ -12,6 +12,8 @@ public class global_damagable : MonoBehaviour
     bool attacking;
     bool damageBlocker;
 
+    //[SerializeField] private Text showHealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class global_damagable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //showHealth.text = "Health: " + currentHP.ToString();
         DoDamage();
     }
 

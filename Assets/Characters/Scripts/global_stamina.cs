@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class global_stamina : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class global_stamina : MonoBehaviour
     public float currentStaminaPoints;
 
     public static global_stamina Instance;
+
+    //[SerializeField] private Text showStamina;
 
     void Awake()
     {
@@ -35,6 +38,8 @@ public class global_stamina : MonoBehaviour
         {
             currentStaminaPoints = currentStaminaPoints + staminaRegen;
         }
+
+       // showStamina.text = "Stamina: " + currentStaminaPoints.ToString();
     }
 
     public void DodgeStamina()
