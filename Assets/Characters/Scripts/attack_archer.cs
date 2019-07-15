@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class attack_archer : MonoBehaviour
 {
+    //stating values for initialisation
     float attackDamage;
     float attackSpeed;
     float attackStamina;
     float attackCooldown;
     float currentStaminaPoints;
-    float nextAttack;
-    public KeyCode attack;
 
+    float nextAttack;
+    [SerializeField] private KeyCode attack;
+
+    //changable values for everything to do with the archer's ranged attack
     float attackDistance;
-    float attackDistanceBase = 0.17f;
+    float attackDistanceBase = 0.017f;
     float attackDistanceBaseCorner = 0.6f;
 
     float rotation;
@@ -21,11 +24,13 @@ public class attack_archer : MonoBehaviour
     [SerializeField] private GameObject archer;
     [SerializeField] private GameObject archerArrow;
 
+    //true/false statement to determine when the Coroutine's while loop finishes
     bool whileLoop = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        //initialising values according to this object's "global_stats"
         attackDistance = gameObject.GetComponent<global_stats>().attackDistance;
         attackDamage = gameObject.GetComponent<global_stats>().attackDamage;
         attackSpeed = gameObject.GetComponent<global_stats>().attackSpeed;
@@ -42,6 +47,7 @@ public class attack_archer : MonoBehaviour
         //updating "currentStaminaPoints" to equal the same value inside "global_stamina"
         currentStaminaPoints = gameObject.GetComponent<global_stamina>().currentStaminaPoints;
 
+        //when the while loop finishes transform the location of the arrow back to the archer
         if (whileLoop == false)
         {
             archerArrow.transform.position = archer.transform.position;

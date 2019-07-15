@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class KS_Scene_Loader : MonoBehaviour
 {
-    public void MapSelection()
+    public void MapSelectionSwamp()
     {
-        SceneManager.LoadScene("NA_Select_Screen_Test");
+        SceneManager.LoadScene("KT_SwampMap");
+    }
+
+    public void MapSelectionTundra()
+    {
+        SceneManager.LoadScene("NA_TundraMap");
     }
 }

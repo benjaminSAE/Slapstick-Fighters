@@ -9,22 +9,36 @@ public class global_damagable : MonoBehaviour
     private float currentHP;
     private float attackDamage;
 
-    bool attacking;
-    bool damageBlocker;
+    private bool attacking;
+    private bool damageBlocker;
 
-    //[SerializeField] private Text showHealth;
+    private int playerNumber;
+
+    private Text showHealth;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerNumber = gameObject.GetComponent<global_stats>().playerNumber;
         maxHP = gameObject.GetComponent<global_stats>().maxHealthPoints;
         currentHP = maxHP;
+
+        if (playerNumber == 1)
+        {
+            showHealth = GameObject.Find("ShowHealthPlayer1").GetComponent<Text>();
+        }
+
+        if (playerNumber == 2)
+        {
+            showHealth = GameObject.Find("ShowHealthPlayer2").GetComponent<Text>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //showHealth.text = "Health: " + currentHP.ToString();
+        showHealth.text = "Health: " + currentHP.ToString("F0");
+        print("current health: " + gameObject + " " + currentHP);
         DoDamage();
     }
 
@@ -32,17 +46,27 @@ public class global_damagable : MonoBehaviour
     {
         if(currentHP <= 0)
         {
-            //run player life method
             print("dead: " + gameObject);
+
+            if (playerNumber == 1)
+            {
+                global_respawn.Instance.RespawnPlayer1();
+            }
+
+            if (playerNumber == 2)
+            {
+                global_respawn.Instance.RespawnPlayer2();
+            }
+
+            Destroy(gameObject);
         }
     }
 
     private void OnTriggerEnter(Collider collider)
     {
         GameObject objectCollided = collider.gameObject;
-        damageBlocker = objectCollided.GetComponentInParent<global_movement_controls>().damageBlocker;
 
-        if (damageBlocker = false && objectCollided.CompareTag("Attacker") && currentHP > 0)
+        if (objectCollided.CompareTag("Attacker") && currentHP > 0)
         {
             attackDamage = objectCollided.GetComponentInParent<global_stats>().attackDamage;
             currentHP -= attackDamage;

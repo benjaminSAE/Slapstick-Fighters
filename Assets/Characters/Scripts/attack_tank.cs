@@ -17,7 +17,7 @@ public class attack_tank : MonoBehaviour
 
     //stating movement related values for initialisation
     float attackDistance;
-    float attackDistanceBase = 0.17f;
+    float attackDistanceBase = 0.017f;
     float attackDistanceBaseCorner = 0.6f;
     float rotation;
     

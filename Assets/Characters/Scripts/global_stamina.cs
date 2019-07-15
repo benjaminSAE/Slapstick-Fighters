@@ -14,7 +14,9 @@ public class global_stamina : MonoBehaviour
 
     public static global_stamina Instance;
 
-    //[SerializeField] private Text showStamina;
+    private Text showStamina;
+
+    int playerNumber;
 
     void Awake()
     {
@@ -24,11 +26,22 @@ public class global_stamina : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerNumber = gameObject.GetComponent<global_stats>().playerNumber;
         dodgeStamina = gameObject.GetComponent<global_stats>().dodgeStamina;
         attackStamina = gameObject.GetComponent<global_stats>().attackStamina;
         maxStaminaPoints = gameObject.GetComponent<global_stats>().maxStaminaPoints;
         staminaRegen = gameObject.GetComponent<global_stats>().staminaRegen;
         currentStaminaPoints = maxStaminaPoints;
+
+        if (playerNumber == 1)
+        {
+            showStamina = GameObject.Find("ShowStaminaPlayer1").GetComponent<Text>();
+        }
+
+        if (playerNumber == 2)
+        {
+            showStamina = GameObject.Find("ShowStaminaPlayer2").GetComponent<Text>();
+        }
     }
 
     // Update is called once per frame
@@ -39,7 +52,7 @@ public class global_stamina : MonoBehaviour
             currentStaminaPoints = currentStaminaPoints + staminaRegen;
         }
 
-       // showStamina.text = "Stamina: " + currentStaminaPoints.ToString();
+        showStamina.text = "Stamina: " + currentStaminaPoints.ToString("F0");
     }
 
     public void DodgeStamina()

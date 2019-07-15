@@ -23,11 +23,6 @@ public class attack_knight : MonoBehaviour
     
     float swordSwing2 = 9999999f;
 
-    /*
-    swordRotation -= Time.deltaTime * rotationSpeed;
-    transform.rotation = Quaternion.Euler(0, swordRotation, 0);
-    */
-
     // Start is called before the first frame update
     void Start()
     {
@@ -48,14 +43,14 @@ public class attack_knight : MonoBehaviour
 
         if (swordSwing2 < Time.time)
         {
-            //start clockwise rotation of sword with a Coroutine;
+            //start anti-clockwise rotation of sword with a Coroutine;
             StartCoroutine(RotateMe(Vector3.up * -90, 0.8f));
 
             swordSwing2 = 9999999f;
         }
     }
 
-    //everything that enables the archer's arrow shooting, stamina usage and cooldown
+    //everything that enables the knight's sword swinging, stamina usage and cooldown
     void KnightAttack()
     {
         if (swordSwing2 == 9999999f && currentStaminaPoints > attackStamina && Time.time > nextAttack && Input.GetKeyDown(attack))
@@ -75,6 +70,7 @@ public class attack_knight : MonoBehaviour
         }
     }
 
+    //method that runs the Coroutine
     IEnumerator RotateMe(Vector3 byAngles, float inTime)
     {
         var fromAngle = swordHilt.transform.rotation;
