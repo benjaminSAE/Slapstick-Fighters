@@ -48,6 +48,9 @@ public class global_damagable : MonoBehaviour
         {
             print("dead: " + gameObject);
 
+            global_kill_counter stamina_globalInstance = GetComponent<global_kill_counter>();
+            stamina_globalInstance.ScoreCounter();
+
             if (playerNumber == 1)
             {
                 global_respawn.Instance.RespawnPlayer1();

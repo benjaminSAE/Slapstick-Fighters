@@ -244,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPlayer1: {fileID: 1363093965}
   spawnPlayer2: {fileID: 1646834763}
-  archerPlayer1: {fileID: 5076676819540777035, guid: a0acec72bc0300a44ad536217112add9,
+  archerPlayer1: {fileID: 1442374932123282489, guid: 7c5552754c1a2024d8a53667d4d37db2,
     type: 3}
   knightPlayer1: {fileID: 4320839269720715677, guid: ab4e442b7c6512746b6a706299f89385,
     type: 3}
@@ -813,7 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0ff2e11866e343be9296aafce7ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  archerPrefab: {fileID: 5076676819540777035, guid: a0acec72bc0300a44ad536217112add9,
+  archerPrefab: {fileID: 1442374932123282489, guid: 7c5552754c1a2024d8a53667d4d37db2,
     type: 3}
   knightPrefab: {fileID: 4320839269720715677, guid: ab4e442b7c6512746b6a706299f89385,
     type: 3}
