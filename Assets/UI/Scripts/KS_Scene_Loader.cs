@@ -14,4 +14,9 @@ public class KS_Scene_Loader : MonoBehaviour
     {
         SceneManager.LoadScene("NA_TundraMap");
     }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("KS_Main_Menu");
+    }
 }
