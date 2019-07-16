@@ -19,4 +19,15 @@ public class KS_Scene_Loader : MonoBehaviour
     {
         SceneManager.LoadScene("KS_Main_Menu");
     }
+
+    public void MainMenuLeaderboard()
+    {
+        GameObject CharacterSelectValues = GameObject.Find("CharacterSelectValues");
+        GameObject KillCounter = GameObject.Find("KillCounter");
+
+        Destroy(CharacterSelectValues);
+        Destroy(KillCounter);
+
+        SceneManager.LoadScene("KS_Main_Menu");
+    }
 }

@@ -10,8 +10,8 @@ public class global_kill_counter : MonoBehaviour
     private bool player1;
     private bool player2;
 
-    private int player1Deaths;
-    private int player2Deaths;
+    [HideInInspector] public int player1Deaths;
+    [HideInInspector] public int player2Deaths;
 
     private Text player1KillsText;
     private Text player2KillsText;

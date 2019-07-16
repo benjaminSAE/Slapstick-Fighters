@@ -120,6 +120,39 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &31783957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 31783958}
+  m_Layer: 0
+  m_Name: Loser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &31783958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31783957}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.991577, y: 23.957031, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 587250562}
+  - {fileID: 370290376}
+  - {fileID: 1360537587}
+  m_Father: {fileID: 1246030695}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &98760798
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +342,7 @@ GameObject:
   - component: {fileID: 234843895}
   - component: {fileID: 234843894}
   m_Layer: 5
-  m_Name: Player (1) Text
+  m_Name: WinnerPlayer#
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -326,12 +359,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1246030695}
-  m_RootOrder: 3
+  m_Father: {fileID: 263174615}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -215, y: 62}
+  m_AnchoredPosition: {x: -228.99158, y: 38.04297}
   m_SizeDelta: {x: 196.9, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234843894
@@ -376,6 +409,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234843892}
   m_CullTransparentMesh: 0
+--- !u!1 &263174614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 263174615}
+  m_Layer: 0
+  m_Name: Winner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &263174615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263174614}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.991577, y: 23.957031, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 234843893}
+  - {fileID: 296533625}
+  - {fileID: 1023813408}
+  m_Father: {fileID: 1246030695}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &296533624
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +454,7 @@ GameObject:
   - component: {fileID: 296533627}
   - component: {fileID: 296533626}
   m_Layer: 5
-  m_Name: Character (1) Text
+  m_Name: WinnerCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -405,12 +471,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1246030695}
-  m_RootOrder: 4
+  m_Father: {fileID: 263174615}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 62}
+  m_AnchoredPosition: {x: -13.991577, y: 38.04297}
   m_SizeDelta: {x: 196.9, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &296533626
@@ -467,7 +533,7 @@ GameObject:
   - component: {fileID: 370290378}
   - component: {fileID: 370290377}
   m_Layer: 5
-  m_Name: Character (2) Text
+  m_Name: LoserCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -484,12 +550,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1246030695}
-  m_RootOrder: 7
+  m_Father: {fileID: 31783958}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -21.399994}
+  m_AnchoredPosition: {x: -13.991577, y: -45.357025}
   m_SizeDelta: {x: 196.9, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &370290377
@@ -608,6 +674,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445721059}
   m_CullTransparentMesh: 0
+--- !u!1 &503167625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 503167626}
+  m_Layer: 0
+  m_Name: Headings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &503167626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503167625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1318732035}
+  - {fileID: 1670970068}
+  - {fileID: 2025743273}
+  m_Father: {fileID: 1246030695}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &577375193
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +798,7 @@ GameObject:
   - component: {fileID: 587250564}
   - component: {fileID: 587250563}
   m_Layer: 5
-  m_Name: Player (2) Text
+  m_Name: LoserPlayer#
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,12 +815,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1246030695}
-  m_RootOrder: 6
+  m_Father: {fileID: 31783958}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -215.00006, y: -21.399994}
+  m_AnchoredPosition: {x: -228.99164, y: -45.357025}
   m_SizeDelta: {x: 196.9, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &587250563
@@ -861,7 +960,7 @@ GameObject:
   - component: {fileID: 781847856}
   - component: {fileID: 781847855}
   m_Layer: 5
-  m_Name: WIN / LOSS (2)
+  m_Name: Loser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -883,7 +982,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: -129.5}
+  m_AnchoredPosition: {x: 8, y: -48.1}
   m_SizeDelta: {x: 271.4, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &781847855
@@ -919,7 +1018,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: WIN / LOSS
+  m_Text: LOSER
 --- !u!222 &781847856
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -940,7 +1039,7 @@ GameObject:
   - component: {fileID: 883288774}
   - component: {fileID: 883288773}
   m_Layer: 5
-  m_Name: WIN / LOSS (1)
+  m_Name: Winner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -962,7 +1061,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.000011, y: 83.5}
+  m_AnchoredPosition: {x: 8.000011, y: 157.6}
   m_SizeDelta: {x: 271.4, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &883288773
@@ -998,7 +1097,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: WIN / LOSS
+  m_Text: WINNER
 --- !u!222 &883288774
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1019,7 +1118,7 @@ GameObject:
   - component: {fileID: 1023813410}
   - component: {fileID: 1023813409}
   m_Layer: 5
-  m_Name: Kills (1) Text
+  m_Name: WinnerKills
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1036,12 +1135,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1246030695}
-  m_RootOrder: 5
+  m_Father: {fileID: 263174615}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 212.99994, y: 62}
+  m_AnchoredPosition: {x: 199.00836, y: 38.04297}
   m_SizeDelta: {x: 196.9, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023813409
@@ -1172,7 +1271,7 @@ GameObject:
   - component: {fileID: 1222067200}
   - component: {fileID: 1222067199}
   m_Layer: 5
-  m_Name: Player 1
+  m_Name: WinnerPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1194,7 +1293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 175.5}
+  m_AnchoredPosition: {x: 8, y: 83.9}
   m_SizeDelta: {x: 196.9, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222067199
@@ -1230,7 +1329,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player 1
+  m_Text: 'Player #'
 --- !u!222 &1222067200
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1266,15 +1365,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1318732035}
-  - {fileID: 1670970068}
-  - {fileID: 2025743273}
-  - {fileID: 234843893}
-  - {fileID: 296533625}
-  - {fileID: 1023813408}
-  - {fileID: 587250562}
-  - {fileID: 370290376}
-  - {fileID: 1360537587}
+  - {fileID: 503167626}
+  - {fileID: 263174615}
+  - {fileID: 31783958}
   m_Father: {fileID: 145528912}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1290,7 +1383,7 @@ GameObject:
   - component: {fileID: 1289545505}
   - component: {fileID: 1289545504}
   m_Layer: 5
-  m_Name: Player 2
+  m_Name: LoserPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1312,7 +1405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: -36.5}
+  m_AnchoredPosition: {x: 8, y: -120.4}
   m_SizeDelta: {x: 196.9, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289545504
@@ -1348,7 +1441,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player 2
+  m_Text: 'Player #'
 --- !u!222 &1289545505
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1460,7 +1553,7 @@ GameObject:
   - component: {fileID: 1318732037}
   - component: {fileID: 1318732036}
   m_Layer: 5
-  m_Name: Player Text
+  m_Name: PlayerHeading
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1477,7 +1570,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1246030695}
+  m_Father: {fileID: 503167626}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1539,7 +1632,7 @@ GameObject:
   - component: {fileID: 1360537589}
   - component: {fileID: 1360537588}
   m_Layer: 5
-  m_Name: Kills (2) Text
+  m_Name: LoserKills
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1556,12 +1649,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1246030695}
-  m_RootOrder: 8
+  m_Father: {fileID: 31783958}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 213, y: -21.399994}
+  m_AnchoredPosition: {x: 199.00842, y: -45.357025}
   m_SizeDelta: {x: 196.9, y: 42.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1360537588
@@ -1720,6 +1813,57 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1449282502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1449282503}
+  - component: {fileID: 1449282504}
+  m_Layer: 0
+  m_Name: ScriptHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1449282503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449282502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 531.9916, y: 315.45703, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1449282504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449282502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11151c4e37408a4aaf1c685ed96b963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winnerWinnerPlayer: {fileID: 1222067199}
+  loserLoserPlayer: {fileID: 1289545504}
+  winnerKills: {fileID: 1023813409}
+  winnerCharacter: {fileID: 296533626}
+  winnerPlayer: {fileID: 234843894}
+  loserKills: {fileID: 1360537588}
+  loserCharacter: {fileID: 370290377}
+  loserPlayer: {fileID: 587250563}
 --- !u!1 &1581986312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,7 +2055,7 @@ GameObject:
   - component: {fileID: 1670970070}
   - component: {fileID: 1670970069}
   m_Layer: 5
-  m_Name: Character Text
+  m_Name: CharacterHeading
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1928,7 +2072,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1246030695}
+  m_Father: {fileID: 503167626}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2061,7 +2205,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1362680259}
-        m_MethodName: MainMenu
+        m_MethodName: MainMenuLeaderboard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2122,7 +2266,7 @@ GameObject:
   - component: {fileID: 2025743275}
   - component: {fileID: 2025743274}
   m_Layer: 5
-  m_Name: Kills Text
+  m_Name: KillsHeading
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2139,7 +2283,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1246030695}
+  m_Father: {fileID: 503167626}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

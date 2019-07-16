@@ -1188,6 +1188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e8fa6c8c57100f44b35a268cbf1c2b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1Deaths: 0
+  player2Deaths: 0
 --- !u!4 &1148828333
 Transform:
   m_ObjectHideFlags: 0
@@ -1737,7 +1739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978590f9ed6f48a469bf2fe725e786e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 180
+  startingTime: 20
   CountdownText: {fileID: 617609234}
 --- !u!4 &1747411829
 Transform:
