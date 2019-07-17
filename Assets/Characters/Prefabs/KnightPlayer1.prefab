@@ -248,14 +248,14 @@ MonoBehaviour:
   attackDistance: 0
   attackDamage: 5
   attackSpeed: 0
-  attackStamina: 20
+  attackStamina: 10
   attackCooldown: 1.5
   dodgeDistance: 10
   dodgeCooldown: 3
   dodgeSpeed: 0
-  dodgeStamina: 30
+  dodgeStamina: 15
   damageBlocker: 0
-  maxHealthPoints: 8
+  maxHealthPoints: 16
   maxStaminaPoints: 100
   staminaRegen: 0.05
   playerNumber: 1

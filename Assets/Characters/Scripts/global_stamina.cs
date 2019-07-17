@@ -14,7 +14,9 @@ public class global_stamina : MonoBehaviour
 
     public static global_stamina Instance;
 
-    private Text showStamina;
+    //private Text showStamina;
+
+    private Image staminaBar;
 
     int playerNumber;
 
@@ -35,12 +37,14 @@ public class global_stamina : MonoBehaviour
 
         if (playerNumber == 1)
         {
-            showStamina = GameObject.Find("ShowStaminaPlayer1").GetComponent<Text>();
+            //showStamina = GameObject.Find("ShowStaminaPlayer1").GetComponent<Text>();
+            staminaBar = GameObject.Find("StaminaBar Player1").GetComponent<Image>();
         }
 
         if (playerNumber == 2)
         {
-            showStamina = GameObject.Find("ShowStaminaPlayer2").GetComponent<Text>();
+            //showStamina = GameObject.Find("ShowStaminaPlayer2").GetComponent<Text>();
+            staminaBar = GameObject.Find("StaminaBar Player2").GetComponent<Image>();
         }
     }
 
@@ -52,7 +56,8 @@ public class global_stamina : MonoBehaviour
             currentStaminaPoints = currentStaminaPoints + staminaRegen;
         }
 
-        showStamina.text = "Stamina: " + currentStaminaPoints.ToString("F0");
+        //showStamina.text = "Stamina: " + currentStaminaPoints.ToString("F0");
+        staminaBar.fillAmount = currentStaminaPoints / maxStaminaPoints;
     }
 
     public void DodgeStamina()

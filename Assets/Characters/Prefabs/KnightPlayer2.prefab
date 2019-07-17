@@ -338,14 +338,14 @@ MonoBehaviour:
   attackDistance: 0
   attackDamage: 5
   attackSpeed: 0
-  attackStamina: 20
+  attackStamina: 10
   attackCooldown: 1.5
   dodgeDistance: 10
   dodgeCooldown: 3
   dodgeSpeed: 0
-  dodgeStamina: 30
+  dodgeStamina: 15
   damageBlocker: 0
-  maxHealthPoints: 8
+  maxHealthPoints: 16
   maxStaminaPoints: 100
   staminaRegen: 0.05
   playerNumber: 2
@@ -367,7 +367,7 @@ MonoBehaviour:
   left: 276
   down: 274
   right: 275
-  dodge: 106
+  dodge: 107
   rotation: 0
   damageBlocker: 0
 --- !u!114 &1145090498093832513
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a89f23176eca434ab7f2335c6d71aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 107
+  attack: 108
   swordHilt: {fileID: 7493644139720623831}
 --- !u!1 &7493644139720623831
 GameObject:

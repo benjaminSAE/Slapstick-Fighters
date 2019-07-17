@@ -14,7 +14,9 @@ public class global_damagable : MonoBehaviour
 
     private int playerNumber;
 
-    private Text showHealth;
+    //private Text showHealth;
+
+    private Image healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -25,20 +27,28 @@ public class global_damagable : MonoBehaviour
 
         if (playerNumber == 1)
         {
-            showHealth = GameObject.Find("ShowHealthPlayer1").GetComponent<Text>();
+            //showHealth = GameObject.Find("ShowHealthPlayer1").GetComponent<Text>();
+            healthBar = GameObject.Find("HealthBar Player1").GetComponent<Image>();
         }
 
         if (playerNumber == 2)
         {
-            showHealth = GameObject.Find("ShowHealthPlayer2").GetComponent<Text>();
+            //showHealth = GameObject.Find("ShowHealthPlayer2").GetComponent<Text>();
+            healthBar = GameObject.Find("HealthBar Player2").GetComponent<Image>();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        showHealth.text = "Health: " + currentHP.ToString("F0");
+        if (playerNumber == 1 || playerNumber == 2)
+        {
+            //showHealth.text = "Health: " + currentHP.ToString("F0");
+            healthBar.fillAmount = currentHP / maxHP;
+        }
+        
         print("current health: " + gameObject + " " + currentHP);
+
         DoDamage();
     }
 

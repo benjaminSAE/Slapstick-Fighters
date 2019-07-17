@@ -9,11 +9,12 @@ public class KT_RoundTimerScript : MonoBehaviour
     float currentTime = 0f;
     //time in seconds
     [SerializeField] public float startingTime = 180f;
-    public Text CountdownText;
+    private Text CountdownText;
 
     void Start()
     {
         currentTime = startingTime;
+        CountdownText = GameObject.Find("Timer").GetComponent<Text>();
     }
 
     // Update is called once per frame

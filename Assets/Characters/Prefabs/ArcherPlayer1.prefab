@@ -153,17 +153,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 4
-  attackDistance: 10
+  attackDistance: 20
   attackDamage: 3
   attackSpeed: 0
-  attackStamina: 20
+  attackStamina: 10
   attackCooldown: 1
   dodgeDistance: 10
   dodgeCooldown: 4
   dodgeSpeed: 0
-  dodgeStamina: 50
+  dodgeStamina: 25
   damageBlocker: 0
-  maxHealthPoints: 6
+  maxHealthPoints: 12
   maxStaminaPoints: 100
   staminaRegen: 0.05
   playerNumber: 1

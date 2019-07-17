@@ -153,17 +153,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 4
-  attackDistance: 10
+  attackDistance: 20
   attackDamage: 3
   attackSpeed: 0
-  attackStamina: 20
+  attackStamina: 10
   attackCooldown: 1
   dodgeDistance: 10
   dodgeCooldown: 4
   dodgeSpeed: 0
-  dodgeStamina: 50
+  dodgeStamina: 25
   damageBlocker: 0
-  maxHealthPoints: 6
+  maxHealthPoints: 12
   maxStaminaPoints: 100
   staminaRegen: 0.05
   playerNumber: 2
@@ -185,7 +185,7 @@ MonoBehaviour:
   left: 276
   down: 274
   right: 275
-  dodge: 106
+  dodge: 107
   rotation: 0
   damageBlocker: 0
 --- !u!114 &1969272035995724931
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd93582432d4b1640b1c0aa34b771cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 107
+  attack: 108
   archer: {fileID: 1442374932123282489}
   archerArrow: {fileID: 3379376069855900016}
 --- !u!1 &3379376069855900016

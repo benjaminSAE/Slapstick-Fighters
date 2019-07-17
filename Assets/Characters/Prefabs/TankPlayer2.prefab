@@ -156,14 +156,14 @@ MonoBehaviour:
   attackDistance: 15
   attackDamage: 7
   attackSpeed: 0
-  attackStamina: 0
+  attackStamina: 20
   attackCooldown: 2
   dodgeDistance: 0
   dodgeCooldown: 0
   dodgeSpeed: 0
-  dodgeStamina: 0.5
+  dodgeStamina: 0.025
   damageBlocker: 1
-  maxHealthPoints: 13
+  maxHealthPoints: 20
   maxStaminaPoints: 100
   staminaRegen: 0.05
   playerNumber: 2
@@ -185,7 +185,7 @@ MonoBehaviour:
   left: 276
   down: 274
   right: 275
-  dodge: 106
+  dodge: 108
   rotation: 0
   damageBlocker: 0
 --- !u!114 &3656766916245772311
