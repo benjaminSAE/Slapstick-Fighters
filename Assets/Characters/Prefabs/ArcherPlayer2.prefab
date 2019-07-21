@@ -158,8 +158,8 @@ MonoBehaviour:
   attackSpeed: 0
   attackStamina: 10
   attackCooldown: 1
-  dodgeDistance: 10
-  dodgeCooldown: 4
+  dodgeDistance: 30
+  dodgeCooldown: 2
   dodgeSpeed: 0
   dodgeStamina: 25
   damageBlocker: 0
