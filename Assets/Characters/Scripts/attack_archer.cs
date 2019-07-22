@@ -65,7 +65,7 @@ public class attack_archer : MonoBehaviour
         if (currentStaminaPoints > attackStamina && Time.time > nextAttack && Input.GetKeyDown(attack))
         {
             //upwards attack movement
-            if (rotation > -3 && rotation < 3)
+            if (rotation > -22 && rotation < 22)
             {
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 top = new Vector3(0, 0, attackDistance * attackDistanceBase);
@@ -80,7 +80,7 @@ public class attack_archer : MonoBehaviour
             }
 
             //upwards/right attack movement
-            if (rotation > 42 && rotation < 48)
+            if (rotation > 23 && rotation < 67)
             {
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 topRight = new Vector3(attackDistance * attackDistanceBase * attackDistanceBaseCorner, 0, attackDistance * attackDistanceBase * attackDistanceBaseCorner);
@@ -95,7 +95,7 @@ public class attack_archer : MonoBehaviour
             }
 
             //right attack movement
-            if (rotation > 87 && rotation < 93)
+            if (rotation > 68 && rotation < 112)
             {
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 right = new Vector3(attackDistance * attackDistanceBase, 0, 0);
@@ -110,7 +110,7 @@ public class attack_archer : MonoBehaviour
             }
 
             //downwards/right attack movement
-            if (rotation > 132 && rotation < 138)
+            if (rotation > 113 && rotation < 157)
             {
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 bottomRight = new Vector3(attackDistance * attackDistanceBase * attackDistanceBaseCorner, 0, -attackDistance * attackDistanceBase * attackDistanceBaseCorner);
@@ -125,7 +125,7 @@ public class attack_archer : MonoBehaviour
             }
 
             //downwards attack movement
-            if (rotation > 177 && rotation < 183 || rotation > -183 && rotation < -177)
+            if (rotation > 158 && rotation < 200 || rotation > -200 && rotation < -158)
             {
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 bottom = new Vector3(0, 0, -attackDistance * attackDistanceBase);
@@ -140,7 +140,7 @@ public class attack_archer : MonoBehaviour
             }
 
             //downwards/left attack movement
-            if (rotation > -138 && rotation < -132)
+            if (rotation > -157 && rotation < -113)
             {
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 bottomLeft = new Vector3(-attackDistance * attackDistanceBase * attackDistanceBaseCorner, 0, -attackDistance * attackDistanceBase * attackDistanceBaseCorner);
@@ -155,7 +155,7 @@ public class attack_archer : MonoBehaviour
             }
 
             //left attack movement
-            if (rotation > -93 && rotation < -87)
+            if (rotation > -112 && rotation < -68)
             {
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 left = new Vector3(-attackDistance * attackDistanceBase, 0, 0);
@@ -170,7 +170,7 @@ public class attack_archer : MonoBehaviour
             }
 
             //upwards/left attack movement
-            if (rotation > -48 && rotation < -42)
+            if (rotation > -67 && rotation < -23)
             {
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 topLeft = new Vector3(-attackDistance * attackDistanceBase * attackDistanceBaseCorner, 0, attackDistance * attackDistanceBase * attackDistanceBaseCorner);
