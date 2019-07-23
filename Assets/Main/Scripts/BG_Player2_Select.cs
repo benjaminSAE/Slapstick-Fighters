@@ -9,6 +9,11 @@ public class BG_Player2_Select : MonoBehaviour
 
     public static BG_Player2_Select Instance;
 
+    private void Start()
+    {
+        characterSelectP2 = 2;    
+    }
+
     private void Awake()
     {
         Instance = this;
