@@ -18,6 +18,8 @@ public class global_damagable : MonoBehaviour
 
     private Image healthBar;
 
+    private float healthPickup;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,8 @@ public class global_damagable : MonoBehaviour
             //showHealth = GameObject.Find("ShowHealthPlayer2").GetComponent<Text>();
             healthBar = GameObject.Find("HealthBar Player2").GetComponent<Image>();
         }
+
+        healthPickup = maxHP / 3;
     }
 
     // Update is called once per frame
@@ -82,6 +86,18 @@ public class global_damagable : MonoBehaviour
         {
             attackDamage = objectCollided.GetComponentInParent<global_stats>().attackDamage;
             currentHP -= attackDamage;
+        }
+    }
+
+    public void HealthPickupMethod()
+    {
+        if (currentHP + healthPickup < maxHP)
+        {
+            currentHP += healthPickup;
+        }
+        else
+        {
+            currentHP = maxHP;
         }
     }
 }

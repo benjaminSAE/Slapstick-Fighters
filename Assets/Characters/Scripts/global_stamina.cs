@@ -14,6 +14,8 @@ public class global_stamina : MonoBehaviour
 
     public static global_stamina Instance;
 
+    private float staminaPickup;
+
     //private Text showStamina;
 
     private Image staminaBar;
@@ -46,6 +48,8 @@ public class global_stamina : MonoBehaviour
             //showStamina = GameObject.Find("ShowStaminaPlayer2").GetComponent<Text>();
             staminaBar = GameObject.Find("StaminaBar Player2").GetComponent<Image>();
         }
+
+        staminaPickup = maxStaminaPoints / 5;
     }
 
     // Update is called once per frame
@@ -68,5 +72,17 @@ public class global_stamina : MonoBehaviour
     public void AttackStamina()
     {
         currentStaminaPoints = currentStaminaPoints - attackStamina;
+    }
+
+    public void StaminaPickupMethod()
+    {
+        if (currentStaminaPoints + staminaPickup < maxStaminaPoints)
+        {
+            currentStaminaPoints += staminaPickup;
+        }
+        else
+        {
+            currentStaminaPoints = maxStaminaPoints;
+        }
     }
 }

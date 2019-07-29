@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 4320839269720715679}
   m_Layer: 0
   m_Name: KnightPlayer1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
   damageBlocker: 0
   maxHealthPoints: 16
   maxStaminaPoints: 100
-  staminaRegen: 0.05
+  staminaRegen: 0.025
   playerNumber: 1
   rotation: 0.1
   rotationSpeed: 100
