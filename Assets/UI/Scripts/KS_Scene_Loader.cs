@@ -5,14 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class KS_Scene_Loader : MonoBehaviour
 {
+    int mapSelect;
+
+    private void Start()
+    {
+        mapSelect = 1;
+    }
+
     public void MapSelectionSwamp()
     {
-        SceneManager.LoadScene("KT_SwampMap");
+        mapSelect = 1;
     }
 
     public void MapSelectionTundra()
     {
-        SceneManager.LoadScene("NA_TundraMap");
+        mapSelect = 2;
     }
 
     public void MainMenu()
@@ -29,5 +36,18 @@ public class KS_Scene_Loader : MonoBehaviour
         Destroy(KillCounter);
 
         SceneManager.LoadScene("KS_Main_Menu");
+    }
+
+    public void MapSelection()
+    {
+        if (mapSelect == 1)
+        {
+            SceneManager.LoadScene("KT_SwampMap");
+        }
+
+        if (mapSelect == 2)
+        {
+            SceneManager.LoadScene("NA_TundraMap");
+        }
     }
 }
