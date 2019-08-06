@@ -8436,7 +8436,7 @@ GameObject:
   - component: {fileID: 1646870563}
   - component: {fileID: 1646870564}
   m_Layer: 0
-  m_Name: P1 Knight
+  m_Name: P2 Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9725,7 +9725,7 @@ GameObject:
   - component: {fileID: 1885640219}
   - component: {fileID: 1885640220}
   m_Layer: 0
-  m_Name: P1 Archer
+  m_Name: P2 Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9812,7 +9812,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1949860639
 GameObject:
   m_ObjectHideFlags: 0
@@ -10244,7 +10244,7 @@ GameObject:
   - component: {fileID: 2040581040}
   - component: {fileID: 2040581041}
   m_Layer: 0
-  m_Name: P1 Tanks
+  m_Name: P2 Tanks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10331,7 +10331,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &2046857444
 GameObject:
   m_ObjectHideFlags: 0
@@ -10389,6 +10389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterSelectP1: 0
+  characterPlayer1: 0
+  characterPlayer2: 0
 --- !u!4 &2046857448
 Transform:
   m_ObjectHideFlags: 0
@@ -10494,7 +10496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2136989391
 Transform:
   m_ObjectHideFlags: 0
@@ -10503,7 +10505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136989390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.76903313}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1253231664}
