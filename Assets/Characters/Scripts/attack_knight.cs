@@ -67,6 +67,9 @@ public class attack_knight : MonoBehaviour
             //runs the method from "global_stamina" to use an amount of stamina points
             global_stamina stamina_globalInstance = GetComponent<global_stamina>();
             stamina_globalInstance.AttackStamina();
+
+            BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
+            characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.KnightAttack);
         }
     }
 

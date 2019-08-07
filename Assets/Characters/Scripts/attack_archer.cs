@@ -24,6 +24,8 @@ public class attack_archer : MonoBehaviour
     [SerializeField] private GameObject archer;
     [SerializeField] private GameObject archerArrow;
 
+
+
     //true/false statement to determine when the Coroutine's while loop finishes
     bool whileLoop = false;
 
@@ -183,6 +185,9 @@ public class attack_archer : MonoBehaviour
                 global_stamina stamina_globalInstance = GetComponent<global_stamina>();
                 stamina_globalInstance.AttackStamina();
             }
+
+            BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
+            characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.ArcherAttack);
         }
     }
 

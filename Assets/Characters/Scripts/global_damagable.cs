@@ -62,6 +62,9 @@ public class global_damagable : MonoBehaviour
         {
             print("dead: " + gameObject);
 
+            BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
+            characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.Death);
+
             if (playerNumber == 1)
             {
                 global_kill_counter.Instance.ScoreCounterPlayer1();
@@ -86,6 +89,9 @@ public class global_damagable : MonoBehaviour
         {
             attackDamage = objectCollided.GetComponentInParent<global_stats>().attackDamage;
             currentHP -= attackDamage;
+
+            BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
+            characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.Flinching);
         }
     }
 

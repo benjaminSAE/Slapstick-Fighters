@@ -31,9 +31,22 @@ public class global_movement_controls : MonoBehaviour
     
     float currentStaminaPoints;
 
+    //FMOD
+    //[FMODUnity.EventRef] [SerializeField] private string walkingSounds;
+    //FMOD.Studio.EventInstance walkingEvent;
+    [SerializeField] private float walkingSoundSpeed;
+    [SerializeField] private float dodgingSoundSpeed;
+    private bool isWalking = false;
+    private bool isDodging = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        //setting speed of walking sounds
+        InvokeRepeating("CallFootsteps", 0, walkingSoundSpeed);
+        InvokeRepeating("CallDodging", 0, dodgingSoundSpeed);
+
+        //walkingEvent.start();
 
         //initialising variables from "stats_global" for basic movement
         movementSpeed = gameObject.GetComponent<global_stats>().movementSpeed;
@@ -379,7 +392,6 @@ public class global_movement_controls : MonoBehaviour
             }
         }
 
-
         //right movement/rotation
         if (Input.GetKey(right))
         {
@@ -550,6 +562,29 @@ public class global_movement_controls : MonoBehaviour
         if (Input.GetKey(up) || Input.GetKey(left) || Input.GetKey(down) || Input.GetKey(right))
         {
             transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
+            isWalking = true;
+        }
+        else
+        {
+            isWalking = false;
+        }
+    }
+
+    void CallFootsteps()
+    {
+        if (isWalking == true)
+        {
+            BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
+            characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.Walking);
+        }
+    }
+
+    void CallDodging()
+    {
+        if (isDodging == true)
+        {
+            BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
+            characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.Dodging);
         }
     }
 
@@ -564,9 +599,13 @@ public class global_movement_controls : MonoBehaviour
         {
             float move = Mathf.Lerp(0, 1, (Time.time - startime) * speed);
 
+            isDodging = true;
+
             transform.position += direction * move;
 
             yield return null;
         }
+
+        isDodging = false;
     }
 }

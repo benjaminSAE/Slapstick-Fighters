@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{c206af0e-472e-41ed-add8-b60fa925baf0}">
+		<property name="assetPath">
+			<value>squeekyFeet1.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.11988662131519275</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ac487fa3-09a3-4e13-8891-62db9a3f838f}</destination>
+		</relationship>
+	</object>
+</objects>

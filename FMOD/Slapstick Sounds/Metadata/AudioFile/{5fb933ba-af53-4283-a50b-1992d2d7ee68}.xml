@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{5fb933ba-af53-4283-a50b-1992d2d7ee68}">
+		<property name="assetPath">
+			<value>scream5.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.5160997732426305</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ac487fa3-09a3-4e13-8891-62db9a3f838f}</destination>
+		</relationship>
+	</object>
+</objects>

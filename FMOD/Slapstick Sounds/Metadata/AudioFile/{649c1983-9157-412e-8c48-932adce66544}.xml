@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{649c1983-9157-412e-8c48-932adce66544}">
+		<property name="assetPath">
+			<value>staminaGet1.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.5135827664399093</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ac487fa3-09a3-4e13-8891-62db9a3f838f}</destination>
+		</relationship>
+	</object>
+</objects>

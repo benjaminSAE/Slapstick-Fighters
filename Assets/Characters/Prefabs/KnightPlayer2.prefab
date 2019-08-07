@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 63350972321240614}
   - component: {fileID: 4268659964308336635}
   - component: {fileID: 1145090498093832513}
+  - component: {fileID: -6839866418065515791}
   m_Layer: 0
   m_Name: KnightPlayer2
   m_TagString: Player
@@ -370,6 +371,8 @@ MonoBehaviour:
   dodge: 107
   rotation: 0
   damageBlocker: 0
+  walkingSoundSpeed: 0.5
+  dodgingSoundSpeed: 0.6
 --- !u!114 &1145090498093832513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +387,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: 108
   swordHilt: {fileID: 7493644139720623831}
+--- !u!114 &-6839866418065515791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7401986755516032393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b22b670579708b04a83b093aa1cad2d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingSounds: event:/Character Sounds/Movement/3D Steps
+  squeekyFeetSounds: event:/Character Sounds/Movement/Squeeky Feet
+  whooshSounds: event:/Character Sounds/Misc/Whooshing
+  archerAttackSounds: event:/Character Sounds/Combat/Archer Attacks
+  knightAttackSounds: event:/Character Sounds/Combat/Knight Attacks
+  tankAttackSounds: event:/Character Sounds/Combat/Tank Attacks
+  deathSounds: event:/Character Sounds/Combat/Deaths
+  fallingDeathSounds: event:/Character Sounds/Combat/Falling Deaths
+  dodgingSounds: event:/Character Sounds/Movement/Dodging
+  flinchingSounds: event:/Character Sounds/Combat/Flinching
+  healthCollectSounds: event:/Character Sounds/Misc/Health Collect
+  staminaCollectSounds: event:/Character Sounds/Misc/Stamina Collect
+  respawnScreamingSounds: event:/Character Sounds/Misc/Screaming Respawn
+  victoryShoutSounds: event:/Character Sounds/Emotes/Victory Shout
+  victoryDanceSounds: event:/Character Sounds/Emotes/Victory Dance
 --- !u!1 &7493644139720623831
 GameObject:
   m_ObjectHideFlags: 0

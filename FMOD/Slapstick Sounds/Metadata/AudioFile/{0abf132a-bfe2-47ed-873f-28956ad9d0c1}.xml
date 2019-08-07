@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{0abf132a-bfe2-47ed-873f-28956ad9d0c1}">
+		<property name="assetPath">
+			<value>victoryShout4.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.3947392290249434</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ac487fa3-09a3-4e13-8891-62db9a3f838f}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -55,6 +55,8 @@ public class global_respawn : MonoBehaviour
 
     public void RespawnPlayer2()
     {
+
+
         if (playerTwo == 1)
         {
             Instantiate(archerPlayer2, spawnPlayer2.transform);

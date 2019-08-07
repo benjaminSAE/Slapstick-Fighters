@@ -170,6 +170,9 @@ public class attack_tank : MonoBehaviour
                 stamina_globalInstance.AttackStamina();
             }
         }
+
+        BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
+        characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.TankAttack);
     }
 
     //method that runs the Coroutine
