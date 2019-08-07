@@ -17,7 +17,7 @@ public class Instantiate_Player2 : MonoBehaviour
     {
         GameObject characterSelect = GameObject.Find("CharacterSelectValues");
 
-        characterSelectP2 = characterSelect.GetComponent<BG_Player2_Select>().characterSelectP2;
+        characterSelectP2 = characterSelect.GetComponent<BG_Player_Select>().characterPlayer2;
 
         if (characterSelectP2 == 1)
         {

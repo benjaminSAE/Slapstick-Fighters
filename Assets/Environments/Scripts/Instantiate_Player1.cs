@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Instantiate_Player1 : MonoBehaviour
 {
-    int characterSelectP1;
+    private int characterSelectP1;
 
     [SerializeField] private GameObject archerPrefab;
     [SerializeField] private GameObject knightPrefab;
@@ -17,7 +17,7 @@ public class Instantiate_Player1 : MonoBehaviour
     {
         GameObject characterSelect = GameObject.Find("CharacterSelectValues");
 
-        characterSelectP1 = characterSelect.GetComponent<BG_Player1_Select>().characterSelectP1;
+        characterSelectP1 = characterSelect.GetComponent<BG_Player_Select>().characterPlayer1;
 
         if (characterSelectP1 == 1)
         {

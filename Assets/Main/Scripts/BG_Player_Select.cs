@@ -4,39 +4,49 @@ using UnityEngine;
 
 public class BG_Player_Select : MonoBehaviour
 {
+    //creating a value to determine which character player one selected: 1 = Archer, 2 = Knight and 3 = Tank
+    /*[HideInInspector]*/ public int characterPlayer1 = 2;
+    /*[HideInInspector]*/ public int characterPlayer2 = 2;
+
+    private void Awake()
+    {
+        characterPlayer1 = 2;
+        characterPlayer2 = 2;
+    }
+
     public void Player1Tank()
     {
         Debug.LogWarning("P1 TANK");
-        BG_Player1_Select.Instance.TankSelect();
+        characterPlayer1 = 3;
     }
 
     public void Player1Archer()
     {
         Debug.LogWarning("P1 ARCHER");
-        BG_Player1_Select.Instance.ArcherSelect();
+        characterPlayer1 = 1;
     }
 
     public void Player1Knight()
     {
         Debug.LogWarning("P1 KNIGHT");
-        BG_Player1_Select.Instance.KnightSelect();
+        characterPlayer1 = 2;
     }
 
     public void Player2Tank()
     {
         Debug.LogWarning("P2 TANK");
-        BG_Player2_Select.Instance.TankSelect();
+        characterPlayer2 = 3;
     }
 
     public void Player2Archer()
     {
         Debug.LogWarning("P2 ARCHER");
-        BG_Player2_Select.Instance.ArcherSelect();
+        characterPlayer2 = 1;
     }
 
     public void Player2Knight()
     {
         Debug.LogWarning("P2 KNIGHT");
-        BG_Player2_Select.Instance.KnightSelect();
+        characterPlayer2 = 2;
     }
 }

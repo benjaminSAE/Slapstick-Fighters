@@ -31,8 +31,8 @@ public class global_respawn : MonoBehaviour
     {
         CharacterSelectValues = GameObject.Find("CharacterSelectValues");
 
-        playerOne = CharacterSelectValues.GetComponent<BG_Player1_Select>().characterSelectP1;
-        playerTwo = CharacterSelectValues.GetComponent<BG_Player2_Select>().characterSelectP2;
+        playerOne = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer1;
+        playerTwo = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer2;
     }
 
     public void RespawnPlayer1()
