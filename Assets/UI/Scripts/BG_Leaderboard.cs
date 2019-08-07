@@ -32,8 +32,8 @@ public class BG_Leaderboard : MonoBehaviour
         CharacterSelectValues = GameObject.Find("CharacterSelectValues");
         KillCounter = GameObject.Find("KillCounter");
 
-        player1Character = CharacterSelectValues.GetComponent<BG_Player1_Select>().characterSelectP1;
-        player2Character = CharacterSelectValues.GetComponent<BG_Player2_Select>().characterSelectP2;
+        player1Character = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer1;
+        player2Character = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer2;
 
         player1Kills = KillCounter.GetComponent<global_kill_counter>().player1Deaths;
         player2Kills = KillCounter.GetComponent<global_kill_counter>().player2Deaths;
