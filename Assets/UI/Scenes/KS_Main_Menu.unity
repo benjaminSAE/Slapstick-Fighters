@@ -892,6 +892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 208378669}
+  - component: {fileID: 208378670}
   m_Layer: 0
   m_Name: P2 Player Row
   m_TagString: Untagged
@@ -916,6 +917,19 @@ Transform:
   m_Father: {fileID: 2007468897}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &208378670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208378668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1184210157, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AllowSwitchOff: 0
 --- !u!1 &222820556
 GameObject:
   m_ObjectHideFlags: 0
@@ -4551,7 +4565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &873850221
 Transform:
   m_ObjectHideFlags: 0
@@ -7146,6 +7160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1435530109}
+  - component: {fileID: 1435530110}
   m_Layer: 0
   m_Name: P1 Archer
   m_TagString: Untagged
@@ -7174,6 +7189,67 @@ RectTransform:
   m_AnchoredPosition: {x: 269.7, y: -91.599976}
   m_SizeDelta: {x: 165.45, y: 41.85}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1435530110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435530108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: fdf3e344267356c40ad3a3e124f1b11c,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 821555238a016b142942fdef4b6c2763, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: e08e36cda91119d4fb51fca79547bb18, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: f5f3cbf6d13ba4e48821130a0df536d5, type: 3}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1576736323}
+  toggleTransition: 1
+  graphic: {fileID: 498090126}
+  m_Group: {fileID: 1603260814}
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2136989393}
+        m_MethodName: Player1Archer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_IsOn: 1
 --- !u!1 &1450351479
 GameObject:
   m_ObjectHideFlags: 0
@@ -7931,6 +8007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1603260813}
+  - component: {fileID: 1603260814}
   m_Layer: 0
   m_Name: P1 Player Row
   m_TagString: Untagged
@@ -7955,6 +8032,19 @@ Transform:
   m_Father: {fileID: 2007468897}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1603260814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603260812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1184210157, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AllowSwitchOff: 0
 --- !u!1 &1612449118
 GameObject:
   m_ObjectHideFlags: 0
@@ -7964,6 +8054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1612449119}
+  - component: {fileID: 1612449120}
   m_Layer: 0
   m_Name: P1 Tanks
   m_TagString: Untagged
@@ -7992,6 +8083,67 @@ RectTransform:
   m_AnchoredPosition: {x: -138.1, y: -91.6}
   m_SizeDelta: {x: 165.45, y: 41.85}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1612449120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612449118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: fdf3e344267356c40ad3a3e124f1b11c,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 821555238a016b142942fdef4b6c2763, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: e08e36cda91119d4fb51fca79547bb18, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: f5f3cbf6d13ba4e48821130a0df536d5, type: 3}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1030323487}
+  toggleTransition: 1
+  graphic: {fileID: 989505295}
+  m_Group: {fileID: 1603260814}
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2136989393}
+        m_MethodName: Player1Tank
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_IsOn: 0
 --- !u!1 &1614534718
 GameObject:
   m_ObjectHideFlags: 0
@@ -8282,8 +8434,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1646870563}
+  - component: {fileID: 1646870564}
   m_Layer: 0
-  m_Name: P2 Knight
+  m_Name: P1 Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8310,6 +8463,67 @@ RectTransform:
   m_AnchoredPosition: {x: 61.4, y: -91.60004}
   m_SizeDelta: {x: 165.45, y: 41.85}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1646870564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646870562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: fdf3e344267356c40ad3a3e124f1b11c,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: e08e36cda91119d4fb51fca79547bb18, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 821555238a016b142942fdef4b6c2763, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: f5f3cbf6d13ba4e48821130a0df536d5, type: 3}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 851709328}
+  toggleTransition: 1
+  graphic: {fileID: 2063763255}
+  m_Group: {fileID: 208378670}
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2136989393}
+        m_MethodName: Player2Knight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_IsOn: 1
 --- !u!1 &1707347714
 GameObject:
   m_ObjectHideFlags: 0
@@ -8499,6 +8713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1738837954}
+  - component: {fileID: 1738837955}
   m_Layer: 0
   m_Name: P1 Knight
   m_TagString: Untagged
@@ -8527,6 +8742,67 @@ RectTransform:
   m_AnchoredPosition: {x: 61.4, y: -91.60004}
   m_SizeDelta: {x: 165.45, y: 41.85}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1738837955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738837953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: fdf3e344267356c40ad3a3e124f1b11c,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 821555238a016b142942fdef4b6c2763, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: e08e36cda91119d4fb51fca79547bb18, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: f5f3cbf6d13ba4e48821130a0df536d5, type: 3}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 168823605}
+  toggleTransition: 1
+  graphic: {fileID: 574913376}
+  m_Group: {fileID: 1603260814}
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2136989393}
+        m_MethodName: Player1Knight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_IsOn: 0
 --- !u!1 &1773305110
 GameObject:
   m_ObjectHideFlags: 0
@@ -9447,8 +9723,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1885640219}
+  - component: {fileID: 1885640220}
   m_Layer: 0
-  m_Name: P2 Archer
+  m_Name: P1 Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9475,6 +9752,67 @@ RectTransform:
   m_AnchoredPosition: {x: 269.7, y: -91.599976}
   m_SizeDelta: {x: 165.45, y: 41.85}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1885640220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885640218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: fdf3e344267356c40ad3a3e124f1b11c,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: e08e36cda91119d4fb51fca79547bb18, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 821555238a016b142942fdef4b6c2763, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: f5f3cbf6d13ba4e48821130a0df536d5, type: 3}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1169584888}
+  toggleTransition: 1
+  graphic: {fileID: 1951727978}
+  m_Group: {fileID: 208378670}
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2136989393}
+        m_MethodName: Player2Archer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_IsOn: 1
 --- !u!1 &1949860639
 GameObject:
   m_ObjectHideFlags: 0
@@ -9904,8 +10242,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2040581040}
+  - component: {fileID: 2040581041}
   m_Layer: 0
-  m_Name: P2 Tanks
+  m_Name: P1 Tanks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9932,6 +10271,67 @@ RectTransform:
   m_AnchoredPosition: {x: -138.1, y: -91.6}
   m_SizeDelta: {x: 165.45, y: 41.85}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2040581041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040581039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: fdf3e344267356c40ad3a3e124f1b11c,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: e08e36cda91119d4fb51fca79547bb18, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 821555238a016b142942fdef4b6c2763, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: f5f3cbf6d13ba4e48821130a0df536d5, type: 3}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1383479913}
+  toggleTransition: 1
+  graphic: {fileID: 384584182}
+  m_Group: {fileID: 208378670}
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2136989393}
+        m_MethodName: Player2Tank
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_IsOn: 1
 --- !u!1 &2046857444
 GameObject:
   m_ObjectHideFlags: 0
@@ -9989,8 +10389,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterSelectP1: 0
-  characterPlayer1: 0
-  characterPlayer2: 0
 --- !u!4 &2046857448
 Transform:
   m_ObjectHideFlags: 0
@@ -10096,7 +10494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2136989391
 Transform:
   m_ObjectHideFlags: 0
@@ -10105,7 +10503,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136989390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.76903313}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1253231664}
