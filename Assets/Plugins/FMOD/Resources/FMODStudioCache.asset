@@ -38,12 +38,35 @@ MonoBehaviour:
   Path: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick
     Sounds\Build\Desktop\Master.strings.bank
   SubDir: 
-  lastModified: 637008040477108996
+  lastModified: 637011259804225312
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1466
+    Value: 1794
   Exists: 1
+--- !u!114 &-7773968911943192780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/instrumental
+  m_EditorClassIdentifier: 
+  Path: event:/Music/instrumental
+  guid: f61e8c657587664082db9c22a29b0980
+  Banks:
+  - {fileID: 5331148680293188853}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 190933
 --- !u!114 &-6682625144385611417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +90,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1660
+--- !u!114 &-5309772961630404411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/battle1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/battle1
+  guid: e316a19c93247f4eb48524148631d4ae
+  Banks:
+  - {fileID: 5331148680293188853}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 144358
 --- !u!114 &-5158043350158745695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +136,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 610
+--- !u!114 &-5086594637036453172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/battle
+  m_EditorClassIdentifier: 
+  Path: event:/Music/battle
+  guid: c32149434948864bbedc04e89f2d8e38
+  Banks:
+  - {fileID: 5331148680293188853}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 138298
 --- !u!114 &-3396329340824302614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +181,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 610
+--- !u!114 &-2470589470483489866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/victory
+  m_EditorClassIdentifier: 
+  Path: event:/Music/victory
+  guid: 61eec8a6ec58a4408f319283b361ce46
+  Banks:
+  - {fileID: 5331148680293188853}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 39473
 --- !u!114 &-2300339843639827817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +273,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 545
+--- !u!114 &-1507750997677071447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/ambient
+  m_EditorClassIdentifier: 
+  Path: event:/Music/ambient
+  guid: 37dcb98f11d9f54ebdad2d31bb546861
+  Banks:
+  - {fileID: 5331148680293188853}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 253399
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,13 +327,44 @@ MonoBehaviour:
   - {fileID: 9165618431429589248}
   - {fileID: -2300339843639827817}
   - {fileID: 1416399338019934704}
+  - {fileID: -1507750997677071447}
+  - {fileID: -2470589470483489866}
+  - {fileID: 188997490016281341}
+  - {fileID: 6947977120397617233}
+  - {fileID: -5086594637036453172}
+  - {fileID: 5145825293957068540}
+  - {fileID: -5309772961630404411}
+  - {fileID: -7773968911943192780}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5331148680293188853}
   StringsBanks:
   - {fileID: -8932673001402932360}
-  stringsBankWriteTime: 637008040477108996
+  stringsBankWriteTime: 637011259804225312
   cacheVersion: 3
+--- !u!114 &188997490016281341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/menu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/menu
+  guid: 66109f6623ae0748af2e831fc0de5262
+  Banks:
+  - {fileID: 5331148680293188853}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 228577
 --- !u!114 &989188056800076467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,6 +525,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5918
+--- !u!114 &5145825293957068540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/battle3
+  m_EditorClassIdentifier: 
+  Path: event:/Music/battle3
+  guid: e023322cd816d245bdae7b5d01e85b24
+  Banks:
+  - {fileID: 5331148680293188853}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 162632
 --- !u!114 &5331148680293188853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,11 +563,11 @@ MonoBehaviour:
   Path: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick
     Sounds\Build\Desktop\Master.bank
   SubDir: 
-  lastModified: 637008040477049527
+  lastModified: 637011259804155886
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1070784
+    Value: 16840160
   Exists: 1
 --- !u!114 &6817679613265824374
 MonoBehaviour:
@@ -423,6 +592,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 666
+--- !u!114 &6947977120397617233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/battle2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/battle2
+  guid: c1a6aacd34e41544b0c1e822d8fc487f
+  Banks:
+  - {fileID: 5331148680293188853}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 139621
 --- !u!114 &8926086358504928274
 MonoBehaviour:
   m_ObjectHideFlags: 0

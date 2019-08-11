@@ -540,6 +540,7 @@ GameObject:
   - component: {fileID: 515900909}
   - component: {fileID: 515900908}
   - component: {fileID: 515900907}
+  - component: {fileID: 515900910}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -554,7 +555,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515900906}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &515900908
 Camera:
   m_ObjectHideFlags: 0
@@ -612,6 +613,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 43.861004, y: 0, z: 0}
+--- !u!114 &515900910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515900906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b1d3c36d3f4494eb0764ec61d5a303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instrumentalMusicMusic: event:/Music/instrumental
+  battleMusicMusic: event:/Music/battle
+  battleMusic1Music: event:/Music/battle1
+  battleMusic2Music: event:/Music/battle2
+  battleMusic3Music: event:/Music/battle3
 --- !u!1001 &516455876
 PrefabInstance:
   m_ObjectHideFlags: 0

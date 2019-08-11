@@ -5,8 +5,8 @@ using UnityEngine;
 public class BG_Player_Select : MonoBehaviour
 {
     //creating a value to determine which character player one selected: 1 = Archer, 2 = Knight and 3 = Tank
-    /*[HideInInspector]*/ public int characterPlayer1 = 2;
-    /*[HideInInspector]*/ public int characterPlayer2 = 2;
+    [HideInInspector] public int characterPlayer1 = 2;
+    [HideInInspector] public int characterPlayer2 = 2;
 
     private void Awake()
     {
