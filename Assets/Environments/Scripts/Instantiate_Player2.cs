@@ -13,7 +13,7 @@ public class Instantiate_Player2 : MonoBehaviour
     [SerializeField] private Transform player2Spawn;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         GameObject characterSelect = GameObject.Find("CharacterSelectValues");
 

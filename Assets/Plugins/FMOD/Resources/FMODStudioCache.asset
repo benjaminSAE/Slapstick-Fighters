@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick
     Sounds\Build\Desktop\Master.strings.bank
   SubDir: 
-  lastModified: 637011259804225312
+  lastModified: 637011287913636624
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -340,7 +340,7 @@ MonoBehaviour:
   - {fileID: 5331148680293188853}
   StringsBanks:
   - {fileID: -8932673001402932360}
-  stringsBankWriteTime: 637011259804225312
+  stringsBankWriteTime: 637011287913636624
   cacheVersion: 3
 --- !u!114 &188997490016281341
 MonoBehaviour:
@@ -563,7 +563,7 @@ MonoBehaviour:
   Path: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick
     Sounds\Build\Desktop\Master.bank
   SubDir: 
-  lastModified: 637011259804155886
+  lastModified: 637011287913597547
   LoadResult: 0
   FileSizes:
   - Name: Desktop
