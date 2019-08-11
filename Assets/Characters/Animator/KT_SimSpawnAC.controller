@@ -103,7 +103,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SimAnimatorController
+  m_Name: KT_SimSpawnAC
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -206,13 +206,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 298366199016669321}
-    m_Position: {x: 167, y: 209, z: 0}
+    m_Position: {x: 160, y: 210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3627665883705497701}
-    m_Position: {x: 355, y: 330, z: 0}
+    m_Position: {x: 360, y: 330, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3009801980958783220}
-    m_Position: {x: 666, y: 380, z: 0}
+    m_Position: {x: 670, y: 380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5051692735884167186}
     m_Position: {x: 951, y: 392, z: 0}
