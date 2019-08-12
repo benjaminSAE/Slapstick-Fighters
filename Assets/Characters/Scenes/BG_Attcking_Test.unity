@@ -139,39 +139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListenerNumber: -1
---- !u!1 &363558921 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1518408630563500194, guid: b18e64f492aa6b5469abfdfc65f5c0af,
-    type: 3}
-  m_PrefabInstance: {fileID: 1222702224}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &363558932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363558921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b22b670579708b04a83b093aa1cad2d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkingSounds: event:/3D Steps
-  squeekyFeetSounds: 
-  whooshSounds: 
-  archerAttackSounds: 
-  knightAttackSounds: 
-  tankAttackSounds: 
-  deathSounds: 
-  fallingDeathSounds: 
-  dodgingSounds: 
-  flinchingSounds: 
-  healthCollectSounds: 
-  staminaCollectSounds: 
-  respawnScreamingSounds: 
-  victoryShoutSounds: 
-  victoryDanceSounds: 
 --- !u!1 &1085915839
 GameObject:
   m_ObjectHideFlags: 0

@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22b670579708b04a83b093aa1cad2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSounds: event:/Character Sounds/Movement/3D Steps
+  walkingSounds: event:/Character Sounds/Movement/Walking
   squeekyFeetSounds: event:/Character Sounds/Movement/Squeeky Feet
   whooshSounds: event:/Character Sounds/Misc/Whooshing
   archerAttackSounds: event:/Character Sounds/Combat/Archer Attacks
