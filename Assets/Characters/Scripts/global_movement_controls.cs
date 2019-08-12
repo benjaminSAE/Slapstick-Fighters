@@ -12,6 +12,7 @@ public class global_movement_controls : MonoBehaviour
     [SerializeField] private KeyCode down;
     [SerializeField] private KeyCode right;
     [SerializeField] private KeyCode dodge;
+    [SerializeField] private Animator animator;
 
     //naming variables from "stats_global" for basic movement
     float rotationSpeed;
@@ -45,7 +46,7 @@ public class global_movement_controls : MonoBehaviour
         //setting speed of walking sounds
         InvokeRepeating("CallFootsteps", 0, walkingSoundSpeed);
         InvokeRepeating("CallDodging", 0, dodgingSoundSpeed);
-
+        animator = this.gameObject.GetComponent<Animator>();
         //walkingEvent.start();
 
         //initialising variables from "stats_global" for basic movement
@@ -561,11 +562,13 @@ public class global_movement_controls : MonoBehaviour
         //translates position of object
         if (Input.GetKey(up) || Input.GetKey(left) || Input.GetKey(down) || Input.GetKey(right))
         {
+            animator.SetBool("IsWalking", true);
             transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
             isWalking = true;
         }
         else
         {
+            animator.SetBool("IsWalking", false);
             isWalking = false;
         }
     }

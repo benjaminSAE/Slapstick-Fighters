@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KT_AnimatorScript : MonoBehaviour
 {
-    public Animator animator;
+    [SerializeField] private Animator animator;
     public float InputX;
     public float InputY;
 
