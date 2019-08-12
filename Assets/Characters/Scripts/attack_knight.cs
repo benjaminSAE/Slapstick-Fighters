@@ -52,10 +52,9 @@ public class attack_knight : MonoBehaviour
             swordSwing2 = 9999999f;
         }
 
-        else
-        {
-            animator.SetBool("isAttacking", false);
-        }
+       
+        animator.SetBool("isAttacking", false);
+       
     }
 
     //everything that enables the knight's sword swinging, stamina usage and cooldown

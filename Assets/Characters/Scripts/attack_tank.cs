@@ -20,10 +20,13 @@ public class attack_tank : MonoBehaviour
     float attackDistanceBase = 0.017f;
     float attackDistanceBaseCorner = 0.6f;
     float rotation;
-    
+
+    [SerializeField] private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
+        animator = this.gameObject.GetComponent<Animator>();
         //initialising values from "global_stats"
         attackDistance = gameObject.GetComponent<global_stats>().attackDistance;
         attackDamage = gameObject.GetComponent<global_stats>().attackDamage;
@@ -35,6 +38,7 @@ public class attack_tank : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("isAttacking", true);
         //updating "rotation" to equal the same value inside "global_movement_controls"
         rotation = gameObject.GetComponent<global_movement_controls>().rotation;
 
@@ -43,6 +47,7 @@ public class attack_tank : MonoBehaviour
 
         //running custom method stated below
         TankAttack();
+        animator.SetBool("isAttacking", false);
     }
 
     //everything that enables the tank's attack movement, stamina usage and cooldown
