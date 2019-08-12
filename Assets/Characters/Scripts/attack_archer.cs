@@ -13,6 +13,7 @@ public class attack_archer : MonoBehaviour
 
     float nextAttack;
     [SerializeField] private KeyCode attack;
+    [SerializeField] private Animator animator;
 
     //changable values for everything to do with the archer's ranged attack
     float attackDistance;
@@ -32,17 +33,21 @@ public class attack_archer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = this.gameObject.GetComponent<Animator>();
+        
         //initialising values according to this object's "global_stats"
         attackDistance = gameObject.GetComponent<global_stats>().attackDistance;
         attackDamage = gameObject.GetComponent<global_stats>().attackDamage;
         attackSpeed = gameObject.GetComponent<global_stats>().attackSpeed;
         attackStamina = gameObject.GetComponent<global_stats>().attackStamina;
         attackCooldown = gameObject.GetComponent<global_stats>().attackCooldown;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+          
         //updating "rotation" to equal the same value inside "global_movement_controls"
         rotation = gameObject.GetComponent<global_movement_controls>().rotation;
 
@@ -59,13 +64,16 @@ public class attack_archer : MonoBehaviour
         ArcherAttack();
 
         whileLoop = false;
+        
     }
 
     //everything that enables the archer's arrow shooting, stamina usage and cooldown
     void ArcherAttack()
     {
+        
         if (currentStaminaPoints > attackStamina && Time.time > nextAttack && Input.GetKeyDown(attack))
         {
+            animator.SetBool("isAttacking", true);
             //upwards attack movement
             if (rotation > -22 && rotation < 22)
             {
@@ -185,10 +193,15 @@ public class attack_archer : MonoBehaviour
                 global_stamina stamina_globalInstance = GetComponent<global_stamina>();
                 stamina_globalInstance.AttackStamina();
             }
+            else
+            {
+                animator.SetBool("isAttacking", false);
+            }
 
             BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
             characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.ArcherAttack);
         }
+        
     }
 
     //method that runs the Coroutine
