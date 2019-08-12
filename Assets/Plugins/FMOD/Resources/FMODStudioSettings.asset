@@ -16,9 +16,10 @@ MonoBehaviour:
   HasSourceProject: 1
   HasPlatforms: 1
   sourceProjectPath: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick
-    Sounds\Slapstick Sounds.fspro
-  SourceProjectPathUnformatted: FMOD\Slapstick Sounds\Slapstick Sounds.fspro
-  SourceBankPathUnformatted: FMOD\Slapstick Sounds\Build
+    Fighters Sounds\Slapstick Fighters Sounds.fspro
+  SourceProjectPathUnformatted: FMOD\Slapstick Fighters Sounds\Slapstick Fighters
+    Sounds.fspro
+  SourceBankPathUnformatted: FMOD\Slapstick Fighters Sounds\Build
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0

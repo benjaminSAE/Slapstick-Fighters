@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Movement/Dodging
   guid: c903755f11d6eb48b4f51b9992e561aa
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -38,12 +37,12 @@ MonoBehaviour:
   Path: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick
     Sounds\Build\Desktop\Master.strings.bank
   SubDir: 
-  lastModified: 637011287913636624
+  lastModified: 637012035028941107
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1794
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7773968911943192780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,8 +57,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/instrumental
   guid: f61e8c657587664082db9c22a29b0980
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -81,8 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Emotes/Victory Shout
   guid: 1285734b3eeb7546814ea170413ef4e8
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -90,6 +87,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1660
+--- !u!114 &-5337661377670053782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Movement/Walking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Movement/Walking
+  guid: e16004dbd4c78343b0bfb55d18bc05dd
+  Banks:
+  - {fileID: 8552736649377847276}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 371
 --- !u!114 &-5309772961630404411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,8 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/battle1
   guid: e316a19c93247f4eb48524148631d4ae
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -127,8 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Movement/3D Steps
   guid: b4080301027b974e8689604c23761278
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -150,8 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/battle
   guid: c32149434948864bbedc04e89f2d8e38
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -195,8 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/victory
   guid: 61eec8a6ec58a4408f319283b361ce46
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -218,8 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Combat/Falling Deaths
   guid: dd20142a521966419b38d054d1d7dfcf
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -241,8 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Combat/Archer Attacks
   guid: a16c3c51752cf549b47b4f5afca95944
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -264,8 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Misc/Health Collect
   guid: c3307c8305a070468f0122a55f37ec7b
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -287,8 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/ambient
   guid: 37dcb98f11d9f54ebdad2d31bb546861
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -309,38 +321,16 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -8932673001402932360}
-  - {fileID: 5331148680293188853}
+  - {fileID: 554734057772508907}
+  - {fileID: 8552736649377847276}
   EditorEvents:
-  - {fileID: -5158043350158745695}
-  - {fileID: 1074954057281487455}
-  - {fileID: 3644948436521545320}
-  - {fileID: -6682625144385611417}
-  - {fileID: 6817679613265824374}
-  - {fileID: 8926086358504928274}
-  - {fileID: 2592334059903670235}
-  - {fileID: 4775988371101063176}
-  - {fileID: -2136721155378454210}
-  - {fileID: 3220438240841355576}
-  - {fileID: -1832809755158109063}
-  - {fileID: -9083209079394331739}
-  - {fileID: 9165618431429589248}
-  - {fileID: -2300339843639827817}
-  - {fileID: 1416399338019934704}
-  - {fileID: -1507750997677071447}
-  - {fileID: -2470589470483489866}
-  - {fileID: 188997490016281341}
-  - {fileID: 6947977120397617233}
-  - {fileID: -5086594637036453172}
-  - {fileID: 5145825293957068540}
-  - {fileID: -5309772961630404411}
-  - {fileID: -7773968911943192780}
+  - {fileID: -5337661377670053782}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 5331148680293188853}
+  - {fileID: 8552736649377847276}
   StringsBanks:
-  - {fileID: -8932673001402932360}
-  stringsBankWriteTime: 637011287913636624
+  - {fileID: 554734057772508907}
+  stringsBankWriteTime: 637012046207497611
   cacheVersion: 3
 --- !u!114 &188997490016281341
 MonoBehaviour:
@@ -356,8 +346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/menu
   guid: 66109f6623ae0748af2e831fc0de5262
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -365,6 +354,27 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 228577
+--- !u!114 &554734057772508907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick
+    Fighters Sounds\Build\Desktop\Master.strings.bank
+  SubDir: 
+  lastModified: 637012046207497611
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 758
+  Exists: 1
 --- !u!114 &989188056800076467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,8 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Movement/Squeeky Feet
   guid: 3784c95d8fda214f88235204567fff4e
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -424,8 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Misc/Whooshing
   guid: e6d7a0e5bc181d438d4fd753f37f01ee
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -447,8 +455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Combat/Deaths
   guid: 5d190d725124ef47a02d98dcfad04684
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -470,8 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Combat/Tank Attacks
   guid: b4a519a08a53254899711ea570710edd
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -493,8 +499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Combat/Knight Attacks
   guid: 0e526d940a18b0438a1cb04826b08e77
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -516,8 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Emotes/Victory Dance
   guid: 68cf012999ea4b448d1af84f43aacc71
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -539,8 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/battle3
   guid: e023322cd816d245bdae7b5d01e85b24
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -563,12 +566,12 @@ MonoBehaviour:
   Path: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick
     Sounds\Build\Desktop\Master.bank
   SubDir: 
-  lastModified: 637011287913597547
+  lastModified: 637012035028851293
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 16840160
-  Exists: 1
+  Exists: 0
 --- !u!114 &6817679613265824374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,8 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Misc/Stamina Collect
   guid: 19080ac5731cff408842191c6753ef4e
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -606,8 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/battle2
   guid: c1a6aacd34e41544b0c1e822d8fc487f
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -615,6 +616,27 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 139621
+--- !u!114 &8552736649377847276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick
+    Fighters Sounds\Build\Desktop\Master.bank
+  SubDir: 
+  lastModified: 637012046207397753
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 68992
+  Exists: 1
 --- !u!114 &8926086358504928274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -629,8 +651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Misc/Screaming Respawn
   guid: 5cf95a83ded4724fabec9f6d0047c617
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -652,8 +673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character Sounds/Combat/Flinching
   guid: dd0369412191124980452edc381eeb4b
-  Banks:
-  - {fileID: 5331148680293188853}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
