@@ -20,12 +20,14 @@ public class attack_knight : MonoBehaviour
     float setSwordRotation = 90;
     float rotationSpeed = 20;
     [SerializeField] private GameObject swordHilt;
-    
+    [SerializeField] private Animator animator;
+
     float swordSwing2 = 9999999f;
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = this.gameObject.GetComponent<Animator>();
         attackDistance = gameObject.GetComponent<global_stats>().attackDistance;
         attackDamage = gameObject.GetComponent<global_stats>().attackDamage;
         attackSpeed = gameObject.GetComponent<global_stats>().attackSpeed;
@@ -36,6 +38,7 @@ public class attack_knight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("isAttacking", true);
         //updating "currentStaminaPoints" to equal the same value inside "global_stamina"
         currentStaminaPoints = gameObject.GetComponent<global_stamina>().currentStaminaPoints;
 
@@ -47,6 +50,11 @@ public class attack_knight : MonoBehaviour
             StartCoroutine(RotateMe(Vector3.up * -90, 0.8f));
 
             swordSwing2 = 9999999f;
+        }
+
+        else
+        {
+            animator.SetBool("isAttacking", false);
         }
     }
 

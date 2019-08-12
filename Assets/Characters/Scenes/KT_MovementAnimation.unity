@@ -133,14 +133,91 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221952605}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5405a336931d1ed47b55d17d5a3ed018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  InputX: 0
-  InputY: 0
+--- !u!114 &221952609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221952605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d88abb7270c074696bb865d4f11382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 2
+  attackDistance: 0
+  attackDamage: 0
+  attackSpeed: 10
+  attackStamina: 0
+  attackCooldown: 0
+  dodgeDistance: 2
+  dodgeCooldown: 0
+  dodgeSpeed: 0
+  dodgeStamina: 0
+  damageBlocker: 0
+  maxHealthPoints: 0
+  maxStaminaPoints: 100
+  staminaRegen: 0.1
+  playerNumber: 0
+  rotation: 0.1
+  rotationSpeed: 100
+--- !u!114 &221952610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221952605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e65d3cc9d0bb441857ea115a4752aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStaminaPoints: 0
+--- !u!114 &221952611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221952605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b60f7e108903a44bf15d7cb82df080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  up: 119
+  left: 97
+  down: 115
+  right: 100
+  dodge: 104
+  animator: {fileID: 0}
+  rotation: 0
+  damageBlocker: 0
+  walkingSoundSpeed: 0
+  dodgingSoundSpeed: 0
+--- !u!114 &221952612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221952605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a89f23176eca434ab7f2335c6d71aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 102
+  swordHilt: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &428169868
 GameObject:
   m_ObjectHideFlags: 0

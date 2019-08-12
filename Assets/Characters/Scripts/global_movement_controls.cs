@@ -13,6 +13,10 @@ public class global_movement_controls : MonoBehaviour
     [SerializeField] private KeyCode right;
     [SerializeField] private KeyCode dodge;
     [SerializeField] private Animator animator;
+    
+    private float InputX;
+    private float InputY;
+    
 
     //naming variables from "stats_global" for basic movement
     float rotationSpeed;
@@ -65,6 +69,11 @@ public class global_movement_controls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        InputX = Input.GetAxis("Horizontal");
+        animator.SetFloat("InputX", InputX);
+        InputY = Input.GetAxis("Vertical");
+        animator.SetFloat("InputY", InputY);
+
         //correcting rotation values to equal tangable rotation limits
         if (rotation > 180)
         {
@@ -364,6 +373,7 @@ public class global_movement_controls : MonoBehaviour
         //left movement/rotation
         if (Input.GetKey(left))
         {
+         
             if (rotation > -90
              && rotation < 0)
             {
@@ -391,11 +401,13 @@ public class global_movement_controls : MonoBehaviour
                 rotation += Time.deltaTime * rotationSpeed;
                 transform.rotation = Quaternion.Euler(0, rotation, 0);
             }
+            
         }
 
         //right movement/rotation
         if (Input.GetKey(right))
         {
+           
             if (rotation < 90
              && rotation > 0)
             {
@@ -423,11 +435,13 @@ public class global_movement_controls : MonoBehaviour
                 rotation -= Time.deltaTime * rotationSpeed;
                 transform.rotation = Quaternion.Euler(0, rotation, 0);
             }
+            
         }
 
         //forward movement/rotation
         if (Input.GetKey(up))
         {
+            
             if (rotation > 0)
             {
                 rotation -= Time.deltaTime * rotationSpeed;
@@ -439,11 +453,13 @@ public class global_movement_controls : MonoBehaviour
                 rotation += Time.deltaTime * rotationSpeed;
                 transform.rotation = Quaternion.Euler(0, rotation, 0);
             }
+            
         }
 
         //backwards movement/rotation    
         if (Input.GetKey(down))
         {
+            
             if (rotation > -180
              && rotation < 0)
             {
@@ -457,11 +473,13 @@ public class global_movement_controls : MonoBehaviour
                 rotation += Time.deltaTime * rotationSpeed;
                 transform.rotation = Quaternion.Euler(0, rotation, 0);
             }
+            
         }
 
         //top/right movement/rotation
         if (Input.GetKey(up) && Input.GetKey(right))
         {
+            
             if (rotation < 45
              && rotation > -135)
             {
@@ -482,11 +500,13 @@ public class global_movement_controls : MonoBehaviour
                 rotation -= Time.deltaTime * rotationSpeed;
                 transform.rotation = Quaternion.Euler(0, rotation, 0);
             }
+            
         }
 
         //top/left movement/rotation
         if (Input.GetKey(up) && Input.GetKey(left))
         {
+           
             if (rotation > -45
              && rotation < 135)
             {
@@ -507,11 +527,13 @@ public class global_movement_controls : MonoBehaviour
                 rotation += Time.deltaTime * rotationSpeed;
                 transform.rotation = Quaternion.Euler(0, rotation, 0);
             }
+           
         }
 
         //bottom/right movement/rotation
         if (Input.GetKey(down) && Input.GetKey(right))
         {
+            
             if (rotation < 135
              && rotation > -45)
             {
@@ -532,11 +554,13 @@ public class global_movement_controls : MonoBehaviour
                 rotation -= Time.deltaTime * rotationSpeed;
                 transform.rotation = Quaternion.Euler(0, rotation, 0);
             }
+            
         }
 
         //bottom/left movement/rotation
         if (Input.GetKey(down) && Input.GetKey(left))
         {
+          
             if (rotation > -135
              && rotation < 45)
             {
@@ -555,21 +579,21 @@ public class global_movement_controls : MonoBehaviour
              && rotation > 45)
             {
                 rotation += Time.deltaTime * rotationSpeed;
+
                 transform.rotation = Quaternion.Euler(0, rotation, 0);
             }
+           
         }
 
         //translates position of object
         if (Input.GetKey(up) || Input.GetKey(left) || Input.GetKey(down) || Input.GetKey(right))
-        {
-            animator.SetBool("IsWalking", true);
+        {          
             transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
-            isWalking = true;
+            animator.SetBool("isMoving", true);
         }
         else
         {
-            animator.SetBool("IsWalking", false);
-            isWalking = false;
+            animator.SetBool("isMoving", false);
         }
     }
 

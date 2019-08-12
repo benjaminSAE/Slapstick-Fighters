@@ -5,8 +5,8 @@ using UnityEngine;
 public class KT_AnimatorScript : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    public float InputX;
-    public float InputY;
+    private float InputX;
+    private float InputY;
 
     void Start()
     {
