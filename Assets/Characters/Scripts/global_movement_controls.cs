@@ -161,7 +161,7 @@ public class global_movement_controls : MonoBehaviour
                     {
                         //setting the direction of the Coroutine and starting the Coroutine
                         Vector3 topRight = new Vector3(baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
-                        StartCoroutine(smooth_move(topRight, 1f));
+                        //StartCoroutine(smooth_move(topRight, 1f));
 
                         //changing the rotation of the player equal to direction of movement
                         rotation = 45.0f;
@@ -182,7 +182,7 @@ public class global_movement_controls : MonoBehaviour
                     {
                         //setting the direction of the Coroutine and starting the Coroutine
                         Vector3 topLeft = new Vector3(-baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
-                        StartCoroutine(smooth_move(topLeft, 1f));
+                      //  StartCoroutine(smooth_move(topLeft, 1f));
 
                         //changing the rotation of the player equal to direction of movement
                         rotation = -45.0f;
@@ -203,7 +203,7 @@ public class global_movement_controls : MonoBehaviour
                     {
                         //setting the direction of the Coroutine and starting the Coroutine
                         Vector3 bottomRight = new Vector3(baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, -baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
-                        StartCoroutine(smooth_move(bottomRight, 1f));
+                       // StartCoroutine(smooth_move(bottomRight, 1f));
 
                         //changing the rotation of the player equal to direction of movement
                         rotation = 135.0f;
@@ -224,7 +224,7 @@ public class global_movement_controls : MonoBehaviour
                     {
                         //setting the direction of the Coroutine and starting the Coroutine
                         Vector3 bottomLeft = new Vector3(-baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, -baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
-                        StartCoroutine(smooth_move(bottomLeft, 1f));
+                      //  StartCoroutine(smooth_move(bottomLeft, 1f));  
 
                         //changing the rotation of the player equal to direction of movement
                         rotation = -135.0f;
@@ -251,7 +251,7 @@ public class global_movement_controls : MonoBehaviour
                         {
                             //setting the direction of the Coroutine and starting the Coroutine
                             Vector3 top = new Vector3(0, 0, baseDodgeDistance * dodgeDistance);
-                            StartCoroutine(smooth_move(top, 1f));
+                            //StartCoroutine(smooth_move(top, 1f));
 
                             //changing the rotation of the player equal to direction of movement
                             rotation = 0.1f;
@@ -279,7 +279,7 @@ public class global_movement_controls : MonoBehaviour
                         {
                             //setting the direction of the Coroutine and starting the Coroutine
                             Vector3 right = new Vector3(baseDodgeDistance * dodgeDistance, 0, 0);
-                            StartCoroutine(smooth_move(right, 1f));
+                           // StartCoroutine(smooth_move(right, 1f));
 
                             //changing the rotation of the player equal to direction of movement
                             rotation = 89.9f;
@@ -307,7 +307,7 @@ public class global_movement_controls : MonoBehaviour
                         {
                             //setting the direction of the Coroutine and starting the Coroutine
                             Vector3 bottom = new Vector3(0, 0, -baseDodgeDistance * dodgeDistance);
-                            StartCoroutine(smooth_move(bottom, 1f));
+                            //StartCoroutine(smooth_move(bottom, 1f));
 
                             //changing the rotation of the player equal to direction of movement
                             rotation = -178.9f;
@@ -335,7 +335,7 @@ public class global_movement_controls : MonoBehaviour
                         {
                             //setting the direction of the Coroutine and starting the Coroutine
                             Vector3 left = new Vector3(-baseDodgeDistance * dodgeDistance, 0, 0);
-                            StartCoroutine(smooth_move(left, 1f));
+                           // StartCoroutine(smooth_move(left, 1f));
 
                             //changing the rotation of the player equal to direction of movement
                             rotation = -89.9f;
@@ -355,6 +355,7 @@ public class global_movement_controls : MonoBehaviour
                 else
                 {
                     animator.SetBool("isDodging", false);
+                     // help Vector3 left || Vector3 right = new Vector3(-baseDodgeDistance * dodgeDistance, 0, 0);
                     damageBlocker = false;
                 }
             }
@@ -617,23 +618,23 @@ public class global_movement_controls : MonoBehaviour
     }
 
     //this is the Coroutine
-    IEnumerator smooth_move(Vector3 direction, float speed)
-    {
-        float startime = Time.time;
-        Vector3 start_pos = transform.position; //Starting position.
-        Vector3 end_pos = transform.position + direction; //Ending position.
+    //IEnumerator smooth_move(Vector3 direction, float speed)
+    //{
+    //    float startime = Time.time;
+    //    Vector3 start_pos = transform.position; //Starting position.
+    //    Vector3 end_pos = transform.position + direction; //Ending position.
 
-        while (start_pos != end_pos && ((Time.time - startime) * speed) < 1f)
-        {
-            float move = Mathf.Lerp(0, 1, (Time.time - startime) * speed);
+    //    while (start_pos != end_pos && ((Time.time - startime) * speed) < 1f)
+    //    {
+    //        float move = Mathf.Lerp(0, 1, (Time.time - startime) * speed);
 
-            isDodging = true;
+    //        isDodging = true;
 
-            transform.position += direction * move;
+    //        transform.position += direction * move;
 
-            yield return null;
-        }
+    //        yield return null;
+    //    }
 
-        isDodging = false;
-    }
+    //    isDodging = false;
+    //}
 }
