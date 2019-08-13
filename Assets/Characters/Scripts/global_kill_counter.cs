@@ -30,8 +30,8 @@ public class global_kill_counter : MonoBehaviour
 
     void Update()
     {
-        player1KillsText.text = "Kills: " + player1Deaths.ToString();
-        player2KillsText.text = "Kills: " + player2Deaths.ToString();
+        player1KillsText.text = player1Deaths.ToString();
+        player2KillsText.text = player2Deaths.ToString();
     }
 
     public void ScoreCounterPlayer1()
