@@ -155,6 +155,7 @@ public class global_movement_controls : MonoBehaviour
             {
                 if (Input.GetKey(dodge))
                 {
+                    animator.SetBool("isDodging", true);
                     //top/right dodge movement
                     if (Input.GetKey(up) && Input.GetKey(right))
                     {
@@ -353,6 +354,7 @@ public class global_movement_controls : MonoBehaviour
                 }
                 else
                 {
+                    animator.SetBool("isDodging", false);
                     damageBlocker = false;
                 }
             }
@@ -608,7 +610,6 @@ public class global_movement_controls : MonoBehaviour
 
     void CallDodging()
     {
-        if (isDodging == true)
         {
             BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
             characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.Dodging);
