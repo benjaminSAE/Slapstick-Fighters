@@ -20,6 +20,7 @@ public class attack_tank : MonoBehaviour
     float attackDistanceBase = 0.017f;
     float attackDistanceBaseCorner = 0.6f;
     float rotation;
+    bool whileLoop;
 
     [SerializeField] private Animator animator;
 
@@ -37,8 +38,7 @@ public class attack_tank : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        animator.SetBool("isAttacking", true);
+    {      
         //updating "rotation" to equal the same value inside "global_movement_controls"
         rotation = gameObject.GetComponent<global_movement_controls>().rotation;
 
@@ -47,7 +47,14 @@ public class attack_tank : MonoBehaviour
 
         //running custom method stated below
         TankAttack();
-        animator.SetBool("isAttacking", false);
+
+        if(whileLoop == false)
+        {
+            animator.SetBool("isAttacking", false);
+        }
+
+        whileLoop = false;
+
     }
 
     //everything that enables the tank's attack movement, stamina usage and cooldown
@@ -58,6 +65,7 @@ public class attack_tank : MonoBehaviour
             //upwards attack movement
             if (rotation > -3 && rotation < 3)
             {
+                animator.SetBool("isAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 top = new Vector3(0, 0, attackDistance * attackDistanceBase);
                 StartCoroutine(smooth_move(top, 1f));
@@ -73,6 +81,7 @@ public class attack_tank : MonoBehaviour
             //upwards/right attack movement
             if (rotation > 42 && rotation < 48)
             {
+                animator.SetBool("isAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 topRight = new Vector3(attackDistance * attackDistanceBase * attackDistanceBaseCorner, 0, attackDistance * attackDistanceBase * attackDistanceBaseCorner);
                 StartCoroutine(smooth_move(topRight, 1f));
@@ -88,6 +97,7 @@ public class attack_tank : MonoBehaviour
             //right attack movement
             if (rotation > 87 && rotation < 93)
             {
+                animator.SetBool("isAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 right = new Vector3(attackDistance * attackDistanceBase, 0, 0);
                 StartCoroutine(smooth_move(right, 1f));
@@ -103,6 +113,7 @@ public class attack_tank : MonoBehaviour
             //downwards/right attack movement
             if (rotation > 132 && rotation < 138)
             {
+                animator.SetBool("isAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 bottomRight = new Vector3(attackDistance * attackDistanceBase * attackDistanceBaseCorner, 0, -attackDistance * attackDistanceBase * attackDistanceBaseCorner);
                 StartCoroutine(smooth_move(bottomRight, 1f));
@@ -118,6 +129,7 @@ public class attack_tank : MonoBehaviour
             //downwards attack movement
             if (rotation > 177 && rotation < 183 || rotation > -183 && rotation < -177)
             {
+                animator.SetBool("isAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 bottom = new Vector3(0, 0, -attackDistance * attackDistanceBase);
                 StartCoroutine(smooth_move(bottom, 1f));
@@ -133,6 +145,7 @@ public class attack_tank : MonoBehaviour
             //downwards/left attack movement
             if (rotation > -138 && rotation < -132)
             {
+                animator.SetBool("isAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 bottomLeft = new Vector3(-attackDistance * attackDistanceBase * attackDistanceBaseCorner, 0, -attackDistance * attackDistanceBase * attackDistanceBaseCorner);
                 StartCoroutine(smooth_move(bottomLeft, 1f));
@@ -148,6 +161,7 @@ public class attack_tank : MonoBehaviour
             //left attack movement
             if (rotation > -93 && rotation < -87)
             {
+                animator.SetBool("isAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 left = new Vector3(-attackDistance * attackDistanceBase, 0, 0);
                 StartCoroutine(smooth_move(left, 1f));
@@ -163,6 +177,7 @@ public class attack_tank : MonoBehaviour
             //upwards/left attack movement
             if (rotation > -48 && rotation < -42)
             {
+                animator.SetBool("isAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 topLeft = new Vector3(-attackDistance * attackDistanceBase * attackDistanceBaseCorner, 0, attackDistance * attackDistanceBase * attackDistanceBaseCorner);
                 StartCoroutine(smooth_move(topLeft, 1f));
@@ -176,8 +191,8 @@ public class attack_tank : MonoBehaviour
             }
         }
 
-        BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
-        characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.TankAttack);
+        //BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
+        //characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.TankAttack);
     }
 
     //method that runs the Coroutine
@@ -192,6 +207,8 @@ public class attack_tank : MonoBehaviour
             float move = Mathf.Lerp(0, 1, (Time.time - startime) * speed);
 
             transform.position += direction * move;
+
+            whileLoop = true;
 
             yield return null;
         }
