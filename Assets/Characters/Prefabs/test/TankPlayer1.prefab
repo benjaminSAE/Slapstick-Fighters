@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 1518408630563500197}
   - component: {fileID: 1518408630563500196}
   - component: {fileID: -1332830694068265759}
+  - component: {fileID: -9080724473171295603}
   m_Layer: 0
   m_Name: TankPlayer1
   m_TagString: Player
@@ -278,6 +279,7 @@ MonoBehaviour:
   down: 115
   right: 100
   dodge: 103
+  animator: {fileID: 0}
   rotation: 0
   damageBlocker: 0
   walkingSoundSpeed: 0.5
@@ -295,6 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: 102
+  animator: {fileID: 0}
 --- !u!114 &-1332830694068265759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,21 +310,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22b670579708b04a83b093aa1cad2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSounds: event:/Character Sounds/Movement/3D Steps
-  squeekyFeetSounds: event:/Character Sounds/Movement/Squeeky Feet
-  whooshSounds: event:/Character Sounds/Misc/Whooshing
-  archerAttackSounds: event:/Character Sounds/Combat/Archer Attacks
-  knightAttackSounds: event:/Character Sounds/Combat/Knight Attacks
-  tankAttackSounds: event:/Character Sounds/Combat/Tank Attacks
-  deathSounds: event:/Character Sounds/Combat/Deaths
-  fallingDeathSounds: event:/Character Sounds/Combat/Falling Deaths
-  dodgingSounds: event:/Character Sounds/Movement/Dodging
-  flinchingSounds: event:/Character Sounds/Combat/Flinching
-  healthCollectSounds: event:/Character Sounds/Misc/Health Collect
-  staminaCollectSounds: event:/Character Sounds/Misc/Stamina Collect
-  respawnScreamingSounds: event:/Character Sounds/Misc/Screaming Respawn
-  victoryShoutSounds: event:/Character Sounds/Emotes/Victory Shout
-  victoryDanceSounds: event:/Character Sounds/Emotes/Victory Dance
+  walkingSounds: event:/Character Sounds/Walking
+  squeekyFeetSounds: event:/Character Sounds/Sqeaky Feet
+  whooshSounds: event:/Character Sounds/Whooshing
+  archerAttackSounds: event:/Character Sounds/Archer Attacks
+  knightAttackSounds: event:/Character Sounds/Knight Attacks
+  tankAttackSounds: event:/Character Sounds/Tank Attacks
+  deathSounds: event:/Character Sounds/Archer Attacks
+  fallingDeathSounds: event:/Character Sounds/Falling Deaths
+  dodgingSounds: event:/Character Sounds/Dodging
+  flinchingSounds: event:/Character Sounds/Flinching
+  healthCollectSounds: event:/Character Sounds/Health Collect
+  staminaCollectSounds: event:/Character Sounds/Stamina Collect
+  respawnScreamingSounds: event:/Character Sounds/Screaming Respawn
+  victoryShoutSounds: event:/Character Sounds/Victory Shout
+  victoryDanceSounds: event:/Character Sounds/Victory Dance
+--- !u!95 &-9080724473171295603
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518408630563500194}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4464867296327513041
 GameObject:
   m_ObjectHideFlags: 0

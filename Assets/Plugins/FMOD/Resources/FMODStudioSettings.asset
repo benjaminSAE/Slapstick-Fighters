@@ -15,15 +15,16 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick
-    Sounds\Slapstick Sounds.fspro
-  SourceProjectPathUnformatted: FMOD\Slapstick Sounds\Slapstick Sounds.fspro
-  SourceBankPathUnformatted: FMOD\Slapstick Sounds\Build
+  sourceProjectPath: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick-Fighters
+    Sounds\Slapstick-Fighters Sounds.fspro
+  SourceProjectPathUnformatted: FMOD\Slapstick-Fighters Sounds\Slapstick-Fighters
+    Sounds.fspro
+  SourceBankPathUnformatted: FMOD\Slapstick-Fighters Sounds\Build
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0
   EncryptionKey: 
-  ImportType: 1
+  ImportType: 0
   TargetAssetPath: 
   LoggingLevel: 2
   SpeakerModeSettings:
@@ -77,7 +78,8 @@ MonoBehaviour:
   - Platform: 20
     Value: 32
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

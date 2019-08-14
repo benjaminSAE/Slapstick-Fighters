@@ -593,10 +593,14 @@ public class global_movement_controls : MonoBehaviour
         {          
             transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
             animator.SetBool("isMoving", true);
+            isWalking = true;
+            print("isWalking = " + isWalking);
         }
         else
         {
             animator.SetBool("isMoving", false);
+            isWalking = false;
+            print("isWalking = " + isWalking);
         }
     }
 
@@ -611,6 +615,7 @@ public class global_movement_controls : MonoBehaviour
 
     void CallDodging()
     {
+        if(isDodging == true)
         {
             BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
             characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.Dodging);
