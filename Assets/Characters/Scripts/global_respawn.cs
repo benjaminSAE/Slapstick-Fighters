@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class global_respawn : MonoBehaviour
 {
@@ -30,9 +31,10 @@ public class global_respawn : MonoBehaviour
     void Start()
     {
         CharacterSelectValues = GameObject.Find("CharacterSelectValues");
-
+          
         playerOne = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer1;
         playerTwo = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer2;
+       
     }
 
     public void RespawnPlayer1()

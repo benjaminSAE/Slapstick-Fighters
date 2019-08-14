@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -217,45 +217,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1955830778}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &814814214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814814213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35cbc20b2ba27684e805224c1d0ab921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  up: 119
---- !u!95 &814814215 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95792339774633994, guid: d1d7f6d670a38f84d82180544cf7d7f0,
+--- !u!4 &814814218 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4627909804491518, guid: d1d7f6d670a38f84d82180544cf7d7f0,
     type: 3}
   m_PrefabInstance: {fileID: 1955830778}
   m_PrefabAsset: {fileID: 0}
---- !u!320 &814814216
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814814213}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: ad53310925bc51346a31ccf84f36d3c7, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 8643606358041957471, guid: ad53310925bc51346a31ccf84f36d3c7, type: 2}
-    value: {fileID: 814814215}
-  m_ExposedReferences:
-    m_References: []
 --- !u!54 &814814219
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -283,8 +250,50 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5526433, y: 1.6396611, z: 1}
-  m_Center: {x: -0.03639567, y: 0.8739288, z: 0}
+  m_Size: {x: 0.60156935, y: 1.6396611, z: 1}
+  m_Center: {x: -0.011932641, y: 0.8739288, z: 0}
+--- !u!114 &814814221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814814213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10436b7cf9720c428fb90fa003fe926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 814814218}
+--- !u!114 &814814222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814814213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d88abb7270c074696bb865d4f11382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 1
+  attackDistance: 0
+  attackDamage: 0
+  attackSpeed: 0
+  attackStamina: 0
+  attackCooldown: 0
+  dodgeDistance: 1
+  dodgeCooldown: 0
+  dodgeSpeed: 0
+  dodgeStamina: 0
+  damageBlocker: 0
+  maxHealthPoints: 0
+  maxStaminaPoints: 100
+  staminaRegen: 0.1
+  playerNumber: 0
+  rotation: 0.1
+  rotationSpeed: 100
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

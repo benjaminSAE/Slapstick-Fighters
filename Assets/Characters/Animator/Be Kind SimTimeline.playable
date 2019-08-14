@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Clip: {fileID: 7400000, guid: ba405ea2242c2a2428c4e17a6c32d2f2, type: 2}
   m_Position: {x: 0, y: 0, z: 0}
   m_EulerAngles: {x: 0, y: 0, z: 0}
-  m_UseTrackMatchFields: 0
+  m_UseTrackMatchFields: 1
   m_MatchTargetFields: 63
   m_RemoveStartOffset: 1
   m_ApplyFootIK: 1
