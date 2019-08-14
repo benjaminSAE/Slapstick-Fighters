@@ -182,7 +182,7 @@ public class global_movement_controls : MonoBehaviour
                     {
                         //setting the direction of the Coroutine and starting the Coroutine
                         Vector3 topLeft = new Vector3(-baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
-                      //  StartCoroutine(smooth_move(topLeft, 1f));
+                        //StartCoroutine(smooth_move(topLeft, 1f));
 
                         //changing the rotation of the player equal to direction of movement
                         rotation = -45.0f;
@@ -203,7 +203,7 @@ public class global_movement_controls : MonoBehaviour
                     {
                         //setting the direction of the Coroutine and starting the Coroutine
                         Vector3 bottomRight = new Vector3(baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, -baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
-                       // StartCoroutine(smooth_move(bottomRight, 1f));
+                        //StartCoroutine(smooth_move(bottomRight, 1f));
 
                         //changing the rotation of the player equal to direction of movement
                         rotation = 135.0f;
@@ -224,7 +224,7 @@ public class global_movement_controls : MonoBehaviour
                     {
                         //setting the direction of the Coroutine and starting the Coroutine
                         Vector3 bottomLeft = new Vector3(-baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, -baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
-                      //  StartCoroutine(smooth_move(bottomLeft, 1f));  
+                       // StartCoroutine(smooth_move(bottomLeft, 1f));  
 
                         //changing the rotation of the player equal to direction of movement
                         rotation = -135.0f;
@@ -307,7 +307,7 @@ public class global_movement_controls : MonoBehaviour
                         {
                             //setting the direction of the Coroutine and starting the Coroutine
                             Vector3 bottom = new Vector3(0, 0, -baseDodgeDistance * dodgeDistance);
-                            //StartCoroutine(smooth_move(bottom, 1f));
+                          //  StartCoroutine(smooth_move(bottom, 1f));
 
                             //changing the rotation of the player equal to direction of movement
                             rotation = -178.9f;

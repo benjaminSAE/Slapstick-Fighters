@@ -152,15 +152,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d88abb7270c074696bb865d4f11382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  movementSpeed: 1
   attackDistance: 2
   attackDamage: 2
   attackSpeed: 10
   attackStamina: 2
   attackCooldown: 0
-  dodgeDistance: 2
+  dodgeDistance: 1
   dodgeCooldown: 0
-  dodgeSpeed: 0
+  dodgeSpeed: 1
   dodgeStamina: 0
   damageBlocker: 0
   maxHealthPoints: 0
