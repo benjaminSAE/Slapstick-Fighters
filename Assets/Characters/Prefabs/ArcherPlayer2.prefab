@@ -1058,7 +1058,7 @@ Animator:
   m_GameObject: {fileID: 1927408138077048}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 152e84f306fd84d4f994be0b2beba996, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 030d66a11e3f2ef4ab62a6cc8e246f94, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1317,10 +1317,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4315204093656162}
     m_Modifications:
-    - target: {fileID: 101924, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}
-      propertyPath: m_Name
-      value: bow
-      objectReference: {fileID: 0}
     - target: {fileID: 401924, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.067088746
@@ -1376,6 +1372,10 @@ PrefabInstance:
     - target: {fileID: 401924, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}
       propertyPath: m_LocalScale.y
       value: 40.00006
+      objectReference: {fileID: 0}
+    - target: {fileID: 101924, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}
+      propertyPath: m_Name
+      value: bow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}

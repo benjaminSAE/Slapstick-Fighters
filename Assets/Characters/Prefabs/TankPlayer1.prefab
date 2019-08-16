@@ -1057,7 +1057,7 @@ Animator:
   m_GameObject: {fileID: 1927408138077048}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 152e84f306fd84d4f994be0b2beba996, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 030d66a11e3f2ef4ab62a6cc8e246f94, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1233,14 +1233,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4895161305379460}
     m_Modifications:
-    - target: {fileID: 149376, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}
-      propertyPath: m_Name
-      value: shield
-      objectReference: {fileID: 0}
-    - target: {fileID: 149376, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}
-      propertyPath: m_TagString
-      value: Attacker
-      objectReference: {fileID: 0}
     - target: {fileID: 449376, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1557661
@@ -1296,6 +1288,14 @@ PrefabInstance:
     - target: {fileID: 449376, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}
       propertyPath: m_LocalScale.z
       value: 25.496996
+      objectReference: {fileID: 0}
+    - target: {fileID: 149376, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}
+      propertyPath: m_Name
+      value: shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 149376, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}
+      propertyPath: m_TagString
+      value: Attacker
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}

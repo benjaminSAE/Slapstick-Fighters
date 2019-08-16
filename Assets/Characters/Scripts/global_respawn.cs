@@ -21,6 +21,7 @@ public class global_respawn : MonoBehaviour
 
     int playerOne;
     int playerTwo;
+    private Animator animator;
 
     private void Awake()
     {
@@ -31,7 +32,7 @@ public class global_respawn : MonoBehaviour
     void Start()
     {
         CharacterSelectValues = GameObject.Find("CharacterSelectValues");
-          
+        animator = this.gameObject.GetComponent<Animator>();
         playerOne = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer1;
         playerTwo = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer2;
        
@@ -42,16 +43,22 @@ public class global_respawn : MonoBehaviour
         if (playerOne == 1)
         {
             Instantiate(archerPlayer1, spawnPlayer1.transform);
+            animator.SetBool("isRespawning", true);
+            StartCoroutine(COStunPause(1.2f));
         }
 
         if (playerOne == 2)
         {
             Instantiate(knightPlayer1, spawnPlayer1.transform);
+            animator.SetBool("isRespawning", true);
+            StartCoroutine(COStunPause(1.2f));
         }
 
         if (playerOne == 3)
         {
             Instantiate(tankPlayer1, spawnPlayer1.transform);
+            animator.SetBool("isRespawning", true);
+            StartCoroutine(COStunPause(1.2f));
         }
     }
 
@@ -62,16 +69,28 @@ public class global_respawn : MonoBehaviour
         if (playerTwo == 1)
         {
             Instantiate(archerPlayer2, spawnPlayer2.transform);
+            animator.SetBool("isRespawning", true);
+            StartCoroutine(COStunPause(1.2f));
         }
 
         if (playerTwo == 2)
         {
             Instantiate(knightPlayer2, spawnPlayer2.transform);
+            animator.SetBool("isRespawning", true);
+            StartCoroutine(COStunPause(1.2f));
         }
 
         if (playerTwo == 3)
         {
             Instantiate(tankPlayer2, spawnPlayer2.transform);
+            animator.SetBool("isRespawning", true);
+            StartCoroutine(COStunPause(1.2f));
         }
+    }
+    public IEnumerator COStunPause(float pauseTime)
+    {
+
+        yield return new WaitForSeconds(pauseTime);
+        animator.SetBool("isRespawning", false);
     }
 }
