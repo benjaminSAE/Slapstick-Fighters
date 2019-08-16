@@ -307,11 +307,11 @@ MonoBehaviour:
   Path: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick-Fighters
     Sounds\Build\Desktop\Master.strings.bank
   SubDir: 
-  lastModified: 637013759919291496
+  lastModified: 637015791914679438
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1632
+    Value: 1808
   Exists: 1
 --- !u!114 &-6573698121938391124
 MonoBehaviour:
@@ -745,6 +745,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 139621
+--- !u!114 &-4118519902412183860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Misc/Select Menu Click
+  m_EditorClassIdentifier: 
+  Path: event:/Misc/Select Menu Click
+  guid: ca7fbcd4c9ed8e439cf9fd95962fd8e6
+  Banks:
+  - {fileID: 4130094070158989364}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 235
 --- !u!114 &-4038813346088049228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1040,6 +1063,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1569
+--- !u!114 &-2111528064253121863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Misc/Forwards Menu Click
+  m_EditorClassIdentifier: 
+  Path: event:/Misc/Forwards Menu Click
+  guid: c55a84c08f40be4d8cf4124a5f46b36a
+  Banks:
+  - {fileID: 4130094070158989364}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 23
 --- !u!114 &-1885575135282323080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,12 +1371,15 @@ MonoBehaviour:
   - {fileID: 5054324520067896168}
   - {fileID: 226951682447756106}
   - {fileID: -7365184045679226650}
+  - {fileID: -2111528064253121863}
+  - {fileID: 7138829939386788312}
+  - {fileID: -4118519902412183860}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4130094070158989364}
   StringsBanks:
   - {fileID: -6671492786718751400}
-  stringsBankWriteTime: 637013759919291496
+  stringsBankWriteTime: 637015791914679438
   cacheVersion: 3
 --- !u!114 &188997490016281341
 MonoBehaviour:
@@ -1750,11 +1799,11 @@ MonoBehaviour:
   Path: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick-Fighters
     Sounds\Build\Desktop\Master.bank
   SubDir: 
-  lastModified: 637013759919241674
+  lastModified: 637015791914549787
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 16868448
+    Value: 16876384
   Exists: 1
 --- !u!114 &4161303216102693608
 MonoBehaviour:
@@ -2164,6 +2213,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 139621
+--- !u!114 &7138829939386788312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Misc/Backwards Menu Click
+  m_EditorClassIdentifier: 
+  Path: event:/Misc/Backwards Menu Click
+  guid: e9c7d5c7f8a6ed47942b9320a39ed7d8
+  Banks:
+  - {fileID: 4130094070158989364}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 32
 --- !u!114 &7632320249436473095
 MonoBehaviour:
   m_ObjectHideFlags: 0
