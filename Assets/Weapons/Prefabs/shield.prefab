@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3349376}
   - component: {fileID: 2349376}
   - component: {fileID: 9549376}
+  - component: {fileID: 2478517105115422283}
   m_Layer: 0
   m_Name: shield
-  m_TagString: Untagged
+  m_TagString: Attacker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +98,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2478517105115422283
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149376}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.015758304, y: 0.019983795, z: 0.0053774216}
+  m_Center: {x: -0.00025442895, y: -0.0016440353, z: -0.00052554}

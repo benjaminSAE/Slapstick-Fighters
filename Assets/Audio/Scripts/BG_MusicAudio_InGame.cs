@@ -95,7 +95,7 @@ public class BG_MusicAudio_InGame : MonoBehaviour
             {
                 print("battleMusic.start();");
                 instrumentalMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                //battleMusic.start();
+                battleMusic.start();
                 startBattleMusic = false;
             }
         }
