@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10
   attackDistance: 10
-  attackDamage: 10
+  attackDamage: 100
   attackSpeed: 10
   attackStamina: 10
   attackCooldown: 3

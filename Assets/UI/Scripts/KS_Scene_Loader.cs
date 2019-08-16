@@ -42,12 +42,12 @@ public class KS_Scene_Loader : MonoBehaviour
     {
         if (mapSelect == 1)
         {
-            SceneManager.LoadScene("KT_SwampMap");
+            SceneManager.LoadScene("KS_SwampMap");
         }
 
         if (mapSelect == 2)
         {
-            SceneManager.LoadScene("NA_TundraMap");
+            SceneManager.LoadScene("KS_Tundra_Map");
         }
     }
 }
