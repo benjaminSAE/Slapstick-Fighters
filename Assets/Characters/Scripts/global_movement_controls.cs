@@ -13,7 +13,10 @@ public class global_movement_controls : MonoBehaviour
     [SerializeField] private KeyCode right;
     [SerializeField] private KeyCode dodge;
     [SerializeField] private Animator animator;
-    
+    GameObject CharacterSelectValues;
+    int playerOne;
+    int playerTwo;
+
     private float InputX;
     private float InputY;
     
@@ -64,6 +67,9 @@ public class global_movement_controls : MonoBehaviour
         dodgeCooldown = gameObject.GetComponent<global_stats>().dodgeCooldown;
         dodgeStamina = gameObject.GetComponent<global_stats>().dodgeStamina;
         damageBlocker = false;
+        CharacterSelectValues = GameObject.Find("CharacterSelectValues");
+        playerOne = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer1;
+        playerTwo = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer2;
     }
 
     // Update is called once per frame
@@ -155,107 +161,19 @@ public class global_movement_controls : MonoBehaviour
             {
                 if (Input.GetKey(dodge))
                 {
-                   //if player class !=tank
-                    animator.SetBool("isDodging", true);
-                    //top/right dodge movement
-                    if (Input.GetKey(up) && Input.GetKey(right))
+                    //if player class !=tank
+                    if (playerOne != 3 || playerTwo != 3)
                     {
-                        //setting the direction of the Coroutine and starting the Coroutine
-                        Vector3 topRight = new Vector3(baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
-                        //StartCoroutine(smooth_move(topRight, 1f));
-
-                        //changing the rotation of the player equal to direction of movement
-                        rotation = 45.0f;
-
-                        //setting the cooldown before the next dodge can be activated
-                        nextDodge = Time.time + dodgeCooldown;
-
-                        //runs the method from "global_stamina" to use an amount of stamina points
-                        global_stamina stamina_globalInstance = GetComponent<global_stamina>();
-                        stamina_globalInstance.DodgeStamina();
-
-                        //changing whether or not this character blocks damage when using their "dodge" ability
-                        damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
-                    }
-
-                    //top/left dodge movement
-                    if (Input.GetKey(up) && Input.GetKey(left))
-                    {
-                        //setting the direction of the Coroutine and starting the Coroutine
-                        Vector3 topLeft = new Vector3(-baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
-                        //StartCoroutine(smooth_move(topLeft, 1f));
-
-                        //changing the rotation of the player equal to direction of movement
-                        rotation = -45.0f;
-
-                        //setting the cooldown before the next dodge can be activated
-                        nextDodge = Time.time + dodgeCooldown;
-
-                        //runs the method from "global_stamina" to use an amount of stamina points
-                        global_stamina stamina_globalInstance = GetComponent<global_stamina>();
-                        stamina_globalInstance.DodgeStamina();
-
-                        //changing whether or not this character blocks damage when using their "dodge" ability
-                        damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
-                    }
-
-                    //bottom/right dodge movement
-                    if (Input.GetKey(down) && Input.GetKey(right))
-                    {
-                        //setting the direction of the Coroutine and starting the Coroutine
-                        Vector3 bottomRight = new Vector3(baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, -baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
-                        //StartCoroutine(smooth_move(bottomRight, 1f));
-
-                        //changing the rotation of the player equal to direction of movement
-                        rotation = 135.0f;
-
-                        //setting the cooldown before the next dodge can be activated
-                        nextDodge = Time.time + dodgeCooldown;
-
-                        //runs the method from "global_stamina" to use an amount of stamina points
-                        global_stamina stamina_globalInstance = GetComponent<global_stamina>();
-                        stamina_globalInstance.DodgeStamina();
-
-                        //changing whether or not this character blocks damage when using their "dodge" ability
-                        damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
-                    }
-
-                    //bottom/left dodge movement
-                    if (Input.GetKey(down) && Input.GetKey(left))
-                    {
-                        //setting the direction of the Coroutine and starting the Coroutine
-                        Vector3 bottomLeft = new Vector3(-baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, -baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
-                       // StartCoroutine(smooth_move(bottomLeft, 1f));  
-
-                        //changing the rotation of the player equal to direction of movement
-                        rotation = -135.0f;
-
-                        //setting the cooldown before the next dodge can be activated
-                        nextDodge = Time.time + dodgeCooldown;
-
-                        //runs the method from "global_stamina" to use an amount of stamina points
-                        global_stamina stamina_globalInstance = GetComponent<global_stamina>();
-                        stamina_globalInstance.DodgeStamina();
-
-                        //changing whether or not this character blocks damage when using their "dodge" ability
-                        damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
-                    }
-
-                    //upwards dodge movement
-                    if (Input.GetKey(up))
-                    {
-                        if (Input.GetKey(right) || Input.GetKey(down) || Input.GetKey(left))
-                        {
-
-                        }
-                        else
+                        animator.SetBool("isDodging", true);
+                        //top/right dodge movement
+                        if (Input.GetKey(up) && Input.GetKey(right))
                         {
                             //setting the direction of the Coroutine and starting the Coroutine
-                            Vector3 top = new Vector3(0, 0, baseDodgeDistance * dodgeDistance);
-                            //StartCoroutine(smooth_move(top, 1f));
+                            Vector3 topRight = new Vector3(baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
+                            //StartCoroutine(smooth_move(topRight, 1f));
 
                             //changing the rotation of the player equal to direction of movement
-                            rotation = 0.1f;
+                            rotation = 45.0f;
 
                             //setting the cooldown before the next dodge can be activated
                             nextDodge = Time.time + dodgeCooldown;
@@ -267,23 +185,16 @@ public class global_movement_controls : MonoBehaviour
                             //changing whether or not this character blocks damage when using their "dodge" ability
                             damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
                         }
-                    }
 
-                    //right dodge movement
-                    if (Input.GetKey(right))
-                    {
-                        if (Input.GetKey(up) || Input.GetKey(down) || Input.GetKey(left))
-                        {
-
-                        }
-                        else
+                        //top/left dodge movement
+                        if (Input.GetKey(up) && Input.GetKey(left))
                         {
                             //setting the direction of the Coroutine and starting the Coroutine
-                            Vector3 right = new Vector3(baseDodgeDistance * dodgeDistance, 0, 0);
-                           // StartCoroutine(smooth_move(right, 1f));
+                            Vector3 topLeft = new Vector3(-baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
+                            //StartCoroutine(smooth_move(topLeft, 1f));
 
                             //changing the rotation of the player equal to direction of movement
-                            rotation = 89.9f;
+                            rotation = -45.0f;
 
                             //setting the cooldown before the next dodge can be activated
                             nextDodge = Time.time + dodgeCooldown;
@@ -295,23 +206,16 @@ public class global_movement_controls : MonoBehaviour
                             //changing whether or not this character blocks damage when using their "dodge" ability
                             damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
                         }
-                    }
 
-                    //downwards dodge movement
-                    if (Input.GetKey(down))
-                    {
-                        if (Input.GetKey(up) || Input.GetKey(right) || Input.GetKey(left))
-                        {
-
-                        }
-                        else
+                        //bottom/right dodge movement
+                        if (Input.GetKey(down) && Input.GetKey(right))
                         {
                             //setting the direction of the Coroutine and starting the Coroutine
-                            Vector3 bottom = new Vector3(0, 0, -baseDodgeDistance * dodgeDistance);
-                          //  StartCoroutine(smooth_move(bottom, 1f));
+                            Vector3 bottomRight = new Vector3(baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, -baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
+                            //StartCoroutine(smooth_move(bottomRight, 1f));
 
                             //changing the rotation of the player equal to direction of movement
-                            rotation = -178.9f;
+                            rotation = 135.0f;
 
                             //setting the cooldown before the next dodge can be activated
                             nextDodge = Time.time + dodgeCooldown;
@@ -323,23 +227,16 @@ public class global_movement_controls : MonoBehaviour
                             //changing whether or not this character blocks damage when using their "dodge" ability
                             damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
                         }
-                    }
 
-                    //left dodge movement
-                    if (Input.GetKey(left))
-                    {
-                        if (Input.GetKey(up) || Input.GetKey(right) || Input.GetKey(down))
-                        {
-
-                        }
-                        else
+                        //bottom/left dodge movement
+                        if (Input.GetKey(down) && Input.GetKey(left))
                         {
                             //setting the direction of the Coroutine and starting the Coroutine
-                            Vector3 left = new Vector3(-baseDodgeDistance * dodgeDistance, 0, 0);
-                           // StartCoroutine(smooth_move(left, 1f));
+                            Vector3 bottomLeft = new Vector3(-baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner, 0, -baseDodgeDistance * dodgeDistance * baseDodgeDistanceCorner);
+                            // StartCoroutine(smooth_move(bottomLeft, 1f));  
 
                             //changing the rotation of the player equal to direction of movement
-                            rotation = -89.9f;
+                            rotation = -135.0f;
 
                             //setting the cooldown before the next dodge can be activated
                             nextDodge = Time.time + dodgeCooldown;
@@ -350,6 +247,118 @@ public class global_movement_controls : MonoBehaviour
 
                             //changing whether or not this character blocks damage when using their "dodge" ability
                             damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
+                        }
+
+                        //upwards dodge movement
+                        if (Input.GetKey(up))
+                        {
+                            if (Input.GetKey(right) || Input.GetKey(down) || Input.GetKey(left))
+                            {
+
+                            }
+                            else
+                            {
+                                //setting the direction of the Coroutine and starting the Coroutine
+                                Vector3 top = new Vector3(0, 0, baseDodgeDistance * dodgeDistance);
+                                //StartCoroutine(smooth_move(top, 1f));
+
+                                //changing the rotation of the player equal to direction of movement
+                                rotation = 0.1f;
+
+                                //setting the cooldown before the next dodge can be activated
+                                nextDodge = Time.time + dodgeCooldown;
+
+                                //runs the method from "global_stamina" to use an amount of stamina points
+                                global_stamina stamina_globalInstance = GetComponent<global_stamina>();
+                                stamina_globalInstance.DodgeStamina();
+
+                                //changing whether or not this character blocks damage when using their "dodge" ability
+                                damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
+                            }
+                        }
+
+                        //right dodge movement
+                        if (Input.GetKey(right))
+                        {
+                            if (Input.GetKey(up) || Input.GetKey(down) || Input.GetKey(left))
+                            {
+
+                            }
+                            else
+                            {
+                                //setting the direction of the Coroutine and starting the Coroutine
+                                Vector3 right = new Vector3(baseDodgeDistance * dodgeDistance, 0, 0);
+                                // StartCoroutine(smooth_move(right, 1f));
+
+                                //changing the rotation of the player equal to direction of movement
+                                rotation = 89.9f;
+
+                                //setting the cooldown before the next dodge can be activated
+                                nextDodge = Time.time + dodgeCooldown;
+
+                                //runs the method from "global_stamina" to use an amount of stamina points
+                                global_stamina stamina_globalInstance = GetComponent<global_stamina>();
+                                stamina_globalInstance.DodgeStamina();
+
+                                //changing whether or not this character blocks damage when using their "dodge" ability
+                                damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
+                            }
+                        }
+
+                        //downwards dodge movement
+                        if (Input.GetKey(down))
+                        {
+                            if (Input.GetKey(up) || Input.GetKey(right) || Input.GetKey(left))
+                            {
+
+                            }
+                            else
+                            {
+                                //setting the direction of the Coroutine and starting the Coroutine
+                                Vector3 bottom = new Vector3(0, 0, -baseDodgeDistance * dodgeDistance);
+                                //  StartCoroutine(smooth_move(bottom, 1f));
+
+                                //changing the rotation of the player equal to direction of movement
+                                rotation = -178.9f;
+
+                                //setting the cooldown before the next dodge can be activated
+                                nextDodge = Time.time + dodgeCooldown;
+
+                                //runs the method from "global_stamina" to use an amount of stamina points
+                                global_stamina stamina_globalInstance = GetComponent<global_stamina>();
+                                stamina_globalInstance.DodgeStamina();
+
+                                //changing whether or not this character blocks damage when using their "dodge" ability
+                                damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
+                            }
+                        }
+
+                        //left dodge movement
+                        if (Input.GetKey(left))
+                        {
+                            if (Input.GetKey(up) || Input.GetKey(right) || Input.GetKey(down))
+                            {
+
+                            }
+                            else
+                            {
+                                //setting the direction of the Coroutine and starting the Coroutine
+                                Vector3 left = new Vector3(-baseDodgeDistance * dodgeDistance, 0, 0);
+                                // StartCoroutine(smooth_move(left, 1f));
+
+                                //changing the rotation of the player equal to direction of movement
+                                rotation = -89.9f;
+
+                                //setting the cooldown before the next dodge can be activated
+                                nextDodge = Time.time + dodgeCooldown;
+
+                                //runs the method from "global_stamina" to use an amount of stamina points
+                                global_stamina stamina_globalInstance = GetComponent<global_stamina>();
+                                stamina_globalInstance.DodgeStamina();
+
+                                //changing whether or not this character blocks damage when using their "dodge" ability
+                                damageBlocker = gameObject.GetComponent<global_stats>().damageBlocker;
+                            }
                         }
                     }
                 }

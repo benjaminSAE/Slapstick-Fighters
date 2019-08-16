@@ -58,7 +58,7 @@ public class attack_archer : MonoBehaviour
         if (whileLoop == false)
         {
             archerArrow.transform.position = archer.transform.position;
-            animator.SetBool("isAttacking", false);
+            animator.SetBool("isArcherAttacking", false);
         }
 
         //running custom method stated below
@@ -77,7 +77,7 @@ public class attack_archer : MonoBehaviour
             //upwards attack movement
             if (rotation > -22 && rotation < 22)
             {
-                animator.SetBool("isAttacking", true);
+                animator.SetBool("isArcherAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 top = new Vector3(0, 0, attackDistance * attackDistanceBase);
                 StartCoroutine(smooth_move(top, 1f));
@@ -93,7 +93,7 @@ public class attack_archer : MonoBehaviour
             //upwards/right attack movement
             if (rotation > 23 && rotation < 67)
             {
-                animator.SetBool("isAttacking", true);
+                animator.SetBool("isArcherAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 topRight = new Vector3(attackDistance * attackDistanceBase * attackDistanceBaseCorner, 0, attackDistance * attackDistanceBase * attackDistanceBaseCorner);
                 StartCoroutine(smooth_move(topRight, 1f));
@@ -109,7 +109,7 @@ public class attack_archer : MonoBehaviour
             //right attack movement
             if (rotation > 68 && rotation < 112)
             {
-                animator.SetBool("isAttacking", true);
+                animator.SetBool("isArcherAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 right = new Vector3(attackDistance * attackDistanceBase, 0, 0);
                 StartCoroutine(smooth_move(right, 1f));
@@ -125,7 +125,7 @@ public class attack_archer : MonoBehaviour
             //downwards/right attack movement
             if (rotation > 113 && rotation < 157)
             {
-                animator.SetBool("isAttacking", true);
+                animator.SetBool("isArcherAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 bottomRight = new Vector3(attackDistance * attackDistanceBase * attackDistanceBaseCorner, 0, -attackDistance * attackDistanceBase * attackDistanceBaseCorner);
                 StartCoroutine(smooth_move(bottomRight, 1f));
@@ -141,7 +141,7 @@ public class attack_archer : MonoBehaviour
             //downwards attack movement
             if (rotation > 158 && rotation < 200 || rotation > -200 && rotation < -158)
             {
-                animator.SetBool("isAttacking", true);
+                animator.SetBool("isArcherAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 bottom = new Vector3(0, 0, -attackDistance * attackDistanceBase);
                 StartCoroutine(smooth_move(bottom, 1f));
@@ -157,7 +157,7 @@ public class attack_archer : MonoBehaviour
             //downwards/left attack movement
             if (rotation > -157 && rotation < -113)
             {
-                animator.SetBool("isAttacking", true);
+                animator.SetBool("isArcherAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 bottomLeft = new Vector3(-attackDistance * attackDistanceBase * attackDistanceBaseCorner, 0, -attackDistance * attackDistanceBase * attackDistanceBaseCorner);
                 StartCoroutine(smooth_move(bottomLeft, 1f));
@@ -173,7 +173,7 @@ public class attack_archer : MonoBehaviour
             //left attack movement
             if (rotation > -112 && rotation < -68)
             {
-                animator.SetBool("isAttacking", true);
+                animator.SetBool("isArcherAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 left = new Vector3(-attackDistance * attackDistanceBase, 0, 0);
                 StartCoroutine(smooth_move(left, 1f));
@@ -189,7 +189,7 @@ public class attack_archer : MonoBehaviour
             //upwards/left attack movement
             if (rotation > -67 && rotation < -23)
             {
-                animator.SetBool("isAttacking", true);
+                animator.SetBool("isArcherAttacking", true);
                 //setting the direction of the Coroutine and starting the Coroutine
                 Vector3 topLeft = new Vector3(-attackDistance * attackDistanceBase * attackDistanceBaseCorner, 0, attackDistance * attackDistanceBase * attackDistanceBaseCorner);
                 StartCoroutine(smooth_move(topLeft, 1f));

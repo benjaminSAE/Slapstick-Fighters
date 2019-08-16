@@ -38,7 +38,7 @@ public class attack_knight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("isAttacking", true);
+        animator.SetBool("isKnightAttacking", true);
         //updating "currentStaminaPoints" to equal the same value inside "global_stamina"
         currentStaminaPoints = gameObject.GetComponent<global_stamina>().currentStaminaPoints;
 
@@ -53,7 +53,7 @@ public class attack_knight : MonoBehaviour
         }
 
        
-        animator.SetBool("isAttacking", false);
+        animator.SetBool("isKnightAttacking", false);
        
     }
 
