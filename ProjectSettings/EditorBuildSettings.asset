@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/UI/Scenes/KS_Main_Menu.unity
     guid: 1f2299babe4659e41af131fdc5813ba5
   - enabled: 1
+    path: Assets/Environments/Scenes/KS_SwampMap.unity
+    guid: 5184bdde9d31388419469a042b5a847a
+  - enabled: 1
+    path: Assets/Environments/Scenes/KS_Tundra_Map.unity
+    guid: 258ddd7c7bd9b7f4a89379197d5c1091
+  - enabled: 0
     path: Assets/Environments/Scenes/NA_TundraMap.unity
     guid: 7f5edf7ba2e7fa045bf5c53d7a585f6a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Environments/Scenes/KT_SwampMap.unity
     guid: a572023c93c5b594ab637bf317a344de
   - enabled: 0
