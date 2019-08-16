@@ -36,12 +36,18 @@ public class HealthStamina_Pickup : MonoBehaviour
                 {
                     global_damagable stamina_globalInstance = objectCollided.GetComponent<global_damagable>();
                     stamina_globalInstance.HealthPickupMethod();
+
+                    BG_CharacterAudio characterAudioInstance = objectCollided.GetComponent<BG_CharacterAudio>();
+                    characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.HealthCollect);
                 }
 
                 if (whichGain == true)
                 {
                     global_stamina stamina_globalInstance = objectCollided.GetComponent<global_stamina>();
                     stamina_globalInstance.StaminaPickupMethod();
+
+                    BG_CharacterAudio characterAudioInstance = objectCollided.GetComponent<BG_CharacterAudio>();
+                    characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.StaminaCollect);
                 }
             }
         }
