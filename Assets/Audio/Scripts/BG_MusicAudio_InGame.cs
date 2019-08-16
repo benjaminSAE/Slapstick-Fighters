@@ -28,17 +28,16 @@ public class BG_MusicAudio_InGame : MonoBehaviour
     private bool startBattleMusic = false;
     private bool startInstrumentalMusic = true;
 
-    // Awake is called as soon as the object loads
+    public static BG_MusicAudio_InGame Instance;
+
     private void Awake()
     {
-        
+        Instance = this;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(LateStart(1));
-
         instrumentalMusic = FMODUnity.RuntimeManager.CreateInstance(instrumentalMusicMusic);
         battleMusic = FMODUnity.RuntimeManager.CreateInstance(battleMusicMusic);
     }
@@ -46,15 +45,6 @@ public class BG_MusicAudio_InGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distance = Vector3.Distance(player1.position, player2.position);
-
-        MusicChanger();
-    }
-
-    IEnumerator LateStart(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-
         GameObject CharacterSelectValues = GameObject.Find("CharacterSelectValues");
         int whichPlayer1 = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer1;
         int whichPlayer2 = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer2;
@@ -84,6 +74,10 @@ public class BG_MusicAudio_InGame : MonoBehaviour
         {
             player1 = GameObject.Find("TankPlayer1(Clone)").GetComponent<Transform>();
         }
+
+        distance = Vector3.Distance(player1.position, player2.position);
+
+        MusicChanger();
     }
 
     private void MusicChanger()
@@ -110,5 +104,11 @@ public class BG_MusicAudio_InGame : MonoBehaviour
                 startInstrumentalMusic = false;
             }
         }
+    }
+
+    public void StopMusic()
+    {
+        instrumentalMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        battleMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

@@ -26,6 +26,7 @@ public class KT_RoundTimerScript : MonoBehaviour
         if (currentTime <= 0)
         {
             currentTime = 0;
+            BG_MusicAudio_InGame.Instance.StopMusic();
             SceneManager.LoadScene("KS_Leaderboard");
         }
     }

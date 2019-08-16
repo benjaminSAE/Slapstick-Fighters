@@ -1750,6 +1750,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1449282503}
   - component: {fileID: 1449282504}
+  - component: {fileID: 1449282505}
+  - component: {fileID: 1449282506}
   m_Layer: 0
   m_Name: ScriptHandler
   m_TagString: Untagged
@@ -1791,6 +1793,34 @@ MonoBehaviour:
   loserKills: {fileID: 1360537588}
   loserCharacter: {fileID: 370290377}
   loserPlayer: {fileID: 587250563}
+--- !u!114 &1449282505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449282502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca809ffaa627834982af1c95bb4f707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  victoryMusicMusic: event:/Music/Victory
+--- !u!114 &1449282506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449282502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8835d3e948d0543a161177d0c89f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forwardClickSound: event:/Misc/Forwards Menu Click
+  backwardsClickSound: event:/Misc/Backwards Menu Click
+  selectClickSound: event:/Misc/Select Menu Click
 --- !u!1 &1581986312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,6 +1952,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1581986312}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1449282506}
+        m_MethodName: ForwardsClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2215,6 +2256,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1449282506}
+        m_MethodName: ForwardsClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1449282505}
+        m_MethodName: StopMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1895177130
@@ -2333,3 +2396,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025743272}
   m_CullTransparentMesh: 0
+--- !u!1001 &4151884279575452615
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 397783450032631376, guid: ddc57bc813ee35f4a85698c34a117e64,
+        type: 3}
+      propertyPath: m_Name
+      value: arrowParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879069400205578021, guid: ddc57bc813ee35f4a85698c34a117e64,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 553.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879069400205578021, guid: ddc57bc813ee35f4a85698c34a117e64,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 311.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879069400205578021, guid: ddc57bc813ee35f4a85698c34a117e64,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879069400205578021, guid: ddc57bc813ee35f4a85698c34a117e64,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879069400205578021, guid: ddc57bc813ee35f4a85698c34a117e64,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879069400205578021, guid: ddc57bc813ee35f4a85698c34a117e64,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879069400205578021, guid: ddc57bc813ee35f4a85698c34a117e64,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879069400205578021, guid: ddc57bc813ee35f4a85698c34a117e64,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879069400205578021, guid: ddc57bc813ee35f4a85698c34a117e64,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879069400205578021, guid: ddc57bc813ee35f4a85698c34a117e64,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879069400205578021, guid: ddc57bc813ee35f4a85698c34a117e64,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ddc57bc813ee35f4a85698c34a117e64, type: 3}
