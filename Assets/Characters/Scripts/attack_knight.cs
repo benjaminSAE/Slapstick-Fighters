@@ -19,7 +19,7 @@ public class attack_knight : MonoBehaviour
     float swordRotation;
     float setSwordRotation = 90;
     float rotationSpeed = 20;
-    [SerializeField] private GameObject swordHilt;
+    //[SerializeField] private GameObject swordHilt;
     [SerializeField] private Animator animator;
 
     float swordSwing2 = 9999999f;
@@ -47,7 +47,7 @@ public class attack_knight : MonoBehaviour
         if (swordSwing2 < Time.time)
         {
             //start anti-clockwise rotation of sword with a Coroutine;
-            StartCoroutine(RotateMe(Vector3.up * -90, 0.8f));
+            //StartCoroutine(RotateMe(Vector3.up * -90, 0.8f));
 
             swordSwing2 = 9999999f;
         }
@@ -63,7 +63,7 @@ public class attack_knight : MonoBehaviour
         if (swordSwing2 == 9999999f && currentStaminaPoints > attackStamina && Time.time > nextAttack && Input.GetKeyDown(attack))
         {
             //start clockwise rotation of sword with a Coroutine;
-            StartCoroutine(RotateMe(Vector3.up * 90, 0.8f));
+            //StartCoroutine(RotateMe(Vector3.up * 90, 0.8f));
 
             //setting time before second swing
             swordSwing2 = Time.time + 0.7f;
@@ -81,18 +81,18 @@ public class attack_knight : MonoBehaviour
     }
 
     //method that runs the Coroutine
-    IEnumerator RotateMe(Vector3 byAngles, float inTime)
-    {
-        var fromAngle = swordHilt.transform.rotation;
-        var toAngle = Quaternion.Euler(transform.eulerAngles + byAngles);
-        for (var t = 0f; t < 1; t += Time.deltaTime / inTime)
-        {
-            swordHilt.transform.rotation = Quaternion.Slerp(fromAngle, toAngle, t);
+    //IEnumerator RotateMe(Vector3 byAngles, float inTime)
+    //{
+    //    var fromAngle = swordHilt.transform.rotation;
+    //    var toAngle = Quaternion.Euler(transform.eulerAngles + byAngles);
+    //    for (var t = 0f; t < 1; t += Time.deltaTime / inTime)
+    //    {
+    //        swordHilt.transform.rotation = Quaternion.Slerp(fromAngle, toAngle, t);
 
-            global_movement_controls global_movement_controlsInstance = GetComponent<global_movement_controls>();
-            global_movement_controlsInstance.StopRotation();
+    //        global_movement_controls global_movement_controlsInstance = GetComponent<global_movement_controls>();
+    //        global_movement_controlsInstance.StopRotation();
 
-            yield return null;
-        }
-    }
+    //        yield return null;
+    //    }
+    //}
 }
