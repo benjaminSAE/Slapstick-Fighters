@@ -1108,7 +1108,7 @@ MonoBehaviour:
   attackDamage: 10
   attackSpeed: 10
   attackStamina: 10
-  attackCooldown: 10
+  attackCooldown: 3
   dodgeDistance: 10
   dodgeCooldown: 10
   dodgeSpeed: 10
