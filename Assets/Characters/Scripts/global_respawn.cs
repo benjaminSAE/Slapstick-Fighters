@@ -21,7 +21,8 @@ public class global_respawn : MonoBehaviour
 
     int playerOne;
     int playerTwo;
-    private Animator animator;
+    private Animator animatorPlayerOne;
+    private Animator animatorPlayerTwo;
 
     private void Awake()
     {
@@ -32,31 +33,56 @@ public class global_respawn : MonoBehaviour
     void Start()
     {
         CharacterSelectValues = GameObject.Find("CharacterSelectValues");
-        animator = this.gameObject.GetComponent<Animator>();
         playerOne = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer1;
         playerTwo = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer2;
-       
+
+        if (playerOne == 1)
+        {
+            animatorPlayerOne = GameObject.Find("ArcherPlayer1(Clone)").GetComponent<Animator>();
+        }
+        else if (playerOne == 2)
+        {
+            animatorPlayerOne = GameObject.Find("KnightPlayer1(Clone)").GetComponent<Animator>();
+        }
+        else if (playerOne == 3)
+        {
+            animatorPlayerOne = GameObject.Find("TankPlayer1(Clone)").GetComponent<Animator>();
+        }
+
+        if (playerTwo == 1)
+        {
+            animatorPlayerTwo = GameObject.Find("ArcherPlayer2(Clone)").GetComponent<Animator>();
+        }
+        else if (playerTwo == 2)
+        {
+            animatorPlayerTwo = GameObject.Find("KnightPlayer2(Clone)").GetComponent<Animator>();
+        }
+        else if (playerTwo == 3)
+        {
+            animatorPlayerTwo = GameObject.Find("TankPlayer2(Clone)").GetComponent<Animator>();
+        }
+
     }
 
     public void RespawnPlayer1()
     {
         if (playerOne == 1)
         {
-            animator.SetBool("isRespawning", true);
+            animatorPlayerOne.SetBool("isRespawning", true);
             Instantiate(archerPlayer1, spawnPlayer1.transform);          
             StartCoroutine(COStunPause(1.2f));
         }
 
         if (playerOne == 2)
         {
-            animator.SetBool("isRespawning", true);
+            animatorPlayerOne.SetBool("isRespawning", true);
             Instantiate(knightPlayer1, spawnPlayer1.transform);            
             StartCoroutine(COStunPause(1.2f));
         }
 
         if (playerOne == 3)
         {
-            animator.SetBool("isRespawning", true);
+            animatorPlayerOne.SetBool("isRespawning", true);
             Instantiate(tankPlayer1, spawnPlayer1.transform);
             StartCoroutine(COStunPause(1.2f));
         }
@@ -64,33 +90,32 @@ public class global_respawn : MonoBehaviour
 
     public void RespawnPlayer2()
     {
-
-
         if (playerTwo == 1)
         {
-            animator.SetBool("isRespawning", true);
+            animatorPlayerTwo.SetBool("isRespawning", true);
             Instantiate(archerPlayer2, spawnPlayer2.transform);           
             StartCoroutine(COStunPause(1.2f));
         }
 
         if (playerTwo == 2)
         {
-            animator.SetBool("isRespawning", true);
+            animatorPlayerTwo.SetBool("isRespawning", true);
             Instantiate(knightPlayer2, spawnPlayer2.transform);            
             StartCoroutine(COStunPause(1.2f));
         }
 
         if (playerTwo == 3)
         {
-            animator.SetBool("isRespawning", true);
+            animatorPlayerTwo.SetBool("isRespawning", true);
             Instantiate(tankPlayer2, spawnPlayer2.transform);            
             StartCoroutine(COStunPause(1.2f));
         }
     }
+
     public IEnumerator COStunPause(float pauseTime)
     {
-
         yield return new WaitForSeconds(pauseTime);
-        animator.SetBool("isRespawning", false);
+        animatorPlayerOne.SetBool("isRespawning", false);
+        animatorPlayerTwo.SetBool("isRespawning", false);
     }
 }
