@@ -161,6 +161,7 @@ public class global_movement_controls : MonoBehaviour
             {
                 if (Input.GetKey(dodge))
                 {
+
                    //if player class !=tank
                    
                     animator.SetBool("isDodging", true);

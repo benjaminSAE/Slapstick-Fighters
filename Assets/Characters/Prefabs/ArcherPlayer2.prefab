@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd93582432d4b1640b1c0aa34b771cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 0
+  attack: 106
   animator: {fileID: 0}
   archer: {fileID: 1927408138077048}
   archerArrow: {fileID: 3730087205865780658}
@@ -1317,6 +1317,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4315204093656162}
     m_Modifications:
+    - target: {fileID: 101924, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}
+      propertyPath: m_Name
+      value: bow
+      objectReference: {fileID: 0}
     - target: {fileID: 401924, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.067088746
@@ -1372,10 +1376,6 @@ PrefabInstance:
     - target: {fileID: 401924, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}
       propertyPath: m_LocalScale.y
       value: 40.00006
-      objectReference: {fileID: 0}
-    - target: {fileID: 101924, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}
-      propertyPath: m_Name
-      value: bow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4224c09beaffb8b49a0c4b2c9be96a33, type: 3}

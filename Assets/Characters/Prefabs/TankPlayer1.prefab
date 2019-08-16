@@ -1197,7 +1197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5255c95cb144244acb1674e34083fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 0
+  attack: 102
   animator: {fileID: 0}
 --- !u!136 &4527803665057035197
 CapsuleCollider:
@@ -1233,6 +1233,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4895161305379460}
     m_Modifications:
+    - target: {fileID: 149376, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}
+      propertyPath: m_Name
+      value: shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 149376, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}
+      propertyPath: m_TagString
+      value: Attacker
+      objectReference: {fileID: 0}
     - target: {fileID: 449376, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.084
@@ -1288,14 +1296,6 @@ PrefabInstance:
     - target: {fileID: 449376, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}
       propertyPath: m_LocalScale.z
       value: 25.496996
-      objectReference: {fileID: 0}
-    - target: {fileID: 149376, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}
-      propertyPath: m_Name
-      value: shield
-      objectReference: {fileID: 0}
-    - target: {fileID: 149376, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}
-      propertyPath: m_TagString
-      value: Attacker
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8de23ea89093a8e4c922b0d019cb9040, type: 3}

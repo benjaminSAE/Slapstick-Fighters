@@ -1197,7 +1197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a89f23176eca434ab7f2335c6d71aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 0
+  attack: 106
   animator: {fileID: 0}
 --- !u!136 &-6877070599914742126
 CapsuleCollider:
