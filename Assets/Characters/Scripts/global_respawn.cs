@@ -21,8 +21,6 @@ public class global_respawn : MonoBehaviour
 
     int playerOne;
     int playerTwo;
-    private Animator animatorPlayerOne;
-    private Animator animatorPlayerTwo;
 
     private void Awake()
     {
@@ -34,33 +32,31 @@ public class global_respawn : MonoBehaviour
     {
         CharacterSelectValues = GameObject.Find("CharacterSelectValues");
         playerOne = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer1;
-        playerTwo = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer2;
+        playerTwo = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer2;       
     }
 
     public void RespawnPlayer1()
     {
         if (playerOne == 1)
         {
-            animatorPlayerOne = GameObject.Find("ArcherPlayer1(Clone)").GetComponent<Animator>();
-            animatorPlayerOne.SetBool("isRespawning", true);
+                    
             Instantiate(archerPlayer1, spawnPlayer1.transform);          
-            StartCoroutine(COStunPause(1.2f));
+           
         }
 
         if (playerOne == 2)
         {
-            animatorPlayerOne = GameObject.Find("KnightPlayer1(Clone)").GetComponent<Animator>();
-            animatorPlayerOne.SetBool("isRespawning", true);
-            Instantiate(knightPlayer1, spawnPlayer1.transform);            
-            StartCoroutine(COStunPause(1.2f));
+            
+            Instantiate(knightPlayer1, spawnPlayer1.transform);
+            
+
         }
 
         if (playerOne == 3)
         {
-            animatorPlayerOne = GameObject.Find("TankPlayer1(Clone)").GetComponent<Animator>();
-            animatorPlayerOne.SetBool("isRespawning", true);
+           
             Instantiate(tankPlayer1, spawnPlayer1.transform);
-            StartCoroutine(COStunPause(1.2f));
+           
         }
     }
 
@@ -68,33 +64,30 @@ public class global_respawn : MonoBehaviour
     {
         if (playerTwo == 1)
         {
-            animatorPlayerTwo = GameObject.Find("ArcherPlayer2(Clone)").GetComponent<Animator>();
-            animatorPlayerTwo.SetBool("isRespawning", true);
+           
             Instantiate(archerPlayer2, spawnPlayer2.transform);           
-            StartCoroutine(COStunPause(1.2f));
+            
         }
 
         if (playerTwo == 2)
         {
-            animatorPlayerTwo = GameObject.Find("KnightPlayer2(Clone)").GetComponent<Animator>();
-            animatorPlayerTwo.SetBool("isRespawning", true);
-            Instantiate(knightPlayer2, spawnPlayer2.transform);            
-            StartCoroutine(COStunPause(1.2f));
+            
+            Instantiate(knightPlayer2, spawnPlayer2.transform);
+            
         }
 
         if (playerTwo == 3)
         {
-            animatorPlayerTwo = GameObject.Find("TankPlayer2(Clone)").GetComponent<Animator>();
-            animatorPlayerTwo.SetBool("isRespawning", true);
+            
             Instantiate(tankPlayer2, spawnPlayer2.transform);            
-            StartCoroutine(COStunPause(1.2f));
+         
         }
     }
 
-    public IEnumerator COStunPause(float pauseTime)
-    {
-        yield return new WaitForSeconds(pauseTime);
-        animatorPlayerOne.SetBool("isRespawning", false);
-        animatorPlayerTwo.SetBool("isRespawning", false);
-    }
+    //public IEnumerator COStunPause(float pauseTime)
+    //{
+    //    yield return new WaitForSeconds(pauseTime);
+    //    animator.SetBool("isRespawning", false);
+       
+    //}
 }

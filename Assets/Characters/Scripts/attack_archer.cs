@@ -10,52 +10,40 @@ public class attack_archer : MonoBehaviour
     float attackStamina;
     float attackCooldown;
     float currentStaminaPoints;
-
     float nextAttack;
-    [SerializeField] private KeyCode attack;
-    [SerializeField] private Animator animator;
 
-    //changable values for everything to do with the archer's ranged attack
+    //customisable control option that can be set in the inspector
+    public KeyCode attack;
+
+    //stating movement related values for initialisation
     float attackDistance;
     float attackDistanceBase = 0.017f;
     float attackDistanceBaseCorner = 0.6f;
-
     float rotation;
+    bool whileLoop;
 
-    [SerializeField] private GameObject archer;
-    [SerializeField] private GameObject archerArrow;
-
-
-
-    //true/false statement to determine when the Coroutine's while loop finishes
-    bool whileLoop = false;
+    [SerializeField] private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = this.gameObject.GetComponent<Animator>();
-
-        //initialising values according to this object's "global_stats"
+        //initialising values from "global_stats"
         attackDistance = gameObject.GetComponent<global_stats>().attackDistance;
         attackDamage = gameObject.GetComponent<global_stats>().attackDamage;
         attackSpeed = gameObject.GetComponent<global_stats>().attackSpeed;
         attackStamina = gameObject.GetComponent<global_stats>().attackStamina;
         attackCooldown = gameObject.GetComponent<global_stats>().attackCooldown;
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
         //updating "rotation" to equal the same value inside "global_movement_controls"
         rotation = gameObject.GetComponent<global_movement_controls>().rotation;
 
         //updating "currentStaminaPoints" to equal the same value inside "global_stamina"
         currentStaminaPoints = gameObject.GetComponent<global_stamina>().currentStaminaPoints;
-
-        //when the while loop finishes transform the location of the arrow back to the archer
-
 
         //running custom method stated below
         ArcherAttack();
@@ -64,13 +52,12 @@ public class attack_archer : MonoBehaviour
 
     }
 
-    //everything that enables the archer's arrow shooting, stamina usage and cooldown
+    //everything that enables the tank's attack movement, stamina usage and cooldown
     void ArcherAttack()
     {
-
         if (currentStaminaPoints > attackStamina && Time.time > nextAttack && Input.GetKeyDown(attack))
         {
-            animator.SetBool("isArcherAttacking", true);
+            animator.SetBool("IsArcherAttacking", true);
             //start clockwise rotation of sword with a Coroutine;
             //StartCoroutine(RotateMe(Vector3.up * 90, 0.8f));
 
@@ -89,12 +76,12 @@ public class attack_archer : MonoBehaviour
         }
         else
         {
-            animator.SetBool("isArcherAttacking", false);
+            animator.SetBool("IsArcherAttacking", false);
         }
     }
 }
 
-    
+
 
 //    //method that runs the Coroutine
 //    IEnumerator smooth_move(Vector3 direction, float speed)
@@ -115,14 +102,14 @@ public class attack_archer : MonoBehaviour
 //        }
 //    }
 //}
-     //commented out archer
-     //    //upwards attack movement
-     //    if (rotation > -22 && rotation < 22)
-     //    {
-     //        animator.SetBool("isArcherAttacking", true);
-     //        //setting the direction of the Coroutine and starting the Coroutine
-     //        Vector3 top = new Vector3(0, 0, attackDistance * attackDistanceBase);
-     //        StartCoroutine(smooth_move(top, 1f));
+//commented out archer
+//    //upwards attack movement
+//    if (rotation > -22 && rotation < 22)
+//    {
+//        animator.SetBool("isArcherAttacking", true);
+//        //setting the direction of the Coroutine and starting the Coroutine
+//        Vector3 top = new Vector3(0, 0, attackDistance * attackDistanceBase);
+//        StartCoroutine(smooth_move(top, 1f));
 
 //        //setting the cooldown before the next attack can be activated
 //        nextAttack = Time.time + attackCooldown;

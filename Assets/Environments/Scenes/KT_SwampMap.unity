@@ -542,7 +542,6 @@ GameObject:
   - component: {fileID: 515900908}
   - component: {fileID: 515900907}
   - component: {fileID: 515900910}
-  - component: {fileID: 515900911}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -632,19 +631,6 @@ MonoBehaviour:
   battleMusic1Music: event:/Music/battle1
   battleMusic2Music: event:/Music/battle2
   battleMusic3Music: event:/Music/battle3
---- !u!114 &515900911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 515900906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c6389d4c45b97f45af9e50f8f416fac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offset: {x: 0, y: 10, z: -10}
 --- !u!1 &900413896
 GameObject:
   m_ObjectHideFlags: 0
