@@ -1018,9 +1018,9 @@ GameObject:
   - component: {fileID: 3221992055073396731}
   - component: {fileID: 7751084337061182337}
   - component: {fileID: 9119069816591068410}
-  - component: {fileID: 8581790266237692088}
   - component: {fileID: -79072850085816335}
   - component: {fileID: -4205921445456158021}
+  - component: {fileID: 1042777672769621787}
   m_Layer: 9
   m_Name: TankPlayer2
   m_TagString: Player
@@ -1180,25 +1180,11 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &8581790266237692088
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927408138077048}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
 --- !u!114 &-79072850085816335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1227,6 +1213,19 @@ CapsuleCollider:
   m_Height: 1.9245389
   m_Direction: 1
   m_Center: {x: 0, y: 0.84677446, z: 0}
+--- !u!65 &1042777672769621787
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927408138077048}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.51534843, z: 1}
+  m_Center: {x: 0, y: 0.26572704, z: 0}
 --- !u!1001 &5055477192473198757
 PrefabInstance:
   m_ObjectHideFlags: 0
