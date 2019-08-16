@@ -38,7 +38,7 @@ public class attack_knight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("isKnightAttacking", true);
+        
         //updating "currentStaminaPoints" to equal the same value inside "global_stamina"
         currentStaminaPoints = gameObject.GetComponent<global_stamina>().currentStaminaPoints;
 
@@ -53,7 +53,7 @@ public class attack_knight : MonoBehaviour
         }
 
        
-        animator.SetBool("isKnightAttacking", false);
+        
        
     }
 
@@ -62,6 +62,7 @@ public class attack_knight : MonoBehaviour
     {
         if (swordSwing2 == 9999999f && currentStaminaPoints > attackStamina && Time.time > nextAttack && Input.GetKeyDown(attack))
         {
+            animator.SetBool("isKnightAttacking", true);
             //start clockwise rotation of sword with a Coroutine;
             //StartCoroutine(RotateMe(Vector3.up * 90, 0.8f));
 
@@ -77,6 +78,10 @@ public class attack_knight : MonoBehaviour
 
             BG_CharacterAudio characterAudioInstance = GetComponent<BG_CharacterAudio>();
             characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.KnightAttack);
+        }
+        else
+        {
+            animator.SetBool("isKnightAttacking", false);
         }
     }
 
