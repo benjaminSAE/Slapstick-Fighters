@@ -645,6 +645,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 10, z: -10}
+  minZoom: 250
+  maxZoom: 50
+  zoomLimiter: 125
+  smoothTime: 0.5
 --- !u!1 &900413896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1495,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7484136778360762295, guid: ba0e6bde07f42cb43a0283fc5fc3cd81,
+        type: 3}
+      propertyPath: victoryMusicMusic
+      value: event:/Music/Victory
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484136778360762295, guid: ba0e6bde07f42cb43a0283fc5fc3cd81,
+        type: 3}
+      propertyPath: startingTime
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba0e6bde07f42cb43a0283fc5fc3cd81, type: 3}
 --- !u!4 &7484136778285824681 stripped
@@ -1499,6 +1513,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7484136778285824680}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7484136778285824682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7484136777975545864, guid: ba0e6bde07f42cb43a0283fc5fc3cd81,
+    type: 3}
+  m_PrefabInstance: {fileID: 7484136778285824680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7484136778285824683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7484136778285824682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc3a1b1ca432fac4d988e6012e4da623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8266751380597803136
 PrefabInstance:
   m_ObjectHideFlags: 0

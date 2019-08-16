@@ -28,11 +28,16 @@ public class BG_MusicAudio_InGame : MonoBehaviour
     private bool startBattleMusic = false;
     private bool startInstrumentalMusic = true;
 
+    public static BG_MusicAudio_InGame Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
-
         instrumentalMusic = FMODUnity.RuntimeManager.CreateInstance(instrumentalMusicMusic);
         battleMusic = FMODUnity.RuntimeManager.CreateInstance(battleMusicMusic);
     }
@@ -99,5 +104,11 @@ public class BG_MusicAudio_InGame : MonoBehaviour
                 startInstrumentalMusic = false;
             }
         }
+    }
+
+    public void StopMusic()
+    {
+        instrumentalMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        battleMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

@@ -24,6 +24,9 @@ public class global_respawn : MonoBehaviour
     private Animator animatorPlayerOne;
     private Animator animatorPlayerTwo;
 
+    private GameObject player2;
+    private GameObject player1;
+
     private void Awake()
     {
         Instance = this;
@@ -37,22 +40,57 @@ public class global_respawn : MonoBehaviour
         playerTwo = CharacterSelectValues.GetComponent<BG_Player_Select>().characterPlayer2;
     }
 
+    private void Update()
+    {
+        if (playerTwo == 1)
+        {
+            player2 = GameObject.Find("ArcherPlayer2(Clone)");
+        }
+        else if (playerTwo == 2)
+        {
+            player2 = GameObject.Find("KnightPlayer2(Clone)");
+        }
+        else if (playerTwo == 3)
+        {
+            player2 = GameObject.Find("TankPlayer2(Clone)");
+        }
+
+        if (playerOne == 1)
+        {
+            player1 = GameObject.Find("ArcherPlayer1(Clone)");
+        }
+        else if (playerOne == 2)
+        {
+            player1 = GameObject.Find("KnightPlayer1(Clone)");
+        }
+        else if (playerOne == 3)
+        {
+            player1 = GameObject.Find("TankPlayer1(Clone)");
+        }
+    }
+
     public void RespawnPlayer1()
     {
         if (playerOne == 1)
         {
             animatorPlayerOne = GameObject.Find("ArcherPlayer1(Clone)").GetComponent<Animator>();
             animatorPlayerOne.SetBool("isRespawning", true);
-            Instantiate(archerPlayer1, spawnPlayer1.transform);          
+            Instantiate(archerPlayer1, spawnPlayer1.transform);
             StartCoroutine(COStunPause(1.2f));
+
+            BG_CharacterAudio characterAudioInstance = player2.GetComponent<BG_CharacterAudio>();
+            characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.RespawnScreaming);
         }
 
         if (playerOne == 2)
         {
             animatorPlayerOne = GameObject.Find("KnightPlayer1(Clone)").GetComponent<Animator>();
             animatorPlayerOne.SetBool("isRespawning", true);
-            Instantiate(knightPlayer1, spawnPlayer1.transform);            
+            Instantiate(knightPlayer1, spawnPlayer1.transform);
             StartCoroutine(COStunPause(1.2f));
+
+            BG_CharacterAudio characterAudioInstance = player2.GetComponent<BG_CharacterAudio>();
+            characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.RespawnScreaming);
         }
 
         if (playerOne == 3)
@@ -61,6 +99,9 @@ public class global_respawn : MonoBehaviour
             animatorPlayerOne.SetBool("isRespawning", true);
             Instantiate(tankPlayer1, spawnPlayer1.transform);
             StartCoroutine(COStunPause(1.2f));
+
+            BG_CharacterAudio characterAudioInstance = player2.GetComponent<BG_CharacterAudio>();
+            characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.RespawnScreaming);
         }
     }
 
@@ -70,24 +111,33 @@ public class global_respawn : MonoBehaviour
         {
             animatorPlayerTwo = GameObject.Find("ArcherPlayer2(Clone)").GetComponent<Animator>();
             animatorPlayerTwo.SetBool("isRespawning", true);
-            Instantiate(archerPlayer2, spawnPlayer2.transform);           
+            Instantiate(archerPlayer2, spawnPlayer2.transform);
             StartCoroutine(COStunPause(1.2f));
+
+            BG_CharacterAudio characterAudioInstance = player2.GetComponent<BG_CharacterAudio>();
+            characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.RespawnScreaming);
         }
 
         if (playerTwo == 2)
         {
             animatorPlayerTwo = GameObject.Find("KnightPlayer2(Clone)").GetComponent<Animator>();
             animatorPlayerTwo.SetBool("isRespawning", true);
-            Instantiate(knightPlayer2, spawnPlayer2.transform);            
+            Instantiate(knightPlayer2, spawnPlayer2.transform);
             StartCoroutine(COStunPause(1.2f));
+
+            BG_CharacterAudio characterAudioInstance = player2.GetComponent<BG_CharacterAudio>();
+            characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.RespawnScreaming);
         }
 
         if (playerTwo == 3)
         {
             animatorPlayerTwo = GameObject.Find("TankPlayer2(Clone)").GetComponent<Animator>();
             animatorPlayerTwo.SetBool("isRespawning", true);
-            Instantiate(tankPlayer2, spawnPlayer2.transform);            
+            Instantiate(tankPlayer2, spawnPlayer2.transform);
             StartCoroutine(COStunPause(1.2f));
+
+            BG_CharacterAudio characterAudioInstance = player2.GetComponent<BG_CharacterAudio>();
+            characterAudioInstance.PlayerSounds(BG_CharacterAudio.soundList.RespawnScreaming);
         }
     }
 

@@ -22,13 +22,9 @@ public class attack_archer : MonoBehaviour
 
     float rotation;
 
-    [SerializeField] private GameObject archer;
     [SerializeField] private GameObject archerArrow;
-
-
-
-    //true/false statement to determine when the Coroutine's while loop finishes
-    bool whileLoop = false;
+    [SerializeField] private float arrowSpeed = 100f;
+    [SerializeField] private Vector3 offset;
 
     // Start is called before the first frame update
     void Start()
@@ -59,9 +55,6 @@ public class attack_archer : MonoBehaviour
 
         //running custom method stated below
         ArcherAttack();
-
-
-
     }
 
     //everything that enables the archer's arrow shooting, stamina usage and cooldown
@@ -71,11 +64,10 @@ public class attack_archer : MonoBehaviour
         if (currentStaminaPoints > attackStamina && Time.time > nextAttack && Input.GetKeyDown(attack))
         {
             animator.SetBool("isArcherAttacking", true);
-            //start clockwise rotation of sword with a Coroutine;
-            //StartCoroutine(RotateMe(Vector3.up * 90, 0.8f));
 
-            //setting time before second swing
-
+            GameObject instArcherArrow = Instantiate(archerArrow, transform.position + offset, Quaternion.identity) as GameObject;
+            Rigidbody instArcherArrowRigidbody = instArcherArrow.GetComponent<Rigidbody>();
+            instArcherArrowRigidbody.AddForce(transform.forward * arrowSpeed);
 
             //setting the cooldown before the next attack can be activated
             nextAttack = Time.time + attackCooldown;
