@@ -112,6 +112,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 39473
+--- !u!114 &-8432996852316029975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Tank Attacks
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Tank Attacks
+  guid: b7edf53bf3548141a6ae8790f039e291
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1830
 --- !u!114 &-8332131894910061884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +158,52 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 371
+--- !u!114 &-7955227045770300163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Sqeaky Feet
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Sqeaky Feet
+  guid: 5fcf8c056427514c9e554b61164f5efc
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 212
+--- !u!114 &-7875520261830699530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Ambient
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Ambient
+  guid: 6aabd7ce5432bd45b1b5537692d44240
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 253399
 --- !u!114 &-7773968911943192780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,6 +426,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 16840160
   Exists: 1
+--- !u!114 &-6424522911075768484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Battle
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Battle
+  guid: df94a895a3dcec45a0d00b70aa8168b9
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 162632
 --- !u!114 &-6329299064398448665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +472,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 227
+--- !u!114 &-6175298095092812085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Misc/Forwards Menu Click
+  m_EditorClassIdentifier: 
+  Path: event:/Misc/Forwards Menu Click
+  guid: c55a84c08f40be4d8cf4124a5f46b36a
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 23
 --- !u!114 &-6170469058838657336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,6 +518,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 39473
+--- !u!114 &-6152451854874052189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:\Slapstick-Fighters\FMOD\Slapstick-Fighters Sounds\Build\Desktop\Master.strings.bank
+  SubDir: 
+  lastModified: 637015799740485483
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1808
+  Exists: 1
 --- !u!114 &-5883367652751827723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,6 +630,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1660
+--- !u!114 &-5410876634446048782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Flinching
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Flinching
+  guid: fd7ee8cf57ac804ebf2dd0c9666e499c
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 227
 --- !u!114 &-5384673155887079231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,6 +857,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5918
+--- !u!114 &-4319883039982270319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Falling Deaths
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Falling Deaths
+  guid: 75e5a997f6d3c74bbf23b331afa2413c
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3165
 --- !u!114 &-4259968330047671340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,6 +1200,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 39473
+--- !u!114 &-2333586306332510300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Walking
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Walking
+  guid: b9e8bb23b2a9f940a1b2de34649d64a9
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 371
 --- !u!114 &-2300339843639827817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,6 +1290,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 23
+--- !u!114 &-1910417670187229199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Health Collect
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Health Collect
+  guid: a92cd191b2d13f4cbf78a3e3d27058ce
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 545
 --- !u!114 &-1885575135282323080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,6 +1425,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 545
+--- !u!114 &-1656095757741500889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Menu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Menu
+  guid: 5b4aa881672d6c408c9511de8f2c0eca
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 228577
 --- !u!114 &-1507750997677071447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1243,6 +1493,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 250
+--- !u!114 &-1379834697697334103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Misc/Backwards Menu Click
+  m_EditorClassIdentifier: 
+  Path: event:/Misc/Backwards Menu Click
+  guid: e9c7d5c7f8a6ed47942b9320a39ed7d8
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 32
 --- !u!114 &-1320143873682369342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1335,6 +1608,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 190933
+--- !u!114 &-122322856023343700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Misc/Select Menu Click
+  m_EditorClassIdentifier: 
+  Path: event:/Misc/Select Menu Click
+  guid: ca7fbcd4c9ed8e439cf9fd95962fd8e6
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 235
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1348,38 +1644,38 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -6671492786718751400}
-  - {fileID: 4130094070158989364}
+  - {fileID: -6152451854874052189}
+  - {fileID: 5629260191896470602}
   EditorEvents:
-  - {fileID: 269916267986909494}
-  - {fileID: -5464470282210545658}
-  - {fileID: 339189464699050044}
-  - {fileID: 4161303216102693608}
-  - {fileID: -1169103122199853199}
-  - {fileID: -3100523475493257759}
-  - {fileID: 4420974342593315670}
-  - {fileID: 3975304211809199938}
-  - {fileID: -8477066872888180383}
-  - {fileID: -1659029507710520752}
-  - {fileID: -1320143873682369342}
-  - {fileID: 4461910359700593723}
-  - {fileID: 7632320249436473095}
-  - {fileID: -5883367652751827723}
-  - {fileID: -8332131894910061884}
-  - {fileID: -1885575135282323080}
-  - {fileID: 4007201957527939135}
-  - {fileID: 5054324520067896168}
-  - {fileID: 226951682447756106}
-  - {fileID: -7365184045679226650}
-  - {fileID: -2111528064253121863}
-  - {fileID: 7138829939386788312}
-  - {fileID: -4118519902412183860}
+  - {fileID: 5146952765658783471}
+  - {fileID: -1656095757741500889}
+  - {fileID: -7955227045770300163}
+  - {fileID: -7875520261830699530}
+  - {fileID: -4319883039982270319}
+  - {fileID: 2773436095719672745}
+  - {fileID: 4374293452804884466}
+  - {fileID: 7282587792722519798}
+  - {fileID: 2527298371265702588}
+  - {fileID: -1910417670187229199}
+  - {fileID: 4044687812926125657}
+  - {fileID: 2986707365568932505}
+  - {fileID: 6666560563921055271}
+  - {fileID: -8432996852316029975}
+  - {fileID: -2333586306332510300}
+  - {fileID: -6175298095092812085}
+  - {fileID: -122322856023343700}
+  - {fileID: -6424522911075768484}
+  - {fileID: 3987924272031229030}
+  - {fileID: -1379834697697334103}
+  - {fileID: 6806159138189627250}
+  - {fileID: 3363610857671652984}
+  - {fileID: -5410876634446048782}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 4130094070158989364}
+  - {fileID: 5629260191896470602}
   StringsBanks:
-  - {fileID: -6671492786718751400}
-  stringsBankWriteTime: 637015791914679438
+  - {fileID: -6152451854874052189}
+  stringsBankWriteTime: 637015799740485483
   cacheVersion: 3
 --- !u!114 &188997490016281341
 MonoBehaviour:
@@ -1605,6 +1901,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 705
+--- !u!114 &2527298371265702588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Victory
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Victory
+  guid: 9f2f3a6ab3d09340860e1f7270d1734f
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 39473
 --- !u!114 &2592334059903670235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1627,6 +1946,52 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 520
+--- !u!114 &2773436095719672745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Archer Attacks
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Archer Attacks
+  guid: 7f74524e376a7f4483584b0737440179
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1569
+--- !u!114 &2986707365568932505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Whooshing
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Whooshing
+  guid: b1bff421661bdf42866ab3090244f944
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 705
 --- !u!114 &3220438240841355576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1649,6 +2014,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1830
+--- !u!114 &3363610857671652984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Stamina Collect
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Stamina Collect
+  guid: f8f7cf9ce7369e4699a3aa84304caf3d
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 666
 --- !u!114 &3382544020763722343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1738,6 +2126,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2367
+--- !u!114 &3987924272031229030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Knight Attacks
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Knight Attacks
+  guid: e32ab57879cb6942952cc291696456db
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 653
 --- !u!114 &4007201957527939135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1761,6 +2172,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 653
+--- !u!114 &4044687812926125657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Deaths
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Deaths
+  guid: acd4ca2e8d91f9458d236649110b45bb
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 520
 --- !u!114 &4103534352352181026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1828,6 +2262,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 253399
+--- !u!114 &4374293452804884466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Dodging
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Dodging
+  guid: 83ca011418e6dd4a89f10d8887b85055
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1500
 --- !u!114 &4405818283814229314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1987,6 +2444,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 162632
+--- !u!114 &5146952765658783471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Victory Dance
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Victory Dance
+  guid: 4478f32b8cc4464b9d638f9a8b62e43f
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5918
 --- !u!114 &5331148680293188853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2031,6 +2511,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3165
+--- !u!114 &5629260191896470602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:\Slapstick-Fighters\FMOD\Slapstick-Fighters Sounds\Build\Desktop\Master.bank
+  SubDir: 
+  lastModified: 637015799740465526
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 16876384
+  Exists: 1
 --- !u!114 &5709586453189404905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2169,6 +2669,52 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 520
+--- !u!114 &6666560563921055271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Instrumental
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Instrumental
+  guid: b783a4855d74c84abe7e0e889358972d
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 190933
+--- !u!114 &6806159138189627250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Victory Shout
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Victory Shout
+  guid: ee7fce5f8b62214ca8651fea84cdea5e
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1660
 --- !u!114 &6817679613265824374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2236,6 +2782,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 32
+--- !u!114 &7282587792722519798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Character Sounds/Screaming Respawn
+  m_EditorClassIdentifier: 
+  Path: event:/Character Sounds/Screaming Respawn
+  guid: 8b354cb5adfd50488c1e90045000935e
+  Banks:
+  - {fileID: 5629260191896470602}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2367
 --- !u!114 &7632320249436473095
 MonoBehaviour:
   m_ObjectHideFlags: 0

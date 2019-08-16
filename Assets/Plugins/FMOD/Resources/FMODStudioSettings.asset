@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\Benjamin\Desktop\SAE\Trimester 2\GAD180\Slapstick-Fighters\FMOD\Slapstick-Fighters
-    Sounds\Slapstick-Fighters Sounds.fspro
+  sourceProjectPath: D:\Slapstick-Fighters\FMOD\Slapstick-Fighters Sounds\Slapstick-Fighters
+    Sounds.fspro
   SourceProjectPathUnformatted: FMOD\Slapstick-Fighters Sounds\Slapstick-Fighters
     Sounds.fspro
   SourceBankPathUnformatted: FMOD\Slapstick-Fighters Sounds\Build
