@@ -1018,9 +1018,9 @@ GameObject:
   - component: {fileID: 8165345250800873171}
   - component: {fileID: 8199776708096157475}
   - component: {fileID: 7301726895521306514}
-  - component: {fileID: -6545088010246618318}
   - component: {fileID: -328036485884239153}
   - component: {fileID: -7899987355744806085}
+  - component: {fileID: -6877070599914742126}
   m_Layer: 9
   m_Name: KnightPlayer2
   m_TagString: Player
@@ -1185,19 +1185,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &-6545088010246618318
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927408138077048}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!64 &-328036485884239153
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1226,6 +1213,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: 0
   animator: {fileID: 0}
+--- !u!136 &-6877070599914742126
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927408138077048}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.002
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.85297096, z: 0}
 --- !u!1001 &1544632430695611435
 PrefabInstance:
   m_ObjectHideFlags: 0
